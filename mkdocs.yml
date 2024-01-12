@@ -15,7 +15,7 @@ theme:
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
-      info: octicons/info-16
+      definition: octicons/info-16
       tip: octicons/squirrel-16
       success: octicons/check-16
       question: octicons/question-16
