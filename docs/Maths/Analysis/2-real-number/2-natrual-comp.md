@@ -43,6 +43,7 @@
             - $E$:={$n:$对于任何 $m \in \mathbb{N}$, 都有 $(m \cdot n) \in \mathbb{N}$}. 
             - 由此可知 $1 \in E$, 因为 $m \cdot 1=m$. 如果 $n \in E$, 即如果 $m \cdot n \in \mathbb{N}$, 则 $m \cdot(n+1)=m n+m$ 是两个自然数之和, 根据已经证明的结果, 它属于 $\mathbb{N}$. 
             - 于是, $(n \in E) \Rightarrow((n+1) \in E)$, 再根据归纳原理, $E=\mathbb{N}$.
+        
     
     - (2) $(n \in \mathbb{N}) \wedge(n \neq 1) \Rightarrow((n-1) \in \mathbb{N})$
 
@@ -170,3 +171,77 @@
 4. 整数集的任何非空下有界子集有最小元素.(1的推论)
 5. 整数集合既没有上界又没有下界(由3, 4得到)
 6. **阿基米德原理**: 如果 $h$ 是任意一个固定的正数, 则对于任何实数 $x$, 可以找到唯一的整数 $k$, 使得 $(k-1) h \leqslant x<k h$.
+
+    ??? Proof
+        - $\mathbb{Z}$ 没有上界, 所以集合 $\{n \in \mathbb{Z} \mid x / h<n\}$ 是整数集的非空下有界子集.
+        - 根据4. 该集合有最小元素$k$. 也就是$(k-1) \leqslant x / h<k$. 
+        - $h>0 \implies$ 这些不等式等价于上述阿基米德原理中的不等式
+        - 由于数集最小元素唯一性, $k$是唯一的. 
+
+
+7. 对于任何正数 $\varepsilon$, 存在自然数 $n$, 使得 $0<1 / n<\varepsilon$.
+    - 根据6. 存在 $n \in \mathbb{Z}$, 使得 $1<\varepsilon \cdot n$. 因为 $0<1$ 且 $0<\varepsilon$, 所以$0<n$. 于是, $n \in \mathbb{N}$ 且 $0<1 / n<\varepsilon$.
+8. 如果数 $x \in \mathbb{R}, x \geqslant 0$, 并且对于任何 $n \in \mathbb{N}$ 有 $x<1 / n$, 则 $x=0$.
+9. 对于满足 $a<b$ 的任何数 $a, b \in \mathbb{R}$, 存在有理数 $r \in \mathbb{Q}$, 使得 $a<r<b$.
+    
+    ??? Proof
+        - 使用(7)选取满足 $0<1 / n<b-a$ 的 $n \in \mathbb{N}$
+        - 再根据阿基米德原理求出满足$(m-1) / n \leqslant a<m / n$ 的 $m \in \mathbb{Z}$.
+        - 反证法: 如果$m / n<b$不成立: 有 $(m-1) / n \leqslant a<b \leqslant m / n$,而由此得到 $1 / n \geqslant b-a$. 因此, $r=m / n \in \mathbb{Q}$ 且 $a<m / n<b$.
+    
+
+10. 对于任何数 $x \in \mathbb{R}$, 存在唯一的整数 $k \in \mathbb{Z}$, 使得 $k \leqslant x<k+1$.
+    - $k$ 记为 $[x]$, 称为数 $x$ 的整数部分.
+    - $\{x\}:=x-[x]$ 称为数 $x$ 的小数部分. 
+
+
+## 实数的计算问题
+
+1. 区间的记号$(a,b]$等
+    - 端点: 确定一个区间的两个数叫做端点
+    - 长度: 量 $b-a$ 称为区间 $a b$ 的长度. 如果 $I$ 是某区间, 我们就用 $|I|$ 表示其长度
+    - $x$的邻域: 包含点 $x \in \mathbb{R}$ 的开区间称为该点的邻域.当 $\delta>0$ 时, 开区间 $( x-\delta, x+\delta)$ 称为点 $x$ 的 $\delta$ 邻域, 其长度为 $2 \delta$.
+    - 绝对值: $|x|=\left\{\begin{aligned} x, & x>0 \\ 0, & x=0 \\ -x, & x<0\end{aligned}\right.$
+    - $x,y$之间的距离:值 $|x-y|$ 称为 $x, y \in \mathbb{R}$ 之间的距离.
+        - 非负性
+        - 对称性
+        - 三角不等式: $|x-y| \leqslant|x-z|+|z-y|$
+
+            ??? Proof
+                - $0 \leqslant x$ 且 $0 \leqslant y$, 则 $0 \leqslant x+y,|x+y|=x+y,|x|=x,|y|=y$
+                - $x \leqslant 0$ 且 $y \leqslant 0$, 则 $x+y \leqslant 0,|x+y|=-(x+y)=-x-y,|x|=-x,|y|=-y$,
+                - 现在设两数一负一正, 例如 $x<0<y$, 则或者 $x<x+y \leqslant 0$, 或者 $0 \leqslant x+y \leqslant y$.对于前者, $|x+y|<|x|$, 对于后者, $|x+y|<|y|$, 即对于二者都有 $|x+y|<|x|+|y|$.
+
+2. 近似值与给出的数
+    - 绝对误差与相对误差: 如果 $x$ 是某个量的精确值, $\tilde{x}$ 是该量的已知近似值, 则数
+        $$
+        \Delta(\tilde{x}):=|x-\tilde{x}|, \quad \delta(\tilde{x}):=\frac{\Delta(\tilde{x})}{|\tilde{x}|}
+        $$
+        分别称为近似值 $\tilde{x}$ 的绝对误差与相对误差. 相对误差在 $\tilde{x}=0$ 时没有定义.
+
+3. 误差与运算: 定义$|x-\tilde{x}|=\Delta(\tilde{x}), \quad|y-\tilde{y}|=\Delta(\tilde{y})$
+    - $\Delta(\tilde{x}+\tilde{y}):=|(x+y)-(\tilde{x}+\tilde{y})| \leqslant \Delta(\tilde{x})+\Delta(\tilde{y})$
+    - $\Delta(\tilde{x} \cdot \tilde{y}):=|x \cdot y-\tilde{x} \cdot \tilde{y}| \leqslant|\tilde{x}| \Delta(\tilde{y})+|\tilde{y}| \Delta(\tilde{x})+\Delta(\tilde{x}) \cdot \Delta(\tilde{y})$
+    - $\Delta\left(\frac{\tilde{x}}{\tilde{y}}\right):=\left|\frac{x}{y}-\frac{\tilde{x}}{\tilde{y}}\right| \leqslant \frac{|\tilde{x}| \Delta(\tilde{y})+|\tilde{y}| \Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})}$, 在$y \neq 0, \quad \tilde{y} \neq 0, \quad \delta(\tilde{y})=\frac{\Delta(\tilde{y})}{|\tilde{y}|}<1$的条件下. 
+
+    ??? Proof
+        设 $x=\tilde{x}+\alpha, y=\tilde{y}+\beta$, 则
+        $$
+        \begin{aligned}
+        \Delta(\tilde{x}+\tilde{y}) & =|(x+y)-(\tilde{x}+\tilde{y})|=|\alpha+\beta| \leqslant|\alpha|+|\beta|=\Delta(\tilde{x})+\Delta(\tilde{y}), \\
+        \Delta(\tilde{x} \cdot \tilde{y}) & =|x y-\tilde{x} \tilde{y}|=|(\tilde{x}+\alpha)(\tilde{y}+\beta)-\tilde{x} \tilde{y}|=|\tilde{x} \beta+\tilde{y} \alpha+\alpha \beta| \\
+        & \leqslant|\tilde{x}||\beta|+|\tilde{y}||\alpha|+|\alpha \beta|=|\tilde{x}| \Delta(\tilde{y})+|\tilde{y}| \Delta(\tilde{x})+\Delta(\tilde{x}) \cdot \Delta(\tilde{y}), \\
+        \Delta\left(\frac{\tilde{x}}{\tilde{y}}\right) & =\left|\frac{x}{y}-\frac{\tilde{x}}{\tilde{y}}\right|=\left|\frac{x \tilde{y}-y \tilde{x}}{y \tilde{y}}\right|=\left|\frac{(\tilde{x}+\alpha) \tilde{y}-(\tilde{y}+\beta) \tilde{x}}{\tilde{y}^2}\right| \cdot\left|\frac{1}{1+\beta / \tilde{y}}\right| \\
+        \leqslant & \frac{|\tilde{x}||\beta|+|\tilde{y}||\alpha|}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})}=\frac{|\tilde{x}| \Delta(\tilde{y})+|\tilde{y}| \Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})}
+        \end{aligned}
+        $$
+
+4. 位置计数法
+    - 引理. 如果固定一个数 $q>1$, 则对于任何正数 $x \in \mathbb{R}$, 可以求出唯一的整数 $k \in \mathbb{Z}$, 使得$q^{k-1} \leqslant x<q^k$. 
+    
+        ??? Proof
+            - 验证, 形如 $q^k(k \in \mathbb{N})$ 的数的集合没有上界.(反证法)
+            - 因为 $q>1$, 所以当 $m<n$ 且 $m, n \in \mathbb{Z}$ 时 $q^m<q^n$, 于是我们同时证明了, 对于任何数 $c \in \mathbb{R}$, 可以求出自然数 $N \in \mathbb{N}$, 使得对于任何自然数 $n>N$ 有 $c<q^n$.
+            - 由此可知, 对于任何数 $\varepsilon>0$, 叮以求出自然数 $M \in \mathbb{N}$, 使得对于任何自然数 $m>M$ 有 $1 / q^m<\varepsilon$.
+            - 取 $c=1 / \varepsilon, N=M$ 即可. 这时, 只要 $m>M$, 就有 $1 / \varepsilon<q^m$.于是, 当 $x>0$ 时, 满足不等式 $x<q^m$ 的整数 $m \in \mathbb{Z}$ 的集合有下界, 它具有最小元素 $k$, 而该元素显然就是所求的整数, 因为 $q^{k-1} \leqslant x<q^k$.(存在性)
+            - (唯一性) 如果 $m, n \in \mathbb{Z}$, 并且, 例如 $m<n$, 则 $m \leqslant n-1$,从而当 $q>1$ 时 $q^m \leqslant q^{n-1}$.
