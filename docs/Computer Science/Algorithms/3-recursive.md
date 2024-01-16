@@ -49,7 +49,6 @@ Idea:
 ![merge-sort](figures/merge-sort.png)
 
 ```cpp
-```cpp
 // We need a tmp array to store relations...
 void mgsort(int a[], int tmp[], int l, int r){
     if(l>=r) return ;
