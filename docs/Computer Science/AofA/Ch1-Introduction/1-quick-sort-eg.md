@@ -44,7 +44,7 @@ $$\frac{C_N}{N+1}=\frac{C_{N-1}}{N}+\frac{2}{N+1}$$
 Telescope:
 
 $$
-\begin{aligned} \frac{C_N}{N+1} & =\frac{C_{N-1}}{N}+\frac{2}{N+1} \\ & =\frac{C_{N-2}}{N-1}+\frac{2}{N}+\frac{2}{N+1} \\ & =\cdots \\ & =\frac{C_1}{2}+\frac{2}{3}+\cdots+\frac{2}{N}+\frac{2}{N+1} \\ & \sim 2 N \sum_{1 \leqslant k \leqslant N} \frac{1}{k}-2 N \\ & \sim 2 N\left(\int_1^{\infty} \frac{1}{x} d x+\gamma\right)-2 N \\ & =2 N \ln N-2(1-\gamma) N .\end{aligned}
+\begin{aligned} \frac{C_N}{N+1} & =\frac{C_{N-1}}{N}+\frac{2}{N+1} \\ & =\frac{C_{N-2}}{N-1}+\frac{2}{N}+\frac{2}{N+1} \\ & =\cdots \\ & =\frac{C_1}{2}+\frac{2}{3}+\cdots+\frac{2}{N}+\frac{2}{N+1} \\ & \sim 2 N \sum_{1 \leqslant k \leqslant N} \frac{1}{k}-2 N \\ & \sim 2 N\left(\int_1^{N} \frac{1}{x} d x+\gamma\right)-2 N \\ & =2 N \ln N-2(1-\gamma) N .\end{aligned}
 $$
 
 ## Checking 

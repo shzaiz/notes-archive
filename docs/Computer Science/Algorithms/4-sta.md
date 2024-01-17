@@ -1,4 +1,4 @@
-# 栈, 递归, 回溯
+# 4. 栈, 递归, 回溯
 
 ## Stacks
 
@@ -151,4 +151,37 @@ PlayAnyGame(X, player):
 
 ## 更多的问题
 
-### 
+### Subset sum
+
+Given a set $X$ of positive integers and target integer $T$, is there a subset of elements in $X$ that add up to $T$ ? 
+
+-  $X=\{8,6,7,5,3,10,9\}$ and $T=15$, the answer is TRUE, because the subsets $\{8,7\}$ and $\{7,5,3\}$ and $\{6,9\}$ and $\{5,10\}$ all sum to 15 . 
+- if $X=\{11,6,5,1,7,13,12\}$ and $T=15$, the answer is FALSE.
+
+Solution: 
+
+-  consider an arbitrary element $x\in X$, there is a subset of $X$ that sums to $T$
+    - There is a subset of $X$ that includes $x$ and whose sum is $T$.
+    - There is a subset of $X$ that excludes $x$ and whose sum is $T$.
+
+![subset-sum](figures/subset-sum.png)
+
+Correctness: 
+
+- By induction! 
+
+Time analysis:
+
+- $T(n) \leq 2 T(n-1)+O(1) \implies T(n)=O\left(2^n\right).$
+
+### General Pattern
+
+- make a sequence of decisions
+- the goal is building a recursively defined structure satisfying certain constraints.
+
+Now we move on to more examples
+
+- Text segmentation 
+- Longest Increasing Subsequence
+
+这些问题我们在后面的《动态规划》的一节中会更加详细地看一看. 
