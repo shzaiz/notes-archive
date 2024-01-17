@@ -115,7 +115,7 @@ void hanoi(int n, char from, char to, char via) {
 
 ## Backtracking(回溯)
 
-### $n$皇后问题
+### 玩游戏: $n$皇后问题
 
 Goal: place $n$ queens on $n \times n$ chessboard, so that no two queens are attacking each other.
 
@@ -128,3 +128,27 @@ Idea: Keep trying, if wrong, return the current stack frame (other stack frames 
 Demonstration on $4\times 4$ chess board:
 
 ![example-4by4](figures/queen-4by4.png)
+
+Backtracking on the problem enables us to "correct mistakes". 
+
+- maybe you are wrong 
+- but the one next to you is not, maybe.
+
+And we can play **ANY** game -- 
+
+```
+PlayAnyGame(X, player):
+  if player has already won the state X
+    return GOOD
+  if player has already lost in state X
+    return BAD
+  
+  for all legal moves x->y
+    if PlayAnyGame(Y, not player) == BAD
+      return GOOD
+  return BAD
+```
+
+## 更多的问题
+
+### 
