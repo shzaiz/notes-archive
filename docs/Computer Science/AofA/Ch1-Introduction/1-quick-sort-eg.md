@@ -55,9 +55,11 @@ $$
 Note that #comparison distrib. is not normal.
 
 Tips on predicting: 
+
 - Hypothesis is $\quad \operatorname{an} N \ln N$
 
 Experiment
+
 - Run for size $N$.
 - could solve for a
 - for $10 N$ to increase a factor.
