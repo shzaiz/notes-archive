@@ -4,6 +4,8 @@
 
 词语本意: 
 
+![stack](./figures/stack.png){width=500px}
+
 - Stack: a large pile (as of hay, straw, or grain) usually shaped like a cone
 
 What is it? 
@@ -112,6 +114,8 @@ void hanoi(int n, char from, char to, char via) {
 ```
 
 类似地, 所有的递归程序都可以通过这样的方法转化为非递归程序. 
+
+实际验证: 使用调试器观察程序的行为(希望早就已经知道了)
 
 ## Backtracking(回溯)
 

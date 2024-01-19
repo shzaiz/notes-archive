@@ -42,6 +42,8 @@ Defn:
     - the node is the biggest(smallest) node
     - left and right child is smaller(bigger) than the node
 
+![heap](./figures/heap.png)
+
 Helpful when: extracting the max(min) number.
 
 Better to talk about how to *maintain* the structure. 

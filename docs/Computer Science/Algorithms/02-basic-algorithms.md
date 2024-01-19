@@ -193,11 +193,14 @@ Linux/Mac: `time`
 
 ### 渐进记号
 
+![asyno](figures/asyno.png)
+
 渐进记号表示**一类函数**, 定义如下: 
 
 定义1: 渐进上界. 对于给定的函数$g(n)$, 渐进上界$O(g(n))$表示如下函数的集合：
 
 $$O(g(n))=\{T(n): \exists c, n_0>0 \text {, 使得 } \forall n \geq n_0, 0 \leq T(n) \leq c g(n)\}$$
+
 
 有时候为了方便起见, 常用等于记号代替属于记号.
 
