@@ -78,6 +78,22 @@ Correctness:
     - on MERGE progress: Each time we always pick the smaller one
     - on MergeSort progress
 
+??? Proof
+    Lemma 1.1. MERGE correctly merges the subarrays $A[1 . . m]$ and $A[m+1 . . n]$, assuming those subarrays are sorted in the input.
+
+    Proof: Let $A[1 \ldots n]$ be any array and $m$ any integer such that the subarrays $A[1 \ldots m]$ and $A[m+1 . . n]$ are sorted. We prove that for all $k$ from 0 to $n$, the last $n-k-1$ iterations of the main loop correctly merge $A[i . . m]$ and $A[j . . n]$ into $B[k . . n]$. The proof proceeds by induction on $n-k+1$, the number of elements remaining to be merged.
+
+    If $k>n$, the algorithm correctly merges the two empty subarrays by doing absolutely nothing. (This is the base case of the inductive proof.) Otherwise, there are four cases to consider for the $k$ th iteration of the main loop.
+
+    - If $j>n$, then subarray $A[j . . n]$ is empty, so $\min (A[i . . m] \cup A[j . . n])=A[i]$.
+    - If $i>m$, then subarray $A[i$.. $m]$ is empty, so $\min (A[i . . m] \cup A[j . . n])=A[j]$.
+    - Otherwise, if $A[i]<A[j]$, then $\min (A[i . . m] \cup A[j . . n])=A[i]$.
+    - Otherwise, we must have $A[i] \geq A[j]$, and $\min (A[i . . m] \cup A[j . . n])=A[j]$. In all four cases, $B[k]$ is correctly assigned the smallest element of $A[i$.. $m] \cup$ $A[j . . n]$. In the two cases with the assignment $B[k] \leftarrow A[i]$, the Recursion Fairy correctly merges - sorry, I mean the Induction Hypothesis implies that the last $n-k$ iterations of the main loop correctly merge $A[i+1 . . m]$ and $A[j . . n]$ into $B[k+1 . . n]$. Similarly, in the other two cases, the Recursion Fairy also correctly merges the rest of the subarrays
+    
+    Theorem 1.2. MERGESORT correctly sorts any input array $A[1 . . n]$.
+
+    Proof: We prove the theorem by induction on $n$. If $n \leq 1$, the algorithm correctly does nothing. Otherwise, the Recursion Fairy correctly sorts-sorry, I mean the induction hypothesis implies that our algorithm correctly sorts the two smaller subarrays $A[1 . . m]$ and $A[m+1 . . n]$, after which they are correctly Merged into a single sorted array (by Lemma 1.1).
+
 Analysis:
 
 - $T(n)=T(\lceil n / 2\rceil)+T(\lfloor n / 2\rfloor)+O(n)$
@@ -99,7 +115,7 @@ How do we partition?
 - Naive appoarch: 2 new arrays
 - Nico Lomuto: 
     - (1) pointer $i$ holds the start, $j$ holds the end
-    - (2) continue increment $i$, till $a[i]> x$; continue decrementing $j$, until $j< x$.
+    - (2) continue increment $i$, till $a[i]> x$; continue decrementing $j$, until $a[j]< x$.
     - (3) swap $A[i]$ with $A[j]$
     - (4) goto (2), until $i>j$. 
 

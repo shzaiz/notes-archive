@@ -57,3 +57,44 @@ struct BSTNode *BSTSearchNode(struct BSTNode *root, int target) {
 }
 ```
 
+## 随机二叉搜索树
+
+Defn. A random binary search tree of size ${n}$ is obtained in the following way: Take a random permutation, ${x}_0, \ldots, {x}_{{n}-1}$, of the integers $0, \ldots, {n}-1$ and add its elements, one by one, into a BinarySearchTree. By random permutation we mean that each of the possible $n$ ! permutations (orderings) of $0, \ldots, n-1$ is equally likely, so that the probability of obtaining any particular permutation is $1 / n !$.
+
+Now look at the search path
+
+**Key observation**. 
+
+- The search path in $T$ contains the node with key $i<x$
+- if and only if the random sequence, $i$ appears before any of $\{i+1, i+2,\cdots, \lfloor x\rfloor\}$.
+
+Hence we have: 
+
+$$
+P\{i \text { is on the search path for } x\}= \begin{cases}1 /(\lfloor x\rfloor-i+1) & \text { if } i<x \\ 1 /(i-\lceil x\rceil+1) & \text { if } i>x\end{cases}
+$$
+
+Then the length of the search path is
+
+$$
+\sum_{i \in\{0, \ldots, n-1\} \backslash\{x\}} I_i
+$$
+
+-  ($I_i$ is the indicator varible with $I_i(x)=\begin{cases}1 & i\text{ appears on the search path of }x \\ 0 &\text{otherwise}\end{cases}$) 
+
+Hence the expectation of the rv is.
+
+$$
+\begin{aligned}
+\mathrm{E}\left[\sum_{i=0}^{x-1} I_i+\sum_{i=x+1}^{n-1} I_i\right]= & \sum_{i=0}^{x-1} \mathrm{E}\left[I_i\right]+\sum_{i=x+1}^{n-1} \mathrm{E}\left[I_i\right] \\
+= & \sum_{i=0}^{x-1} 1 /(\lfloor x\rfloor-i+1)+\sum_{i=x+1}^{n-1} 1 /(i-\lceil x\rceil+1) \\
+= & \sum_{i=0}^{x-1} 1 /(x-i+1)+\sum_{i=x+1}^{n-1} 1 /(i-x+1) \\
+= & \frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{x+1} \\
+& +\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n-x} \\
+= & H_{x+1}+H_{n-x}-2 .
+\end{aligned}
+$$
+
+Hence we get the following theorem: 
+
+For any $x \in\{0, \ldots, n-1\}$, the expected length of the search path for $x$ is $H_{x+1}+H_{n-x}-O(1).$

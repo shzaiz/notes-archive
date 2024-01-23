@@ -24,9 +24,9 @@ $$
 is given by 
 $$
 \begin{array}{ll}
-a_n=\Theta\left(n^\gamma(\log n)^\delta\right) & \text { when } \gamma<\log _\beta \alpha \\
+a_n=\Theta\left(n^\gamma(\log n)^\delta\right) & \text { when } \gamma>\log _\beta \alpha \\
 a_n=\Theta\left(n^\gamma(\log n)^{\delta+1}\right) & \text { when } \gamma=\log _\beta \alpha \\
-a_n=\Theta\left(n^{\log _\beta \alpha}\right) & \text { when } \gamma>\log _\beta \alpha
+a_n=\Theta\left(n^{\log _\beta \alpha}\right) & \text { when } \gamma<\log _\beta \alpha
 \end{array}
 $$
 
