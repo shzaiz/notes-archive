@@ -21,7 +21,7 @@
 
 ```c
 struct BinaryTree{
-    Node *left, *right;
+    BinaryTree *left, *right;
     int val;
 };
 ```

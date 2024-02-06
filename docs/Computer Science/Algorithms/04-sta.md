@@ -82,7 +82,16 @@ int pop(){
 
 ### 例子2: 用栈模拟递归
 
+小代码: 
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23include%20%3Cstdio.h%3E%0Avoid%20hanoi%28int%20n,%20char%20from,%20char%20to,%20char%20via%29%20%7B%0A%20%20%20%20if%20%28n%20%3D%3D%201%29%20%7B%0A%20%20%20%20%20%20%20%20printf%28%22%25c%20-%3E%20%25c%5Cn%22,%20from,%20to%29%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20hanoi%28n%20-%201,%20from,%20via,%20to%29%3B%0A%20%20%20%20%20%20%20%20hanoi%281,%20%20%20%20%20from,%20to,%20%20via%29%3B%0A%20%20%20%20%20%20%20%20hanoi%28n%20-%201,%20via,%20%20to,%20%20from%29%3B%0A%20%20%20%20%7D%0A%7D%0A%0Aint%20main%28%29%7B%0A%20%20%20%20hanoi%283,%20'A',%20'B',%20'C'%29%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=c_gcc9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
 (选自 jyywiki )
+
+
+不适用递归的代码: 
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=//%20by%20Yanyan%20Jiang%0A%0Atypedef%20struct%20%7B%0A%20%20int%20pc,%20n%3B%0A%20%20char%20from,%20to,%20via%3B%0A%7D%20Frame%3B%0A%0A%23define%20call%28...%29%20%28%7B%20*%28%2B%2Btop%29%20%3D%20%28Frame%29%20%7B%20.pc%20%3D%200,%20__VA_ARGS__%20%7D%3B%20%7D%29%0A%23define%20ret%28%29%20%20%20%20%20%28%7B%20top--%3B%20%7D%29%0A%23define%20goto%28loc%29%20%28%7B%20f-%3Epc%20%3D%20%28loc%29%20-%201%3B%20%7D%29%0A%0Avoid%20hanoi%28int%20n,%20char%20from,%20char%20to,%20char%20via%29%20%7B%0A%20%20Frame%20stk%5B10%5D,%20*top%20%3D%20stk%20-%201%3B%0A%20%20call%28n,%20from,%20to,%20via%29%3B%0A%20%20for%20%28Frame%20*f%3B%20%28f%20%3D%20top%29%20%3E%3D%20stk%3B%20f-%3Epc%2B%2B%29%20%7B%0A%20%20%20%20n%20%3D%20f-%3En%3B%20from%20%3D%20f-%3Efrom%3B%20to%20%3D%20f-%3Eto%3B%20via%20%3D%20f-%3Evia%3B%0A%20%20%20%20switch%20%28f-%3Epc%29%20%7B%0A%20%20%20%20%20%20case%200%3A%20if%20%28n%20%3D%3D%201%29%20%7B%20printf%28%22%25c%20-%3E%20%25c%5Cn%22,%20from,%20to%29%3B%20goto%284%29%3B%20%7D%20break%3B%0A%20%20%20%20%20%20case%201%3A%20call%28n%20-%201,%20from,%20via,%20to%29%3B%20%20%20break%3B%0A%20%20%20%20%20%20case%202%3A%20call%28%20%20%20%201,%20from,%20to,%20%20via%29%3B%20%20break%3B%0A%20%20%20%20%20%20case%203%3A%20call%28n%20-%201,%20via,%20%20to,%20%20from%29%3B%20break%3B%0A%20%20%20%20%20%20case%204%3A%20ret%28%29%3B%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0Aint%20main%28%29%7B%0A%20%20hanoi%283,%20'A',%20'B',%20'C'%29%3B%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=c_gcc9.3.0&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 ```c
 // by Yanyan Jiang
