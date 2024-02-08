@@ -16,7 +16,7 @@ To simplify that :
 Apply symmetry
 
 $$
-\left.C_N=N+1+\frac{2}{N} \sum_{1 \leqslant k \leqslant n} C_{k-1} \quad \text { (both sums are } \sum C_{k-1}\right) .
+C_N=N+1+\frac{2}{N} \sum_{1 \leqslant k \leqslant n} C_{k-1} \quad \text { (both sums are } \sum C_{k-1}) .
 $$
 
 Multiply both sides by $N$

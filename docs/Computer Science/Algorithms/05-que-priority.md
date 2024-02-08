@@ -43,6 +43,7 @@ Defn:
     - left and right child is smaller(bigger) than the node
 
 ![heap](./figures/heap.png)
+{width=600px}
 
 Helpful when: extracting the max(min) number.
 
