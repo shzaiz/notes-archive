@@ -92,3 +92,5 @@ For convenience, we take the easy appoarch
 	- 这个数字比最小堆堆顶元素大? 插入最小堆: 插入最大堆
 	- 之后检查堆最大堆是不是超过了$\lfloor n/2 \rfloor$, 最小堆是不是超过了$\lceil n/2\rceil$. 如果超过了, 就取出超出的那个扔到不足的那个堆里面. 
 
+## 树基础
+
