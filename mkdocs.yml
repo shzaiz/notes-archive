@@ -42,3 +42,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - def_list
