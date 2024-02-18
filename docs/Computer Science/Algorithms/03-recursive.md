@@ -1,5 +1,11 @@
 # 03. 递归算法
 
+视频回放: 
+
+- [3 递归地求解问题](https://www.acfun.cn/v/ac43750364)
+- [3 $\beta$ 函数调用和递归的机器级实现
+](https://www.acfun.cn/v/ac43753673)
+
 ## 回顾: 递归
 
 The general principle: 

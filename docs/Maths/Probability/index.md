@@ -4,6 +4,9 @@
 
 **⚠️警告**: 笔记仅供参考! 请不要使用这个当做教科书/自学资料, 但是当做复习还是可以的.
 
+
+
+
 课程大纲: 
 
 - 第一部分: 概率论的基本概念
@@ -46,3 +49,7 @@
     5. 统计量与抽样分布
     6. 区间估计
     7. 假设检验
+
+<object data="./main.pdf" type="application/pdf" width="100%" height="800px">
+      <p>Unable to display PDF file. <a href="./main.pdf>Download</a> instead.</p>
+</object>
