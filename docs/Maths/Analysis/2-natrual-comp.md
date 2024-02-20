@@ -236,7 +236,7 @@
         \end{aligned}
         $$
 
-4. 位置计数法
+4. 位值计数法
     - 引理. 如果固定一个数 $q>1$, 则对于任何正数 $x \in \mathbb{R}$, 可以求出唯一的整数 $k \in \mathbb{Z}$, 使得$q^{k-1} \leqslant x<q^k$. 
     
         ??? Proof
