@@ -16,6 +16,7 @@ struct BSTNode {
 构建新节点的初始值: `key=0, left=right=NULL`.
 
 
+
 ## 插入
 
 - 要满足结构约定的条件：
