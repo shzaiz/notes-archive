@@ -17,7 +17,9 @@ $$
 
 定义 2'. 称数 $A \in \mathbb{R}$ 为数列 $\left\{x_n\right\}$ 的极限, 如果对于任何 $\varepsilon>0$, 存在着号码 $N$, 使得对于一切 $n>N$, 有 $\left|x_n-A\right|<\varepsilon$.
 
-$$\left(\lim _{n \rightarrow \infty} x_n=A\right):=\forall \varepsilon>0 \exists N \in \mathbb{N} \forall n>N\left(\left|x_n-A\right|<\varepsilon\right)$$
+$$
+\left(\lim _{n \rightarrow \infty} x_n=A\right):=\forall \varepsilon>0 \exists N \in \mathbb{N} \forall n>N\left(\left|x_n-A\right|<\varepsilon\right)
+$$
 
 等价性验证: 点 $A$ 的任何邻域 $V(A)$ 都包含这点的一个 $\varepsilon$ 邻域. 
 
@@ -101,6 +103,7 @@ $$
     证明: $\left|A-x_n\right|=\Delta\left(x_n\right),\left|B-y_n\right|=\Delta\left(y_n\right)$. 这时, 
 
     - 对于 a), 我们有
+    
     $$
     \left|(A+B)-\left(x_n+y_n\right)\right| \leqslant \Delta\left(x_n\right)+\Delta\left(y_n\right) .
     $$
@@ -117,6 +120,7 @@ $$
 ??? Proof
 
     a) 取一数 $C$ 使 $A<C<B$. 根据极限的定义, 存在数 $N^{\prime}$ 与 $N^{\prime \prime}$, 使得当 $n>N^{\prime}$ 时, $\left|x_n-A\right|<C-A$, 并且当 $n>N^{\prime \prime}$ 时, $\left|y_n-B\right|<B-C$, 这样, 当 $n>N=\max \left\{N^{\prime}, N^{\prime \prime}\right\}$ 时, 就得到
+
     $$
     x_n<A+(C-A)=C=B-(B-C)<y_n .
     $$
@@ -212,11 +216,13 @@ $$
 
     即存在 $\varepsilon>0$, 使对于任何 $N \in \mathbb{N}$, 存在着大于 $N$ 的 $n$ 与 $m$, 使得 $\left|x_m-x_n\right| \geqslant \varepsilon$.
     在本例中, 只要取 $\varepsilon=1$ 即可. 这时, 对于任何 $N \in \mathbb{N}$, 将有
+
     $$
     \left|x_{N+1}-x_{N+2}\right|=|1-(-1)|=2>1=\varepsilon \text {. }
     $$
 
     例 9 令
+
     $$
     x_1=0 . \alpha_1, x_2=0 . \alpha_1 \alpha_2, x_3=0 . \alpha_1 \alpha_2 \alpha_3, \cdots, x_n=0 . \alpha_1 \alpha_2 \cdots \alpha_n, \cdots .
     $$
@@ -235,6 +241,7 @@ $$
     这就证明了 $\left\{x_n\right\}$ 是基本数列.
 
 例 10.(调和级数) 讨论数列 $\left\{x_n\right\}$, 这里
+
 $$
 x_n=1+\frac{1}{2}+\cdots+\frac{1}{n} .
 $$
