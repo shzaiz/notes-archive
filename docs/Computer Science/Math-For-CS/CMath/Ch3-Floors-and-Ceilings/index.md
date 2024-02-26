@@ -1,5 +1,10 @@
 # Exercises
 
+<object data="./chapter3.pdf" type="application/pdf" width="100%" height="700px">
+      <p>Unable to display PDF file. <a href="./chapter3.pdf">Download</a> instead.</p>
+</object>
+
+
 $$
 \newcommand{\flr}[1]{\left\lfloor #1 \right\rfloor}
 $$

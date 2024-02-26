@@ -1,5 +1,21 @@
 # Divisibility
 
+
+
+
+
+
+
+<object data="./main.pdf" type="application/pdf" width="100%" height="700px">
+      <p>Unable to display PDF file. <a href="./main.pdf">Download</a> instead.</p>
+</object>
+
+
+
+
+
+## The Divisible
+
 $$
 \newcommand{\flr}[1]{\left \lfloor #1 \right\rfloor }
 \newcommand{\cil}[1]{\left \lceil #1 \right\rceil }
@@ -11,10 +27,6 @@ $$
 \newcommand{\blue}[1]{{{\color{blue}#1}}}
 \newcommand{\purple}[1]{{{\color{purple}#1}}}
 $$
-
-
-
-## The Divisible
 
 Divisibility is defined as: $m \mid n \iff m > 0 \land n = mk$ for some integer $k$.
 
