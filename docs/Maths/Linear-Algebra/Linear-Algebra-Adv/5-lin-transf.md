@@ -7,3 +7,11 @@
 <object data="./5.2.pdf" type="application/pdf" width="100%" height="800px">
       <p>Unable to display PDF file. <a href="./5.2.pdf">Download</a> instead.</p>
 </object>
+
+<object data="./5.3.pdf" type="application/pdf" width="100%" height="800px">
+      <p>Unable to display PDF file. <a href="./5.3.pdf">Download</a> instead.</p>
+</object>
+
+<object data="./5.4.pdf" type="application/pdf" width="100%" height="800px">
+      <p>Unable to display PDF file. <a href="./5.4.pdf">Download</a> instead.</p>
+</object>
