@@ -10,13 +10,13 @@
 
 ### `AM`难以处理多个CPU
 
-(同学) 目前为止遇到的问题和解决方案：https://blog.rijuyuezhu.top/posts/aba214cc/
+(同学) 目前为止遇到的问题和解决方案：`https://blog.rijuyuezhu.top/posts/aba214cc/`
 
 (助教) 关于CPU只有一个的问题：
 
-TL;DR: abstract-machine和xv6都通过读MP tables来得到CPU核心数的值，这个值对应QEMU中的sockets数量。如果发现am只找到了一个核，在abstract-machine/scripts/platform/qemu.mk里面的QEMU_FLAGS里把-smp设置成-smp “cores=1.sockets=$(smp)”即可。
+TL;DR: `abstract-machine`和`xv6`都通过读MP tables来得到CPU核心数的值，这个值对应QEMU中的sockets数量。如果发现am只找到了一个核，在`abstract-machine/scripts/platform/qemu.mk`里面的QEMU_FLAGS里把-smp设置成`-smp “cores=1.sockets=$(smp)”`即可。
 
-原因：QEMU6.1之前的版本的策略是prefer sockets over core，所以指定-smp $(smp)相当于指定-smp cpus=n,cores=1,sockets=n；>6.1的某个版本策略变成了prefer core,所以这时候指定-smp $(smp)相当于指定-smp cpus=n,cores=n,sockets=1。在不改配置的情况下 一种比较hack的方式是在trm.c的__am_lapic_init()里面调cpuid指令，然后把拿到的logical cpu count赋值给__am_ncpu。
+原因：QEMU6.1之前的版本的策略是`prefer sockets over core`，所以指定`-smp $(smp)`相当于指定`-smp cpus=n,cores=1,sockets=n`；>6.1的某个版本策略变成了`prefer core`,所以这时候指定`-smp $(smp)`相当于指定-smp cpus=n,cores=n,sockets=1。在不改配置的情况下 一种比较hack的方式是在`trm.c`的`__am_lapic_init()`里面调cpuid指令，然后把拿到的logical cpu count赋值给`__am_ncpu`。
 
 
 ## 实验技巧
