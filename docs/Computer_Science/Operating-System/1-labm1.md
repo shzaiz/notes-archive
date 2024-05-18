@@ -1,3 +1,16 @@
-# Lab M0. 自制进程树
+# 实验进度
 
 在实验 Hard Deadline 之前不会公布. 
+
+![image-20240518233627449](1-labm1.assets/image-20240518233627449.png)
+
+![image-20240518233702265](1-labm1.assets/image-20240518233702265.png)
+
+![image-20240518233719604](1-labm1.assets/image-20240518233719604.png)
+
+![image-20240518233738031](1-labm1.assets/image-20240518233738031.png)
+
+![image-20240518233755681](1-labm1.assets/image-20240518233755681.png)
+
+![image-20240518233819055](1-labm1.assets/image-20240518233819055.png)
+
