@@ -58,4 +58,118 @@ Notations
 #### Comput. Model
 
 - model the execution process of every application
-- 
+
+- calculate complete time: vehicle movement time, data transmission time, application computing time, 
+
+    result transmission time. 
+
+    - Vehicle movement: time taken for **one vehicle** from **starting point** to the **coverage range** of one RSU.
+    - Application computing: app completed on RSU
+    - computation result transmis ignored: result of one application is much smaller than input size
+    
+- Application $T_m$ offloaded frm V $m$ to RSU $n$,  denote $t_m^{\text {process }}$ as total completion time: app $T_m$ processed on RSU $n$. 
+
+    - Movement Time: 车m从开始移动到RSU n覆盖范围, $T_m$可以可以从车n到RSU m
+
+        - 车m经过n-1个路段
+
+        - movement time of vehicle: $t_m^{\text {mov }}$ time taken for vehicle *m* from its starting point to the coverage range of RSU n
+
+        - $$
+            t_m^{\mathrm{mov}}=\sum_{k=1}^{n-1} \frac{L_k}{v}
+            $$
+
+    - Transmission time
+
+        - $t_m^{\mathrm{send}}$: transmission time of input data $d_m$ of application $T_m$. 
+
+        - $p_m$: transmission power of vehicle *m*
+
+        - $g_m^n$: **channel gain** between vehicle *m* and RSU *n* (what is channel gain used for)
+
+        - $s_m^n$: data transmission rate of the link between vehicle *m* to RSU *n*
+
+            - *W* represents the bandwidth of the link between vehicle m to RSU n
+
+            - $N_0$ is the noise power
+
+            - $$
+                s_m^n=W \log \left(1+\frac{p_m g_m^n}{N_0}\right)
+                $$
+
+        - the data transmission time $t_m^{\text {send }}$ (m上传大小为$d_m$的应用$T_m$是)
+
+            - $$
+                t_m^{\text {send }}=\frac{d_m}{s_m^n}
+                $$
+
+    - Computing time
+
+        - Computation of each RSU is limited, each MEC server on RSUs can only execute 1 task 
+
+            - $\mathrm{AFT}_{m, i}$ := **actual** time that task $T_{m,i}$is completed(**Finished**) on MEC servers
+
+                - Ith task of application Tm
+
+            - ready time $\mathrm{RT}_{m, i}$ of task $T_{m, i}$ is 
+
+                - **Ready Time**
+
+                - $$
+                    \mathrm{RT}_{m, i}=\max _{T_{m, h} \in \operatorname{pre}\left(T_{m, i}\right)} \mathrm{AFT}_{m, h}
+                    $$
+
+			-   Idle MEC server $r$, $r \in \mathcal{R}$表示一个MEC server 在RSU上. Task $T_{m, i}$ can be scheduled to MEC server $r$. 
+			
+			- 要是有冲突, 后来的得等
+			
+			- $\mathrm{AT}_{m, i, r}$:= earliest **time** that MEC server *r* is **available** for task $T_{m, i}$
+			
+			    - earliest start time of one task = earliest time one task **has been started** after the task has been **ready** and  MEC server is available for the task
+			    - $\mathrm{EST}_{m, i, r}=\max \left\{\mathrm{RT}_{m, i}, \mathrm{AT}_{m, i, r}\right\}$
+			
+			- $\mathrm{ET}_{m, i, r}$: Execution Time of task m part i on MEC r $\mathrm{ET}_{m, i, r}=\frac{b_{m, i}}{f_r}$
+			
+			    - $b_{m, i}$ = amount of computation resource for $T_{m, i}$. 
+			    - $f_r$ = comp cap of MEC server r
+			
+			- Earliest Finish time $\mathrm{EFT}_{m, i, r}=\mathrm{EST}_{m, i, r}+\mathrm{ET}_{m, i, r}$.
+			
+			- actual finish time is the same as $\text{EFT}_{m, i, r}=\text{AFT}_{m, i}$.
+			
+			    - $T_{m, I}$ as exit task of $T_m$, 
+			
+			- $t_m^{\text {comp }}=\mathrm{AFT}_{m, I}$
+			
+			- $t_m^{\text {process }}=t_m^{\text {mov }}+t_m^{\text {send }}+t_m^{\text {comp }}$.
+
+#### 问题描述
+
+scheduling decision variable
+
+- $x_{m, i, r}= \begin{cases}1, & \text { if task } T_{m, i} \text { can be executed on MEC server } r \\ 0, & \text { otherwise }\end{cases}$
+- each task is scheduled only 1 MEC server, have $\sum_{r=1}^R x_{m, i, r}=1$
+
+a binary variable $y_{h, i}$ to specify the task scheduling order
+
+- $y_{h, i}= \begin{cases}1, & \text { if task } h \text { is scheduled before task } i \\ 0, & \text { otherwise }\end{cases}$
+- $y_{h, i}=1$ represents that task $i$ is not scheduled until task $h$ has been scheduled.
+
+earliest start time $\mathrm{EST}_{m, i, r}$ of task $T_{m, i}$ on MEC server $r$ should meet
+
+- $\mathrm{EST}_{m, i, r} \geq x_{m, i, r} \cdot x_{s, h, r} \cdot y_{h, i} \cdot \mathrm{EFT}_{s, h}$, forall h.
+
+task dependency among the tasks belonging to the same application should meet
+
+- $\mathrm{AFT}_{m, i} \geq y_{h, i} \cdot \mathrm{AFT}_{m, h}$. forall h
+
+finish time of exit task of application $T_m$ should be 
+
+- $\mathrm{AFT}_{m, I} \leq t_m^{\max }-t_m^{\text {mov }}-t_m^{\text {send }}$
+- $T_m$ can be finished within its range
+
+an optimization problem 
+$$
+\begin{aligned} \min \quad \frac{1}{m}[ & \sum_{m=1}^M\left(t_m^{\mathrm{mov}}+t_m^{\mathrm{send}}\right) \\ & \left.+\sum_{m=1}^M \sum_{i=1}^I \sum_{r=1}^R x_{m, i, r} \cdot \mathrm{EFT}_{m, i, r}\right]\end{aligned}
+$$
+subject to above constraints mixed-integer nonlinear programming problem

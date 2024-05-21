@@ -36,6 +36,7 @@ extra_css:
   - css/latex.css
 
 markdown_extensions:
+  - pymdownx.arithmatex
   - admonition
   - attr_list
   - md_in_html
@@ -44,3 +45,9 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.magiclink

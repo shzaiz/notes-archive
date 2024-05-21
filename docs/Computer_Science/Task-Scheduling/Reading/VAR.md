@@ -140,7 +140,9 @@ $\newcommand{\M}{\mathbb{M}}$
   - energy consumption cost during data computing and transmitting
   - 队列处理模式: data with a smaller queue index should be processed first
 
-📢$\mathcal{V}_k^t$表示一堆车在路段$k$, 时刻$t$的时候, 被丢弃的数据表达为
+📢$\mathcal{V}_k^t$表示一堆车在路段$k$, 时刻$t$​的时候, 被丢弃的数据表达为
+
+
 $$
 D_{\text {loss }}^t=\sum_{k \in \mathbb{K}}\left(\sum_{n \in \mathcal{V}_k^t} \alpha_{n, k}^t \max \left\{0, q_{n, 1}^t-D_n^{\text {local }}\right\}+\mu_k^t \max \left\{0, g_{k, 1}^t-D_k^{\mathrm{ECN}}\right\}+\left(1-\alpha_{n, k}^t\right) q_{n, 1}^t+\left(1-\mu_k^t\right) g_{k, 1}^t\right)
 $$
@@ -152,6 +154,8 @@ $$
 - $D_k^{\mathrm{ECN}}$=data processing capabilities of RSU at one timeslot
 
 📢为了满足交流延迟, 用好计算资源, 变为如下的优化问题
+
+
 $$
 \begin{aligned}
 \min _{\{\alpha, \beta, \gamma, \delta, \mu\}} \text { Loss }=\sum_{t=1}^{\infty}\left\{\xi D_{\text {loss }}^t\right. & +\sum_{k \in \mathbb{K}}\left(\varrho E_n^{\text {local }} \sum_{n \in \mathcal{V}_k^t} \alpha_{n, k}^t\right. \\
@@ -179,8 +183,6 @@ $$
 - 观察: *Loss* mainly depends on the states and data scheduling actions of both V and RSUs
 
   - 下一个状态仅仅取决于本次
-
-- 
 
 - 形式化
 
