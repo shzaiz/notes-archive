@@ -109,12 +109,10 @@
     text-decoration-skip-ink: auto;
   }
 
-  
 
-  
   /* Make images easier to work with */
   img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     display: block;
   }
@@ -147,4 +145,13 @@
     hyphens: none;
   }
 
+  .gossip {
+    font-size: small;
+    text-align: right;
+    width: 80%;
+    margin-left: auto; 
+    border: 1px solid black; 
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
   
