@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/vincentdoerig/latex-css/blob/master/LICENSE)
 */
 
+.md-typeset img,.md-typeset svg,.md-typeset video {
+  height: auto;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   
   :root {
@@ -155,3 +161,5 @@
     box-sizing: border-box; 
   }
   
+  /* Additional CSS */
+

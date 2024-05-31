@@ -89,7 +89,7 @@ Bellard](https://en.wikipedia.org/wiki/Fabrice_Bellard)发明的QEMU让我们可
 首先我们要配置上面说的新建一个虚拟机. 相当于购买了新的电脑硬件.
 由于把硬盘选到物理的USB的行为很不常见, 所以我们要选择自定义.
 
-![](images/clipboard-4149302847.png)
+![第一步](images/clipboard-4149302847.png "第一步数学")
 
 由于现在是配置一个架子, 那么除了 “安装客户机操作系统” 选项中选择
 “稍后安装操作系统”, 以及选对要安装的系统类型(Ubuntu 64位)之外,
