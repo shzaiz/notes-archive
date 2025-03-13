@@ -25,6 +25,11 @@ jobs:
           sudo add-apt-repository "deb http://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/ focal universe"
           sudo apt-get update
           sudo apt-get install texmacs
+          mkdir -p ~/.TeXmacs
+          cd ~/.TeXmacs
+          wget ftp://ftp.texmacs.org/pub/TeXmacs/fonts/TeXmacs-chinese-fonts.tar.gz
+          gunzip -c TeXmacs-*-fonts.tar.gz | tar xvf -
+          
           
       
       - name: Run TeXmacs script with headless option
