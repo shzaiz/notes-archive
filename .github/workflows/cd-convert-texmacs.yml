@@ -19,7 +19,12 @@ jobs:
           fetch-depth: 1
 
       - name: Install TeXmacs
-        run: sudo apt-get update && sudo apt-get install -y texmacs
+        run: |
+          wget https://www.texmacs.org/Download/ftp/tmftp/generic/TeXmacs-2.1.4-C.tar.gz
+          gunzip -c TeXmacs-*-*.tar.gz | tar xvf -
+          export TEXMACS_PATH=$(PWD)
+          export PATH=$TEXMACS_PATH/bin:$PATH
+          
       
       - name: Run TeXmacs script with headless option
         run: |
