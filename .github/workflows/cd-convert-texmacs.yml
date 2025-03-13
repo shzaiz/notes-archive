@@ -21,10 +21,12 @@ jobs:
       - name: Install TeXmacs
         run: |
           wget https://www.texmacs.org/Download/ftp/tmftp/generic/TeXmacs-2.1.4-C.tar.gz
-          gunzip -c TeXmacs-*-*.tar.gz | tar xvf -
+          gunzip -c TeXmacs-2.1.4-x86_64.tar.gz | tar xvf -
+          cd TeXmacs-2.1.4-x86_64/TeXmacs
           export TEXMACS_PATH=$(PWD)
           export PATH=$TEXMACS_PATH/bin:$PATH
           ls
+          echo $(PWD)
           
       
       - name: Run TeXmacs script with headless option
