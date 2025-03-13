@@ -20,15 +20,11 @@ jobs:
 
       - name: Install TeXmacs
         run: |
-          name=$(lsb_release -cs)
           curl --insecure https://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/apt-texmacs.asc --output apt-texmacs.asc
-          sudo bash
-          apt-key add apt-texmacs.asc
-          rm apt-texmacs.asc
-          add-apt-repository "deb http://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/ focal universe"
-          apt-get update
-          apt-get install texmacs
-          echo name
+          sudo apt-key add apt-texmacs.asc
+          sudo add-apt-repository "deb http://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/ focal universe"
+          sudo apt-get update
+          sudo apt-get install texmacs
           
       
       - name: Run TeXmacs script with headless option
