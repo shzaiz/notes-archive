@@ -25,7 +25,7 @@ jobs:
           sudo add-apt-repository "deb http://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/ focal universe"
           sudo apt-get update
           sudo apt-get install texmacs
-          sudo apt-get install fonts-droid ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
+          sudo apt-get install ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
           
           
       
