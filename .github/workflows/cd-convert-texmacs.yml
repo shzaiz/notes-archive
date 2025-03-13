@@ -20,13 +20,15 @@ jobs:
 
       - name: Install TeXmacs
         run: |
-          wget https://www.texmacs.org/Download/ftp/tmftp/generic/TeXmacs-2.1.4-C.tar.gz
-          gunzip -c TeXmacs-2.1.4-x86_64.tar.gz | tar xvf -
-          cd TeXmacs-2.1.4-x86_64/TeXmacs
-          export TEXMACS_PATH=$(PWD)
-          export PATH=$TEXMACS_PATH/bin:$PATH
-          ls
-          echo $(PWD)
+          name=$(lsb_release -cs)
+          curl --insecure https://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/apt-texmacs.asc --output apt-texmacs.asc
+          sudo bash
+          apt-key add apt-texmacs.asc
+          rm apt-texmacs.asc
+          add-apt-repository "deb http://ftp.texmacs.org/TeXmacs/tmftp/repos/apt/ focal universe"
+          apt-get update
+          apt-get install texmacs
+          echo name
           
       
       - name: Run TeXmacs script with headless option
@@ -36,7 +38,6 @@ jobs:
 
           # run texmacs scripts
           texmacs_bin=$(which texmacs)
-          echo $(texmacs_bin)
           
           $texmacs_bin -headless -x '(begin (load "notes-tools.scm") (notes-update) (quit))'
 
