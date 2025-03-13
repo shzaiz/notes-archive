@@ -18,9 +18,8 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Load Docker image
-        run: |
-          docker load -i ./.docker-images/shzaiz~tm-docker~L8EAKG.dockerbuild
+      - name: Install TeXmacs
+        run: sudo apt-get update && sudo apt-get install -y texmacs
       
       - name: Run TeXmacs script with headless option
         run: |
