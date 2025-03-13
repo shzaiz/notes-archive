@@ -11,17 +11,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    container:
-      image: ghcr.io/texmacs/texmacs-2.1.4-cd:main.20250313.120903.410Z
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
+
+      - name: Load Docker image
+        run: |
+          docker load -i ./.docker-images/shzaiz~tm-docker~L8EAKG.dockerbuild
       
       - name: Run TeXmacs script with headless option
         run: |
