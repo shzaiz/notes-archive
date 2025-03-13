@@ -24,6 +24,7 @@ jobs:
           gunzip -c TeXmacs-*-*.tar.gz | tar xvf -
           export TEXMACS_PATH=$(PWD)
           export PATH=$TEXMACS_PATH/bin:$PATH
+          ls
           
       
       - name: Run TeXmacs script with headless option
@@ -33,6 +34,8 @@ jobs:
 
           # run texmacs scripts
           texmacs_bin=$(which texmacs)
+          echo $(texmacs_bin)
+          
           $texmacs_bin -headless -x '(begin (load "notes-tools.scm") (notes-update) (quit))'
 
       - name: Commit changes to main and deploy to gh-pages
