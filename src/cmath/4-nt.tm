@@ -595,6 +595,8 @@
   </enumerate>
 
   <\example>
+    \;
+
     <\equation*>
       <\aligned>
         <tformat|<table|<row|<cell|<around|(|1|)>>|<cell|<frac|0|1>,<text|<frame|<math|<frac|1|1>>>>,<frac|1|0>>>|<row|<cell|<around|(|2|)>>|<cell|<frac|0|1>,<text|<frame|<math|<frac|1|2>>>>,<frac|1|1>,<text|<frame|<math|<frac|2|1>>>>,<frac|1|0>>>|<row|<cell|<around|(|3|)>>|<cell|<frac|0|1>,<text|<frame|<math|<frac|1|3>>>>,<frac|1|2>,<text|<frame|<math|<frac|2|3>>>>,<frac|1|1>,<text|<frame|<math|<frac|3|2>>>>,<frac|2|1>,<text|<frame|<math|<frac|3|1>>>>,<frac|1|0>.>>>>

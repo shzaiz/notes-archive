@@ -1142,7 +1142,9 @@
 
     <\equation*>
       <\aligned>
-        <tformat|<table|<row|<cell|<big|sum>x<boxed|2<rsup|x>>\<delta\>*x=<big|sum>x*\<delta\><around*|(|2<rsup|x>|)>>|<cell|=x*2<rsup|x>-<big|sum>2<rsup|<boxed|x+1>>*\<delta\>*x>>|<row|<cell|>|<cell|=x*2<rsup|x>-2<rsup|x+1>+c.>>>>
+        <tformat|<table|<row|<cell|<big|sum>x<block|<tformat|<table|<row|<cell|2<rsup|x>
+        >>>>>\<delta\>*x=<big|sum>x*\<delta\><around*|(|2<rsup|x>|)>>|<cell|=x*2<rsup|x>-<big|sum>2<rsup|<block|<tformat|<table|<row|<cell|x+1
+        >>>>>>*\<delta\>*x>>|<row|<cell|>|<cell|=x*2<rsup|x>-2<rsup|x+1>+c.>>>>
       </aligned>
     </equation*>
 
