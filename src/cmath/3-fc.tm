@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|libertine-font>>
 
 <\body>
   <\hide-preamble>
@@ -979,9 +979,7 @@
 
 <\initial>
   <\collection>
-    <associate|font|roman>
     <associate|font-base-size|8>
-    <associate|font-family|rm>
     <associate|math-font|roman>
     <associate|page-top|1in>
   </collection>
