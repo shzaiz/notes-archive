@@ -44,6 +44,14 @@
   \<#6781\>\<#5927\>\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>|./ml/0-sbasis.tm>>|<cell|<hlink|1.
   \<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#6CD5\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>|./ml/1-minsq.tm>>>|<row|<cell|>|<cell|>>>>>
 
+  \;
+
+  \<#7A0B\>\<#5E8F\>\<#8BBE\>\<#8BA1\>\<#8BED\>\<#8A00\>
+
+  <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|1.
+  \<#65E0\>\<#7C7B\>\<#578B\>\<#7684\><math|\<lambda\>
+  >-\<#6F14\>\<#7B97\>|./fp/fp.tm>>|<cell|>>|<row|<cell|>|<cell|>>>>>
+
   <hrule>
 
   \;
