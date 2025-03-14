@@ -13,12 +13,17 @@
 
   <chapter*|Notes On Mathematics>
 
+  \;
+
   \<#6982\>\<#7387\>\<#8BBA\>
 
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|1.
   \<#6982\>\<#7387\>\<#7A7A\>\<#95F4\>|./prob/1-pres.tm>>|<cell|<hlink|2.
   \<#968F\>\<#673A\>\<#53D8\>\<#91CF\>|./prob/2-rand-var.tm>>|<cell|<hlink|3.
-  \<#77E9\>\<#4E0E\>\<#504F\>\<#5DEE\>|./prob/3-moment-deriv.tm>>>>>>
+  \<#77E9\>\<#4E0E\>\<#504F\>\<#5DEE\>|./prob/3-moment-deriv.tm>>>|<row|<cell|4.
+  \<#8FDE\>\<#7EED\>\<#5206\>\<#5E03\>>|<cell|<hlink|5.
+  \<#6536\>\<#655B\>\<#7684\>\<#5E8F\>\<#5217\>\<#548C\>\<#6781\>\<#9650\>\<#5B9A\>\<#7406\>|./prob/5-conv-seq.tm>>|<cell|<hlink|6.
+  \<#4E24\>\<#4E2A\>\<#754C\>\<#9650\>|./prob/4-ch-bound.tm>>>>>>
 
   \;
 
@@ -27,7 +32,17 @@
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|1.
   \<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#57FA\>\<#7840\>|./cmath/2-sum.tm>>|<cell|<hlink|2.
   \<#4E0A\>\<#53D6\>\<#6574\>\<#548C\>\<#4E0B\>\<#53D6\>\<#6574\>|./cmath/3-fc.tm>>|<cell|<hlink|3.
-  \<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>|./prob/3-moment-deriv.tm>>>>>>
+  \<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>|./cmath/4-nt.tm>>>|<row|<cell|4.
+  \<#5B9E\>\<#8DF5\>\<#4E2D\>\<#7684\>\<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>>|<cell|5.
+  \<#4E8C\>\<#9879\>\<#5F0F\>\<#7CFB\>\<#6570\>>|<cell|>>>>>
+
+  \;
+
+  \<#673A\>\<#5668\>\<#5B66\>\<#4E60\>
+
+  <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|0.
+  \<#6781\>\<#5927\>\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>|./ml/0-sbasis.tm>>|<cell|<hlink|1.
+  \<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#6CD5\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>|./ml/1-minsq.tm>>>|<row|<cell|>|<cell|>>>>>
 
   <hrule>
 

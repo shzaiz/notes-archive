@@ -78,6 +78,7 @@ jobs:
 
           # copy 'index.html'
           cp ../${ROOT_INDEX_FILE} .
+          echo "note.zgwwiki.top" > CNAME
           
           # commit & push
           git add --all
