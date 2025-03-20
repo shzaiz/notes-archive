@@ -42,7 +42,8 @@
 
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|0.
   \<#6781\>\<#5927\>\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>|./ml/0-sbasis.tm>>|<cell|<hlink|1.
-  \<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#6CD5\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>|./ml/1-minsq.tm>>>|<row|<cell|>|<cell|>>>>>
+  \<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#6CD5\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>|./ml/1-minsq.tm>>>|<row|<cell|<hlink|2.
+  \<#5BF9\>\<#6570\>\<#51E0\>\<#7387\>\<#56DE\>\<#5F52\>|./ml/2-log-reg.tm>>|<cell|>>>>>
 
   \;
 
