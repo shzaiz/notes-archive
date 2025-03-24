@@ -33,8 +33,8 @@
   \<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#57FA\>\<#7840\>|./cmath/2-sum.tm>>|<cell|<hlink|2.
   \<#4E0A\>\<#53D6\>\<#6574\>\<#548C\>\<#4E0B\>\<#53D6\>\<#6574\>|./cmath/3-fc.tm>>|<cell|<hlink|3.
   \<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>|./cmath/4-nt.tm>>>|<row|<cell|4.
-  \<#5B9E\>\<#8DF5\>\<#4E2D\>\<#7684\>\<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>>|<cell|5.
-  \<#4E8C\>\<#9879\>\<#5F0F\>\<#7CFB\>\<#6570\>>|<cell|>>>>>
+  \<#5B9E\>\<#8DF5\>\<#4E2D\>\<#7684\>\<#6570\>\<#8BBA\>\<#51FD\>\<#6570\>>|<cell|<hlink|5.
+  \<#8BA1\>\<#6570\>\<#539F\>\<#7406\>(\<#590D\>\<#4E60\>)|./cmath/5-counting.tm>>|<cell|>>>>>
 
   \;
 
@@ -43,7 +43,8 @@
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|0.
   \<#6781\>\<#5927\>\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>|./ml/0-sbasis.tm>>|<cell|<hlink|1.
   \<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#6CD5\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>|./ml/1-minsq.tm>>>|<row|<cell|<hlink|2.
-  \<#5BF9\>\<#6570\>\<#51E0\>\<#7387\>\<#56DE\>\<#5F52\>|./ml/2-log-reg.tm>>|<cell|>>>>>
+  \<#5BF9\>\<#6570\>\<#51E0\>\<#7387\>\<#56DE\>\<#5F52\>|./ml/2-log-reg.tm>>|<cell|<hlink|3.
+  \<#7EBF\>\<#6027\>\<#5224\>\<#522B\>\<#5206\>\<#6790\>|./ml/3-lda.tm>>>>>>
 
   \;
 
@@ -51,7 +52,9 @@
 
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|1.
   \<#65E0\>\<#7C7B\>\<#578B\>\<#7684\><math|\<lambda\>
-  >-\<#6F14\>\<#7B97\>|./fp/fp.tm>>|<cell|>>|<row|<cell|>|<cell|>>>>>
+  >-\<#6F14\>\<#7B97\>|./fp/fp.tm>>|<cell|2.
+  Coq\<#548C\>\<#7C7B\>\<#578B\>>>|<row|<cell|3.
+  Coq\<#4E2D\>\<#7684\>\<#7B56\>\<#7565\>>|<cell|>>>>>
 
   <hrule>
 
