@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese>>
 
 <\body>
   <\hide-preamble>
@@ -407,135 +407,34 @@
     <associate|auto-4|<tuple|2.2|?>>
     <associate|auto-5|<tuple|2.3|?>>
     <associate|auto-6|<tuple|2.4|?>>
-    <associate|auto-7|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1588|<tuple|?|?>>
-    <associate|magicparlabel-1589|<tuple|?|?>>
-    <associate|magicparlabel-1590|<tuple|?|?>>
-    <associate|magicparlabel-1591|<tuple|?|?>>
-    <associate|magicparlabel-1592|<tuple|?|?>>
-    <associate|magicparlabel-1593|<tuple|1|?>>
-    <associate|magicparlabel-1596|<tuple|3|?>>
-    <associate|magicparlabel-1597|<tuple|3|?>>
-    <associate|magicparlabel-1598|<tuple|3|?>>
-    <associate|magicparlabel-1599|<tuple|3|?>>
-    <associate|magicparlabel-1600|<tuple|3|?>>
-    <associate|magicparlabel-1601|<tuple|3|?>>
-    <associate|magicparlabel-1602|<tuple|3|?>>
-    <associate|magicparlabel-1603|<tuple|3|?>>
-    <associate|magicparlabel-1604|<tuple|3|?>>
-    <associate|magicparlabel-1605|<tuple|3|?>>
-    <associate|magicparlabel-1606|<tuple|3|?>>
-    <associate|magicparlabel-1607|<tuple|3|?>>
-    <associate|magicparlabel-1608|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1610|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1611|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1612|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1613|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1614|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1615|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1616|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1617|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1618|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1619|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1620|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1621|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1622|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1626|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1627|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1628|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1629|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1630|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1631|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1632|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1633|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1634|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1635|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1636|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1637|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1638|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1639|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1640|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1641|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1647|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1648|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1649|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1650|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1651|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1655|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1656|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1657|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1658|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1659|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1660|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1661|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1662|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1663|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1664|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1665|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1666|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1667|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1668|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1669|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1670|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1671|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1672|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1673|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1674|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1675|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1676|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1680|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1681|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1682|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1683|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1686|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1687|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1688|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1689|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1690|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1691|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1692|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1693|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1694|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1695|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1696|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1697|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1698|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1699|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1700|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1701|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1702|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1703|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1704|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1705|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1706|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1707|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1709|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1710|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|magicparlabel-1711|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
-    <\associate|idx>
-      <tuple|<tuple|>|<pageref|auto-2>>
-
-      <tuple|<tuple|>|<pageref|auto-4>>
-
-      <tuple|<tuple|>|<pageref|auto-6>>
-    </associate>
     <\associate|toc>
-      1.<space|2spc>\<#77E9\>\<#751F\>\<#6210\>\<#51FD\>\<#6570\>(\<#7EE7\>\<#7EED\>)
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.<space|2spc>\<#5F15\>\<#8A00\> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      2.<space|2spc>\<#63A8\>\<#5BFC\>\<#5F97\>\<#5230\>Chernoff\<#754C\>
+      2.<space|2spc>\<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>
+      <no-break><pageref|auto-2>
 
-      <with|par-left|<quote|1tab>|2.1.<space|2spc>Hoeffding\<#754C\>
+      <with|par-left|<quote|1tab>|2.1.<space|2spc>\<#76F4\>\<#7EBF\>\<#62DF\>\<#5408\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|2.2.<space|2spc>\<#591A\>\<#9879\>\<#5F0F\>\<#62DF\>\<#5408\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|2.3.<space|2spc>\<#505A\>\<#53D8\>\<#91CF\>\<#4EE3\>\<#6362\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|1tab>|2.4.<space|2spc>\<#5BF9\>\<#4E8E\>\<#4F7F\>\<#7528\>\<#8BA1\>\<#7B97\>\<#5668\>\<#7684\>\<#9644\>\<#6CE8\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
     </associate>
   </collection>
 </auxiliary>

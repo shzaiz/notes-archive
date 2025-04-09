@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -669,7 +669,7 @@
     <associate|auto-9|<tuple||?>>
     <associate|def:mle1|<tuple|2|?>>
     <associate|def:mle2|<tuple|3|?>>
-    <associate|ex:normal|<tuple|7|?>>
+    <associate|ex:normal|<tuple|3|?>>
     <associate|footnote-1|<tuple|1|?>>
     <associate|footnr-1|<tuple|1|?>>
   </collection>
@@ -677,29 +677,38 @@
 
 <\auxiliary>
   <\collection>
+    <\associate|idx>
+      <tuple|<tuple|>|<pageref|auto-3>>
+
+      <tuple|<tuple|>|<pageref|auto-4>>
+
+      <tuple|<tuple|>|<pageref|auto-6>>
+
+      <tuple|<tuple|>|<pageref|auto-7>>
+
+      <tuple|<tuple|>|<pageref|auto-8>>
+
+      <tuple|<tuple|>|<pageref|auto-9>>
+
+      <tuple|<tuple|>|<pageref|auto-11>>
+    </associate>
     <\associate|toc>
-      1.<space|2spc>\<#5F15\>\<#8A00\> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      1.<space|2spc>\<#6570\>\<#7406\>\<#7EDF\>\<#8BA1\>\<#7684\>\<#57FA\>\<#672C\>\<#6982\>\<#5FF5\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      2.<space|2spc>\<#6700\>\<#5C0F\>\<#4E8C\>\<#4E58\>\<#66F2\>\<#7EBF\>\<#62DF\>\<#5408\>
+      <with|par-left|<quote|3tab>|1. \<#5F15\>\<#5165\>:
+      \<#4EC0\>\<#4E48\>\<#662F\>\<#6570\>\<#7406\>\<#7EDF\>\<#8BA1\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>
+      <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|2.1.<space|2spc>\<#76F4\>\<#7EBF\>\<#62DF\>\<#5408\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
-
-      <with|par-left|<quote|1tab>|2.2.<space|2spc>\<#591A\>\<#9879\>\<#5F0F\>\<#62DF\>\<#5408\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
-
-      <with|par-left|<quote|1tab>|2.3.<space|2spc>\<#505A\>\<#53D8\>\<#91CF\>\<#4EE3\>\<#6362\>
+      <with|par-left|<quote|3tab>|2. \<#57FA\>\<#672C\>\<#7684\>\<#6982\>\<#5FF5\>\<#548C\>\<#5B9A\>\<#4E49\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.4.<space|2spc>\<#5BF9\>\<#4E8E\>\<#4F7F\>\<#7528\>\<#8BA1\>\<#7B97\>\<#5668\>\<#7684\>\<#9644\>\<#6CE8\>
+      2.<space|2spc>\<#6781\>\<#5927\>(\<#6700\>\<#5927\>)\<#4F3C\>\<#7136\>\<#4F30\>\<#8BA1\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-10>
     </associate>
   </collection>
 </auxiliary>

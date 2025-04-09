@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe|hanging-theorems>>
 
 <\body>
   <\hide-preamble>
@@ -365,7 +365,7 @@
 
     <\equation*>
       <binom|n+m-1|m>=<binom|n+m|m>+<binom|n+m-1|m-1>+\<cdots\>+<binom|n+1|1>+<binom|n+0|0>.
-      </equation*>
+    </equation*>
 
     \<#5176\>\<#53EF\>\<#4EE5\>\<#7528\>\<#5982\>\<#4E0B\>\<#7684\>\<#56FE\>\<#793A\>\<#8BB0\>\<#5FC6\>:\ 
 
@@ -374,7 +374,7 @@
     \<#5BF9\>\<#4E8E\>Vandermonde\<#5377\>\<#79EF\>,
     \<#53EF\>\<#4EE5\>\<#8003\>\<#5BDF\><math|<around*|(|1+x|)><rsup|m+n>=<around*|(|1+x|)><rsup|m>\<cdot\>
     <around*|(|1+x|)><rsup|n>>\<#4E2D\><math|x<rsup|r>>\<#7684\>\<#7CFB\>\<#6570\>.
-    </remark>
+  </remark>
 
   \;
 
@@ -408,7 +408,7 @@
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      1.<space|2spc>\<#57FA\>\<#672C\>\<#8BA1\>\<#6570\>\<#539F\>\<#7406\>
+      1.<space|2spc>\<#57FA\>\<#672C\>\<#8BA1\>\<#6570\>\<#539F\>\<#7406\>(\<#590D\>\<#4E60\>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
@@ -428,7 +428,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      2.<space|2spc>\<#6392\>\<#5217\>\<#7684\>\<#8BA1\>\<#6570\>
+      2.<space|2spc>\<#6392\>\<#5217\>\<#7684\>\<#8BA1\>\<#6570\>(\<#590D\>\<#4E60\>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
@@ -440,11 +440,11 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      3.<space|2spc>\<#7EC4\>\<#5408\>\<#7684\>\<#8BA1\>\<#6570\>
+      3.<space|2spc>\<#7EC4\>\<#5408\>\<#7684\>\<#8BA1\>\<#6570\>(\<#590D\>\<#4E60\>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>
 
-      4.<space|2spc>\<#7EC4\>\<#5408\>\<#6570\>\<#7684\>\<#6027\>\<#8D28\>
+      4.<space|2spc>\<#6B63\>\<#6570\>\<#8303\>\<#56F4\>\<#7EC4\>\<#5408\>\<#6570\>\<#7684\>\<#6027\>\<#8D28\>(\<#590D\>\<#4E60\>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>
     </associate>

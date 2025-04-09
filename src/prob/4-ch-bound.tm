@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -648,125 +648,35 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|?>>
-    <associate|auto-10|<tuple||?>>
-    <associate|auto-11|<tuple|1.1|?>>
-    <associate|auto-12|<tuple||?>>
-    <associate|auto-13|<tuple|1.2|?>>
-    <associate|auto-14|<tuple|1.2.1|?>>
-    <associate|auto-15|<tuple|1.2.2|?>>
-    <associate|auto-16|<tuple|1.2.3|?>>
-    <associate|auto-17|<tuple|1.2.4|?>>
-    <associate|auto-18|<tuple|1.2.5|?>>
-    <associate|auto-19|<tuple|1.2.6|?>>
     <associate|auto-2|<tuple||?>>
-    <associate|auto-20|<tuple|1.3|?>>
-    <associate|auto-21|<tuple|1.3.1|?>>
-    <associate|auto-22|<tuple|1.3.2|?>>
-    <associate|auto-23|<tuple|2|?>>
-    <associate|auto-24|<tuple||?>>
-    <associate|auto-25|<tuple|3|?>>
-    <associate|auto-26|<tuple||?>>
     <associate|auto-3|<tuple|2|?>>
     <associate|auto-4|<tuple||?>>
     <associate|auto-5|<tuple|2.1|?>>
     <associate|auto-6|<tuple||?>>
-    <associate|auto-7|<tuple||?>>
-    <associate|auto-8|<tuple||?>>
-    <associate|auto-9|<tuple||?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|idx>
-      <tuple|<tuple|>|<pageref|auto-5>>
+      <tuple|<tuple|>|<pageref|auto-2>>
 
-      <tuple|<tuple|>|<pageref|auto-8>>
+      <tuple|<tuple|>|<pageref|auto-4>>
 
-      <tuple|<tuple|>|<pageref|auto-9>>
-
-      <tuple|<tuple|>|<pageref|auto-10>>
-
-      <tuple|<tuple|>|<pageref|auto-11>>
-
-      <tuple|<tuple|>|<pageref|auto-12>>
-
-      <tuple|<tuple|>|<pageref|auto-14>>
-
-      <tuple|<tuple|>|<pageref|auto-26>>
+      <tuple|<tuple|>|<pageref|auto-6>>
     </associate>
     <\associate|toc>
-      1.<space|2spc>\<#4E0E\>\<#671F\>\<#671B\>\<#76F8\>\<#5173\>\<#7684\>\<#4E0D\>\<#7B49\>\<#5F0F\>
+      1.<space|2spc>\<#77E9\>\<#751F\>\<#6210\>\<#51FD\>\<#6570\>(\<#7EE7\>\<#7EED\>)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      <with|par-left|<quote|1tab>|1.1.<space|2spc>Markov\<#4E0D\>\<#7B49\>\<#5F0F\>
+      2.<space|2spc>\<#63A8\>\<#5BFC\>\<#5F97\>\<#5230\>Chernoff\<#754C\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      <no-break><pageref|auto-3>
 
-      <with|par-left|<quote|1tab>|1.2.<space|2spc>Chebyshev\<#4E0D\>\<#7B49\>\<#5F0F\>
+      <with|par-left|<quote|1tab>|2.1.<space|2spc>Hoeffding\<#754C\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
-
-      <with|par-left|<quote|1tab>|1.3.<space|2spc>\<#4E2D\>\<#4F4D\>\<#6570\>\<#548C\>\<#671F\>\<#671B\>\<#7684\>\<#5173\>\<#7CFB\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4>>
-
-      2.<space|2spc>\<#65B9\>\<#5DEE\>\<#53CA\>\<#5176\>\<#8BA1\>\<#7B97\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>
-
-      <with|par-left|<quote|2tab>|2.0.1.<space|2spc>\<#57FA\>\<#672C\>\<#5B9A\>\<#4E49\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
-
-      <with|par-left|<quote|1tab>|2.1.<space|2spc>\<#7EBF\>\<#6027\>\<#51FD\>\<#6570\>\<#7684\>\<#65B9\>\<#5DEE\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13>>
-
-      <with|par-left|<quote|1tab>|2.2.<space|2spc>\<#5E38\>\<#89C1\>\<#5206\>\<#5E03\>\<#7684\>\<#65B9\>\<#5DEE\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15>>
-
-      <with|par-left|<quote|2tab>|2.2.1.<space|2spc>Bernoulli\<#968F\>\<#673A\>\<#53D8\>\<#91CF\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16>>
-
-      <with|par-left|<quote|2tab>|2.2.2.<space|2spc>\<#79BB\>\<#6563\>\<#7684\>\<#5747\>\<#5300\>\<#5206\>\<#5E03\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
-
-      <with|par-left|<quote|2tab>|2.2.3.<space|2spc>Possion\<#5206\>\<#5E03\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|2tab>|2.2.4.<space|2spc>\<#51E0\>\<#4F55\>\<#5206\>\<#5E03\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19>>
-
-      <with|par-left|<quote|2tab>|2.2.5.<space|2spc>\<#4E8C\>\<#9879\>\<#5206\>\<#5E03\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
-
-      <with|par-left|<quote|2tab>|2.2.6.<space|2spc>\<#8D1F\>\<#4E8C\>\<#9879\>\<#5206\>\<#5E03\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
-
-      <with|par-left|<quote|1tab>|2.3.<space|2spc>\<#518D\>\<#8BBA\>Chebyshev\<#4E0D\>\<#7B49\>\<#5F0F\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22>>
-
-      <with|par-left|<quote|2tab>|2.3.1.<space|2spc>\<#968F\>\<#673A\>\<#7B97\>\<#6CD5\>\<#7684\>\<#53BB\>\<#968F\>\<#673A\>\<#5316\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
-
-      <with|par-left|<quote|2tab>|2.3.2.<space|2spc>Weierstrass\<#903C\>\<#8FD1\>\<#5B9A\>\<#7406\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>>
-
-      3.<space|2spc>\<#9AD8\>\<#9636\>\<#77E9\>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>
+      <no-break><pageref|auto-5>>
     </associate>
   </collection>
 </auxiliary>

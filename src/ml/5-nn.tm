@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|gnuplot>>
+<style|<tuple|notes|std-latex|gnuplot|chinese>>
 
 <\body>
   <\hide-preamble>
@@ -209,7 +209,7 @@
         \<#5206\>\<#7C7B\>\<#9519\>\<#8BEF\>\<#8D8A\>\<#5C11\>,
         \<#8DDD\>\<#79BB\>\<#8D85\>\<#5E73\>\<#9762\>\<#5C31\>\<#8D8A\>\<#8FD1\>,
         \<#51FD\>\<#6570\>\<#635F\>\<#5931\>\<#503C\>\<#5C31\>\<#8D8A\>\<#5C0F\>.
-        </itemize>
+      </itemize>
     </itemize>
   </itemize>
 
@@ -288,6 +288,10 @@
       <with|par-left|<quote|1tab>|1.1.<space|2spc>\<#611F\>\<#77E5\>\<#673A\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
+
+      2.<space|2spc>\<#795E\>\<#7ECF\>\<#7F51\>\<#7EDC\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3>
     </associate>
   </collection>
 </auxiliary>
