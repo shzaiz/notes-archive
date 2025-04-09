@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|libertine-font>>
+<style|<tuple|notes|std-latex|libertine-font|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -998,7 +998,7 @@
     <associate|auto-8|<tuple|3|?>>
     <associate|auto-9|<tuple|3.1|?>>
     <associate|sec:intro|<tuple|1|?>>
-    <associate|sec:mod|<tuple|16|?>>
+    <associate|sec:mod|<tuple|6|?>>
   </collection>
 </references>
 

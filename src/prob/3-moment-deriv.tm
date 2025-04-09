@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -907,32 +907,32 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-10|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-11|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-12|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-13|<tuple|2.1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-14|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-15|<tuple|2.2|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-16|<tuple|2.2.1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-17|<tuple|2.2.2|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-18|<tuple|2.2.3|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-19|<tuple|2.2.4|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-2|<tuple|1.1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-20|<tuple|2.2.5|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-21|<tuple|2.2.6|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-22|<tuple|2.3|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-23|<tuple|2.3.1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-24|<tuple|2.3.2|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-25|<tuple|3|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-26|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-3|<tuple|1.2|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-4|<tuple|1.3|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-5|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-6|<tuple|2|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-7|<tuple|2.0.1|?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-8|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
-    <associate|auto-9|<tuple||?|../../../CMath-notes/RandP/3-moment-deriv.tex>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-10|<tuple||?>>
+    <associate|auto-11|<tuple||?>>
+    <associate|auto-12|<tuple||?>>
+    <associate|auto-13|<tuple|2.1|?>>
+    <associate|auto-14|<tuple||?>>
+    <associate|auto-15|<tuple|2.2|?>>
+    <associate|auto-16|<tuple|2.2.1|?>>
+    <associate|auto-17|<tuple|2.2.2|?>>
+    <associate|auto-18|<tuple|2.2.3|?>>
+    <associate|auto-19|<tuple|2.2.4|?>>
+    <associate|auto-2|<tuple|1.1|?>>
+    <associate|auto-20|<tuple|2.2.5|?>>
+    <associate|auto-21|<tuple|2.2.6|?>>
+    <associate|auto-22|<tuple|2.3|?>>
+    <associate|auto-23|<tuple|2.3.1|?>>
+    <associate|auto-24|<tuple|2.3.2|?>>
+    <associate|auto-25|<tuple|3|?>>
+    <associate|auto-26|<tuple||?>>
+    <associate|auto-3|<tuple|1.2|?>>
+    <associate|auto-4|<tuple|1.3|?>>
+    <associate|auto-5|<tuple||?>>
+    <associate|auto-6|<tuple|2|?>>
+    <associate|auto-7|<tuple|2.0.1|?>>
+    <associate|auto-8|<tuple||?>>
+    <associate|auto-9|<tuple||?>>
   </collection>
 </references>
 

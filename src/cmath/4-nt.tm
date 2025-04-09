@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|libertine-font>>
+<style|<tuple|notes|std-latex|libertine-font|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>

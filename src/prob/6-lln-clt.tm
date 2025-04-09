@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -749,39 +749,38 @@
     <associate|auto-6|<tuple|2|?>>
     <associate|auto-7|<tuple||?>>
     <associate|auto-8|<tuple||?>>
-    <associate|thm:clt-gen|<tuple|9|?>>
+    <associate|thm:clt-gen|<tuple|4|?>>
     <associate|thm:clt-iid|<tuple||?>>
-    <associate|thm:dist-moment|<tuple|6|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|idx>
+      <tuple|<tuple|>|<pageref|auto-3>>
+
       <tuple|<tuple|>|<pageref|auto-4>>
 
-      <tuple|<tuple|>|<pageref|auto-5>>
-
-      <tuple|<tuple|>|<pageref|auto-6>>
-
       <tuple|<tuple|>|<pageref|auto-7>>
+
+      <tuple|<tuple|>|<pageref|auto-8>>
     </associate>
     <\associate|toc>
-      1.<space|2spc>\<#968F\>\<#673A\>\<#5E8F\>\<#5217\>\<#7684\>\<#6536\>\<#655B\>\<#6027\>
+      1.<space|2spc>\<#5927\>\<#6570\>\<#5B9A\>\<#5F8B\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      <with|par-left|<quote|3tab>|1. \<#5F15\>\<#4F8B\>
+      <with|par-left|<quote|3tab>|\<#5927\>\<#6570\>\<#5B9A\>\<#5F8B\>\<#53CA\>\<#5176\>\<#91CD\>\<#8981\>\<#63A8\>\<#8BBA\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|3tab>|2. \<#4E09\>\<#4E2A\>\<#6536\>\<#655B\>\<#6027\>\<#8D28\>
+      <with|par-left|<quote|3tab>|\<#5927\>\<#6570\>\<#5B9A\>\<#5F8B\>\<#7684\>\<#5E94\>\<#7528\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>>
+      <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|3tab>|3. \<#4E09\>\<#4E2A\>\<#6536\>\<#655B\>\<#6027\>\<#7684\>\<#8054\>\<#7CFB\>
+      2.<space|2spc>\<#4E2D\>\<#5FC3\>\<#6781\>\<#9650\>\<#5B9A\>\<#7406\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8>>
+      <no-break><pageref|auto-6>
     </associate>
   </collection>
 </auxiliary>

@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|libertine-font>>
+<style|<tuple|notes|std-latex|libertine-font|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -1204,7 +1204,7 @@
     <associate|auto-7|<tuple|1.3.1|4>>
     <associate|auto-8|<tuple|1.3.2|4>>
     <associate|auto-9|<tuple|1.3.3|5>>
-    <associate|thm:sum-prop|<tuple|5|2>>
+    <associate|thm:sum-prop|<tuple|1|2>>
   </collection>
 </references>
 

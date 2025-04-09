@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|gnuplot>>
+<style|<tuple|notes|std-latex|gnuplot|chinese>>
 
 <\body>
   <\hide-preamble>
@@ -280,7 +280,6 @@
   <\collection>
     <associate|auto-1|<tuple|1|?>>
     <associate|auto-2|<tuple|2|?>>
-    <associate|auto-3|<tuple|3|?>>
   </collection>
 </references>
 
@@ -290,6 +289,11 @@
       1.<space|2spc>\<#57FA\>\<#672C\>\<#539F\>\<#7406\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
+
+      2.<space|2spc>\<#4F7F\>\<#7528\> Lagrange
+      \<#4E58\>\<#6570\>\<#6CD5\>\<#6C42\>\<#89E3\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>
     </associate>
   </collection>
 </auxiliary>

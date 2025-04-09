@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -1185,13 +1185,13 @@
       <no-break><pageref|auto-13>>
 
       <with|par-left|<quote|2tab>|1.2.1.<space|2spc><with|font-series|<quote|bold>|\<#5E76\>\<#7684\>\<#4E0A\>\<#754C\>(union
-      bound)><assign|the-label|><flag|index|dark
+      bound)><assign|the-label|><flag|\<#7D22\>\<#5F15\>|dark
       green|key><assign|auto-nr|15><write|idx|<tuple|<tuple|>|<pageref|auto-15>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
       <with|par-left|<quote|2tab>|1.2.2.<space|2spc><with|font-series|<quote|bold>|\<#5BB9\>\<#65A5\>\<#539F\>\<#7406\>(principle
-      of inclusion-exclusion, PIE)><assign|the-label|><flag|index|dark
+      of inclusion-exclusion, PIE)><assign|the-label|><flag|\<#7D22\>\<#5F15\>|dark
       green|key><assign|auto-nr|19><write|idx|<tuple|<tuple|>|<pageref|auto-19>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>

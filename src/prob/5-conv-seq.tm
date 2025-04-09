@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex>>
+<style|<tuple|notes|std-latex|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -643,31 +643,37 @@
     <associate|auto-6|<tuple||?>>
     <associate|auto-7|<tuple||?>>
     <associate|auto-8|<tuple|3|?>>
-    <associate|thm:dist-moment|<tuple|6|?>>
+    <associate|thm:dist-moment|<tuple|1|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|idx>
-      <tuple|<tuple|>|<pageref|auto-2>>
-
       <tuple|<tuple|>|<pageref|auto-4>>
 
+      <tuple|<tuple|>|<pageref|auto-5>>
+
       <tuple|<tuple|>|<pageref|auto-6>>
+
+      <tuple|<tuple|>|<pageref|auto-7>>
     </associate>
     <\associate|toc>
-      1.<space|2spc>\<#77E9\>\<#751F\>\<#6210\>\<#51FD\>\<#6570\>(\<#7EE7\>\<#7EED\>)
+      1.<space|2spc>\<#968F\>\<#673A\>\<#5E8F\>\<#5217\>\<#7684\>\<#6536\>\<#655B\>\<#6027\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      2.<space|2spc>\<#63A8\>\<#5BFC\>\<#5F97\>\<#5230\>Chernoff\<#754C\>
+      <with|par-left|<quote|3tab>|1. \<#5F15\>\<#4F8B\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3>
+      <no-break><pageref|auto-2>>
 
-      <with|par-left|<quote|1tab>|2.1.<space|2spc>Hoeffding\<#754C\>
+      <with|par-left|<quote|3tab>|2. \<#4E09\>\<#4E2A\>\<#6536\>\<#655B\>\<#6027\>\<#8D28\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-5>>
+      <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|3tab>|3. \<#4E09\>\<#4E2A\>\<#6536\>\<#655B\>\<#6027\>\<#7684\>\<#8054\>\<#7CFB\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
     </associate>
   </collection>
 </auxiliary>
