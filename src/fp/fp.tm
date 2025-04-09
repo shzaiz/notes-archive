@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|indent-paragraphs|ornaments|std-frame|no-page-numbers|libertine-font>>
+<style|<tuple|notes|indent-paragraphs|ornaments|std-frame|no-page-numbers>>
 
 <\body>
   <\hide-preamble>
@@ -938,8 +938,8 @@
 
   \<#5728\>\<#89E3\>\<#51B3\>\<#8FD9\>\<#4E2A\>\<#4E4B\>\<#524D\>,
   \<#9996\>\<#5148\>\<#7EA6\>\<#5B9A\>\<#4FD7\>\<#6210\>\<#5730\>,
-  \<#8BB0\><math|f<rsup|n >x\<assign\><wide*|f<around*|(|f<around*|(|f<gap|<show-reply||>><around*|(|f
-  x|)><gap|<show-reply||>>|)>|)> <rsub|>|\<wide-underbrace\>><rsub|n\<#6B21\>>>.
+  \<#8BB0\><math|f<rsup|n >x\<assign\><wide*|f<around*|(|f<around*|(|f<around*|(|f
+  x|)>|)>|)> <rsub|>|\<wide-underbrace\>><rsub|n\<#6B21\>>>.
   \<#6211\>\<#4EEC\>\<#7684\>\<#81EA\>\<#7136\>\<#6570\><math|n>\<#88AB\>\<#5B9A\>\<#4E49\>\<#505A\>:<math|<overline|
   n>=\<lambda\> f x.<around*|(|f<rsup|n>x|)>.>
 
@@ -1277,7 +1277,7 @@
       <around*|(|fact <around*|(|pred <overline|2>|)>|)>|)>>>|<row|<cell|<long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>>|<cell|mult
       <overline|2> <around*|(|fact <around*|(|pred
       <overline|2>|)>|)><long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>mult
-      <overline|2> <around*|(|fact 1|)>>>|<row|<cell|<gap|>>|<cell|>>|<row|<cell|<long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>>|<cell|mult
+      <overline|2> <around*|(|fact 1|)>>>|<row|<cell|<long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>>|<cell|mult
       <around*|(|<overline|2> mult<around*|(|<overline|1>
       <overline|1>|)>|)>.>>>>>>
     </solution*>
@@ -1396,6 +1396,9 @@
 
 <\initial>
   <\collection>
+    <associate|font|roman>
+    <associate|font-family|rm>
+    <associate|math-font|roman>
     <associate|page-medium|automatic>
     <associate|page-screen-margin|true>
   </collection>
