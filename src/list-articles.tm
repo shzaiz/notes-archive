@@ -12,12 +12,12 @@
 
   <hrule>
 
-  <notes-entry|main.tm|Notes On Mathematics|(no abstract)|Thu Mar 13 14:27:23
+  <notes-entry|main.tm|Notes On Mathematics|(no abstract)|Tue Apr 15 08:25:48
   2025 UTC>
 
   <notes-entry|list-articles.tm|List of all the articles|A list of all the
-  articles in the website, ordered by the most recent modification time.|Thu
-  Mar 13 14:27:23 2025 UTC>
+  articles in the website, ordered by the most recent modification time.|Tue
+  Apr 15 08:25:48 2025 UTC>
 
   <hrule>
 </body>
