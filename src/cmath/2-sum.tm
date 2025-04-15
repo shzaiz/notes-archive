@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|notes|std-latex|libertine-font|chinese|number-europe>>
+<style|<tuple|notes|libertine-font|chinese|number-europe>>
 
 <\body>
   <\hide-preamble>
@@ -1215,7 +1215,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      <with|par-left|<quote|1tab>|1.1.<space|2spc>\<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#8BB0\>\<#53F7\>
+      <with|par-left|<quote|1tab>|1.1.<space|2spc>\<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#8BB0\>s\<#53F7\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
