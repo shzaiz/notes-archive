@@ -130,7 +130,14 @@
     <assign|iint|<math|<big|int> <big|int> >>
 
     \;
+
+    <assign|doc-title|<macro|x|<\surround|<vspace*|0.5fn>|<vspace|0.5fn>>
+      <doc-title-block|<font-magnify|1.682|<doc-title-name|<arg|x>>>>
+    </surround>>>
   </hide-preamble>
+
+  <center|<really-huge| \<#7B2C\>\<#4E8C\>\<#7AE0\>.
+  \<#548C\>\<#5F0F\>\<#7684\>\<#57FA\>\<#672C\>\<#64CD\>\<#4F5C\>>>
 
   <section|\<#548C\>\<#5F0F\>\<#53CA\>\<#5176\>\<#57FA\>\<#672C\>\<#64CD\>\<#4F5C\>>
 
@@ -1215,7 +1222,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1>
 
-      <with|par-left|<quote|1tab>|1.1.<space|2spc>\<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#8BB0\>s\<#53F7\>
+      <with|par-left|<quote|1tab>|1.1.<space|2spc>\<#548C\>\<#5F0F\>\<#4E0E\>\<#6C42\>\<#548C\>\<#8BB0\>\<#53F7\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2>>
 
