@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>TeXmacs notes</title>
+    <meta charset="utf-8" content="TeXmacs 2.1.4" name="generator"></meta>
+    <link href="../../resources/notes-base.css" type="text/css" rel="stylesheet"></link>
+    <link href="../../resources/blog-icon.png" rel="icon"></link>
+    <script src="../../resources/highlight.pack.js" language="javascript" defer></script>
+    <script src="../../resources/notes-base.js" language="javascript" defer></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <h2 id="auto-1">1.<span style="margin-left: 1em"></span><tt class="verbatim">apply</tt><span style="margin-left: 1em"></span></h2>
+    <p>
+      Use <tt class="verbatim">apply [assumption].</tt> when
+    </p>
+    <ul>
+      <li>
+        <p>
+          Apply the assumption and finish derivation.
+        </p>
+      </li>
+      <li>
+        <p>
+          When <img src="coq2-tactics-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0132892561983471em; margin-right: -0.0112837465564741em; margin-top: -0.0323085399449036em; vertical-align: -0.201101928374656em; height: 0.953476584022039em"></img> in the assumption, the goal is <span
+          class="no-breaks"><img src="coq2-tactics-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0132892561983471em; margin-right: -0.0112837465564739em; margin-top: -0.0323085399449036em; vertical-align: -0.201101928374656em; height: 0.953476584022039em"></img>.</span> Apply <img src="coq2-tactics-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0654765840220386em; margin-top: -0.00974104683195587em; vertical-align: 0em; height: 0.727801652892562em"></img>
+          to goal will yield the goal to <span class="no-breaks"><img src="coq2-tactics-4.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.125818181818182em; margin-top: -0.00974104683195587em; vertical-align: 0em; height: 0.727801652892562em"></img>.</span>
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply can substitute universal quantifiers automatically.
+        </p>
+      </li>
+      <li>
+        <p>
+          By using this, you should make sure the same between hypothesis and
+          goal.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Use <tt class="verbatim">apply [assumption] with ([freevar]:=[val])</tt> when
+      there are free variables in hypothesis, where you can specify their
+      values. 
+    </p>
+    <h2 id="auto-2">2.<span style="margin-left: 1em"></span><tt class="verbatim">transitivity</tt><span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">transitivity [sth]</tt> is equivalent with <tt class="verbatim">apply
+      trans_eq with (m:=x)</tt>. 
+    </p>
+    <h2 id="auto-3">3.<span style="margin-left: 1em"></span><tt class="verbatim">symmetry</tt><span style="margin-left: 1em"></span></h2>
+    <p>
+      Change goal's left hand side and right hand side.
+    </p>
+    <h2 id="auto-4">4.<span style="margin-left: 1em"></span><tt class="verbatim">injection</tt><span style="margin-left: 1em"></span></h2>
+    <p>
+      Based on the inductive-defined types, (1) it's usually injective.
+      (different constructors yields different values); (2) it's disjoint. 
+    </p>
+    <p>
+      Tactic <tt class="verbatim">injection [hypothesis]</tt> destruct to different
+      accoding to its constructor. It's also possible to <tt class="verbatim">injection
+      [hyp] as [subgoal names].</tt> 
+    </p>
+    <p>
+      The inverse of <tt class="verbatim">injection</tt> is <tt class="verbatim">f_equal</tt>.
+      That is <span class="no-breaks"><img src="coq2-tactics-5.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0119449035812664em; margin-top: -0.0320881542699725em; vertical-align: -0.201101928374656em; height: 0.976044077134986em"></img>.</span>
+    </p>
+    <h2 id="auto-5">5.<span style="margin-left: 1em"></span><tt class="verbatim">discriminate</tt><span style="margin-left: 1em"></span></h2>
+    <p>
+      
+    </p>
+  </body>
+</html>

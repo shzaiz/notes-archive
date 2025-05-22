@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>TeXmacs notes</title>
+    <meta charset="utf-8" content="TeXmacs 2.1.4" name="generator"></meta>
+    <link href="../../resources/notes-base.css" type="text/css" rel="stylesheet"></link>
+    <link href="../../resources/blog-icon.png" rel="icon"></link>
+    <script src="../../resources/highlight.pack.js" language="javascript" defer></script>
+    <script src="../../resources/notes-base.js" language="javascript" defer></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <h2 id="auto-1">1.<span style="margin-left: 1em"></span>The Coq Programming Language<span style="margin-left: 1em"></span></h2>
+    <p>
+      Coq is a purely functional language that with dependent types:
+    </p>
+    <ul>
+      <li>
+        <p>
+          Terms can depend on terms(i.e. regular functions)
+        </p>
+        <p>
+          <img src="coq1-basics-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0122314049586777em; margin-right: -0.0112837465564741em; margin-top: -0.0141267217630854em; vertical-align: -0.258578512396694em; height: 1.06067217630854em"></img>
+        </p>
+      </li>
+      <li>
+        <p>
+          Terms can be depend on types (polymorphic terms); e.g. List&lt;T&gt;
+        </p>
+        <p>
+          <img src="coq1-basics-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0122314049586777em; margin-right: -0.0288705234159785em; margin-top: -0.0141267217630854em; vertical-align: -0.258578512396694em; height: 1.06067217630854em"></img>
+        </p>
+      </li>
+      <li>
+        <p>
+          Types can depend on types (type constructors)
+        </p>
+        <p>
+          List::<img src="coq1-basics-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564737em; margin-top: -0.0321763085399449em; vertical-align: 0em; height: 0.524694214876033em"></img>
+        </p>
+      </li>
+      <li>
+        <p>
+          Types can be depend on terms
+        </p>
+      </li>
+    </ul>
+    <p>
+      For example, <tt class="verbatim">sprintf</tt> in C library takes in a format
+      string, and uses vaiable length arguments to indicate its conversion.
+      Here are some examples:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">sprintf &quot;foo&quot;</tt> <img src="coq1-basics-4.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.019900826446281em; margin-right: -0.0112837465564741em; margin-top: -0.0262258953168044em; vertical-align: -0.200132231404959em; height: 0.930909090909091em"></img>
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">sprintf &quot;x = %d&quot;</tt> : <img src="coq1-basics-5.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.019900826446281em; margin-right: -0.0112837465564741em; margin-top: -0.0262258953168044em; vertical-align: -0.200132231404959em; height: 0.930909090909091em"></img>
+          (takes int and returns string)
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">sprintf &quot;%s = %d&quot;</tt> : <img src="coq1-basics-6.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.019900826446281em; margin-right: -0.0112837465564741em; margin-top: -0.0262258953168044em; vertical-align: -0.200132231404959em; height: 0.930909090909091em"></img>
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">sprinf</tt> : <img src="coq1-basics-7.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.019900826446281em; margin-right: -0.0112837465564732em; margin-top: -0.0262258953168044em; vertical-align: -0.200132231404959em; height: 0.930909090909091em"></img> . It depends on its
+          first argument. 
+        </p>
+        <p>
+          <tt class="verbatim">sprintf (s:string) : sprintType s</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <img src="coq1-basics-8.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564724em; margin-top: 0em; vertical-align: 0em; height: 20.3012672176309em"></img>
+    </p>
+    <p>
+      <img src="coq1-basics-9.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564724em; margin-top: 0em; vertical-align: 0em; height: 17.3672286501377em"></img>
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
