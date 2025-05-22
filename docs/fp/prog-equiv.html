@@ -49,12 +49,48 @@
     <p>
       Their equivalence are defined as 
     </p>
-    <p style="margin-top: 1em; margin-bottom: 1em">
+    <p style="margin-top: 1em">
       <class style="font-variant: small-caps">Definition <class style="font-style: normal">1</class>. </class><i><class
       style="font-style: normal"><class style="font-variant: small-caps">(Equivalence of Expressions) </class></class>For
       aexps and bexps with variables, Two aexps or bexps are
       &ldquo;behaviorally equivalent&rdquo; if they evaluate to the same
       result in every state.</i>
+    </p>
+    <div style="margin-bottom: 1em">
+      <i><pre class="verbatim" xml:space="preserve">
+Definition aequiv (a1 a2 : aexp) : Prop :=
+  forall (st : state),
+    aeval st a1 = aeval st a2.
+
+Definition bequiv (b1 b2 : bexp) : Prop :=
+  forall (st : state),
+    beval st b1 = beval st b2.</pre></i>
+    </div>
+    <p style="margin-top: 1em">
+      <class style="font-variant: small-caps">Definition <class style="font-style: normal">2</class>. </class><i><class
+      style="font-style: normal"><class style="font-variant: small-caps">(Equivalence of Commands) </class></class>Two
+      commands are behaviorally equivalent if, for any given starting state,
+      they either (1) both diverge or (2) both terminate in the same final
+      state. A compact way to express this is &ldquo;if the first one
+      terminates in a particular state then so does the second, and vice
+      versa.&quot;</i>
+    </p>
+    <i><pre class="verbatim" xml:space="preserve">
+Definition cequiv (c1 c2 : com) : Prop :=
+  &forall; (st st' : state),
+    (st =[ c1 ]=&gt; st') &harr; (st =[ c2 ]=&gt; st').</pre></i>
+    <p>
+      <i>We say that c<sub>1</sub> <i>refines</i> c<sub>2</sub> if they
+      produce the same final states <i>when c<sub>1</sub> terminates</i> (but
+      c<sub>1</sub> may not terminate in some cases where c<sub>2</sub>
+      does).</i>
+    </p>
+    <i><pre class="verbatim" xml:space="preserve">
+Definition refines (c1 c2 : com) : Prop :=
+   &forall;(st st' : state),
+    (st =[ c1 ]=&gt; st') -&gt; (st =[ c2 ]=&gt; st').</pre></i>
+    <p style="margin-bottom: 1em">
+      <i></i>
     </p>
     <p>
       
