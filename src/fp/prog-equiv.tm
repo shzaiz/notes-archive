@@ -27,6 +27,53 @@
     <dueto|Equivalence of Expressions>For<nbsp>aexps and<nbsp>bexps with
     variables, Two<nbsp>aexps or<nbsp>bexps are ``behaviorally equivalent''
     if they evaluate to the same result in every state.
+
+    <\code>
+      Definition aequiv (a1 a2 : aexp) : Prop :=
+
+      \ \ forall (st : state),
+
+      \ \ \ \ aeval st a1 = aeval st a2.
+
+      \;
+
+      Definition bequiv (b1 b2 : bexp) : Prop :=
+
+      \ \ forall (st : state),
+
+      \ \ \ \ beval st b1 = beval st b2.
+    </code>
+  </definition>
+
+  <\definition>
+    <dueto|Equivalence of Commands>Two commands are behaviorally equivalent
+    if, for any given starting state, they either (1) both diverge or (2)
+    both terminate in the same final state. A compact way to express this is
+    ``if the first one terminates in a particular state then so does the
+    second, and vice versa."
+
+    <\code>
+      Definition cequiv (c1 c2 : com) : Prop :=
+
+      \ \ \<forall\> (st st' : state),
+
+      \ \ \ \ (st =[ c1 ]=\<gtr\> st') \<leftrightarrow\> (st =[ c2 ]=\<gtr\>
+      st').
+    </code>
+
+    We say that c<rsub|1> <with|font-shape|italic|refines> c<rsub|2> if they
+    produce the same final states<nbsp><with|font-shape|italic|when<nbsp>c<rsub|1><nbsp>terminates><nbsp>(but<nbsp>c<rsub|1><nbsp>may
+    not terminate in some cases where<nbsp>c<rsub|2><nbsp>does).
+
+    <\code>
+      Definition refines (c1 c2 : com) : Prop :=
+
+      \ \ \ \<forall\>(st st' : state),
+
+      \ \ \ \ (st =[ c1 ]=\<gtr\> st') -\<gtr\> (st =[ c2 ]=\<gtr\> st').
+    </code>
+
+    \;
   </definition>
 
   \;
@@ -46,11 +93,12 @@
 
 <\references>
   <\collection>
-    <associate|a\<less\>sub\<gtr\>1\<less\>/sub\<gtr\>:1|<tuple|1|?>>
-    <associate|a\<less\>sub\<gtr\>2\<less\>/sub\<gtr\>:2|<tuple|1|?>>
-    <associate|aequiv|<tuple|1|?>>
     <associate|auto-1|<tuple|I|1>>
-    <associate|st:3|<tuple|1|?>>
+    <associate|c\<less\>sub\<gtr\>1\<less\>/sub\<gtr\>:7|<tuple|2|?>>
+    <associate|c\<less\>sub\<gtr\>2\<less\>/sub\<gtr\>:8|<tuple|2|?>>
+    <associate|cequiv|<tuple|2|?>>
+    <associate|st':10|<tuple|2|?>>
+    <associate|st:9|<tuple|2|?>>
   </collection>
 </references>
 

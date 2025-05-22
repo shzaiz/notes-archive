@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <style|notes>
 
@@ -56,6 +56,16 @@
   Coq\<#548C\>\<#7C7B\>\<#578B\>>>|<row|<cell|3.
   Coq\<#4E2D\>\<#7684\>\<#7B56\>\<#7565\>>|<cell|>>>>>
 
+  \;
+
+  \<#7B97\>\<#6CD5\>\<#7B14\>\<#8BB0\>\<#548C\>\<#56DE\>\<#987E\>
+
+  <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|A1.
+  \<#679A\>\<#4E3E\>\<#7684\>\<#4F18\>\<#5316\>|./algomemo/A1-enum-opt.tm>>|<cell|<hlink|A2.
+  \<#52A8\>\<#6001\>\<#89C4\>\<#5212\>\<#548C\>\<#5B50\>\<#95EE\>\<#9898\>|./algomemo/A2-dp.tm>>>|<row|<cell|<hlink|D1.
+  \<#5806\>\<#548C\>\<#6808\>|./algomemo/D1-stack-heap.tm>>|<cell|>>|<row|<cell|<hlink|S1.
+  Z3\<#7EA6\>\<#675F\>\<#6C42\>\<#89E3\>\<#5668\>|./algomemo/S1-z3solver.tm>>|<cell|>>>>>
+
   <hrule>
 
   \;
@@ -63,7 +73,10 @@
 
 <\initial>
   <\collection>
+    <associate|font|roman>
     <associate|font-base-size|12>
+    <associate|font-family|rm>
+    <associate|math-font|roman>
     <associate|preamble|false>
   </collection>
 </initial>

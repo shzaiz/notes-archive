@@ -1,6 +1,6 @@
 <TeXmacs|2.1.4>
 
-<style|<tuple|notes|libertine-font|chinese|number-europe|framed-program>>
+<style|<tuple|notes|libertine-font|chinese|number-europe|framed-program|html-fold|number-long-article>>
 
 <\body>
   <\hide-preamble>
@@ -125,11 +125,9 @@
 
     <assign|motivation|<macro|1|<blue|<arg|1>>>>
 
-    <assign| boxed|block>
+    <assign|boxed|block>
 
     <assign|iint|<math|<big|int> <big|int> >>
-
-    \;
 
     <assign|doc-title|<macro|x|<\surround|<vspace*|0.5fn>|<vspace|0.5fn>>
       <doc-title-block|<font-magnify|1.682|<doc-title-name|<arg|x>>>>
@@ -251,7 +249,9 @@
 
   \;
 
-  \;
+  \<#53CC\>\<#6307\>\<#9488\>\<#4E00\>\<#822C\>\<#6765\>\<#8BB2\>\<#53EF\>\<#4EE5\>\<#4F7F\>\<#7528\>\<#4E24\>\<#4E2A\>\<#6307\>\<#9488\>\<#5728\>\<#6570\>\<#636E\>\<#7ED3\>\<#6784\>\<#4E0A\>\<#8FDB\>\<#884C\>\<#626B\>\<#63CF\>,
+  \<#901A\>\<#5E38\>\<#662F\>\<#4ECE\>\<#4E24\>\<#7AEF\>\<#6216\>\<#4E00\>\<#4E2A\>\<#65B9\>\<#5411\>\<#79FB\>\<#52A8\>.
+  \<#4E00\>\<#822C\>\<#6765\>\<#8BB2\>, \<#901A\>\<#5E38\>\<#9700\>\<#8981\>\<#8981\>\<#6C42\>\<#79FB\>\<#52A8\>\<#7684\>\<#8FC7\>\<#7A0B\>\<#4E2D\>\<#6709\>\<#5E8F\>\<#6216\>\<#8005\>\<#7B54\>\<#6848\>\<#53EF\>\<#4EE5\>\<#5F88\>\<#597D\>\<#5728\>\<#6307\>\<#9488\>\<#79FB\>\<#52A8\>\<#7684\>\<#8FC7\>\<#7A0B\>\<#4E2D\>\<#7EF4\>\<#62A4\>.\ 
 
   <with|section-display-numbers|true|<section|\<#6ED1\>\<#52A8\>\<#7A97\>\<#53E3\>>>
 
@@ -275,6 +275,93 @@
       <item>\<#5B9E\>\<#73B0\>\<#5BF9\>\<#5E94\>\<#7684\>\<#4EE3\>\<#7801\>.
       \<#4E00\>\<#4E2A\>\<#5FAA\>\<#73AF\>\<#5C31\>\<#662F\>\<#4E00\>\<#4E2A\>\<#5F52\>\<#7EB3\>\<#8FC7\>\<#7A0B\>.
     </enumerate>
+
+    <\folded|\<#4EE3\>\<#7801\>\<#6F14\>\<#793A\>>
+      C++:
+
+      <\code>
+        class Solution {
+
+        public:
+
+        \ \ \ \ vector\<less\>int\<gtr\> getAverages(vector\<less\>int\<gtr\>&
+        nums, int k) {
+
+        \ \ \ \ \ \ \ \ vector\<less\>int \<gtr\> ans;
+
+        \ \ \ \ \ \ \ \ long long klen = 2 * k + 1LL;
+
+        \ \ \ \ \ \ \ \ int sz = nums.size();
+
+        \ \ \ \ \ \ \ \ if(klen \<gtr\> sz){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for(int i=0; i\<less\>sz; i++)
+        ans.push_back(-1);
+
+        \ \ \ \ \ \ \ \ \ \ \ \ return ans;
+
+        \ \ \ \ \ \ \ \ }
+
+        \;
+
+        \ \ \ \ \ \ \ \ for(int i=0; i\<less\>k; i++) ans.push_back(-1);
+
+        \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ long long curr = [&]() -\<gtr\> long long{
+
+        \ \ \ \ \ \ \ \ \ \ \ \ long long ans = 0;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for(int i=0; i\<less\>klen; i++){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans += nums[i];
+
+        \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ \ \ \ \ return ans;
+
+        \ \ \ \ \ \ \ \ }();
+
+        \ \ \ \ \ \ \ \ ans.push_back(curr/klen);
+
+        \ \ \ \ \ \ \ \ // \<#5230\>\<#8FD9\>\<#91CC\>:
+        \<#5DF2\>\<#7ECF\>\<#5F97\>\<#5230\>\<#4E86\> nums[0,
+        klen)\<#7684\>\<#7ED3\>\<#679C\>
+
+        \ \ \ \ \ \ \ \ // \<#8FD9\>\<#4E2A\>\<#5FAA\>\<#73AF\>: nums[lp-1,
+        rp-1) \<#7684\>\<#7ED3\>\<#679C\> -\<gtr\> nums[lp,
+        rp)\<#7684\>\<#7ED3\>\<#679C\>
+
+        \ \ \ \ \ \ \ \ for(int lp=1; lp\<less\>sz-k; lp++){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ int rp = lp + klen; // [lp, rp)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ if(rp \<gtr\> sz) {ans.push_back(-1);
+        continue;}
+
+        \ \ \ \ \ \ \ \ \ \ \ \ // \<#52A0\>\<#5165\>rp
+
+        \ \ \ \ \ \ \ \ \ \ \ \ curr += nums[rp-1];
+
+        \ \ \ \ \ \ \ \ \ \ \ \ // \<#62BD\>\<#8D70\>lp
+
+        \ \ \ \ \ \ \ \ \ \ \ \ curr -= nums[lp-1];
+
+        \ \ \ \ \ \ \ \ \ \ \ \ // \<#7EF4\>\<#62A4\>\<#7B54\>\<#6848\>
+
+        \ \ \ \ \ \ \ \ \ \ \ \ ans.push_back(curr / klen);
+
+        \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ return ans;
+
+        \ \ \ \ }
+
+        };
+      </code>
+    </folded>
   </example>
 
   \<#6ED1\>\<#52A8\>\<#7A97\>\<#53E3\>, \<#5018\>\<#82E5\>\<#91C7\>\<#7528\><math|<around*|[|l,r|)>>\<#7684\>\<#5199\>\<#6CD5\>,
@@ -318,6 +405,100 @@
       \<#53EF\>\<#4EE5\>\<#6BCF\>\<#6B21\>\<#79FB\>\<#52A8\><math|word<around*|[|i|]>.length>\<#90A3\>\<#4E48\>\<#591A\>,
       \<#5E76\>\<#5206\><math|word<around*|[|i|]>.length>\<#90A3\>\<#4E48\>\<#591A\>\<#4E2A\>\<#7A97\>\<#53E3\>\<#4E00\>\<#8D77\>\<#6ED1\>\<#52A8\>.
     </enumerate>
+
+    <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
+      C++:
+
+      <\code>
+        class Solution {
+
+        public:
+
+        \ \ \ \ vector\<less\>int\<gtr\> findSubstring(string s,
+        vector\<less\>string\<gtr\>& words) {
+
+        \ \ \ \ \ \ \ \ int n_elm = words.size();
+
+        \ \ \ \ \ \ \ \ int sz_str = words[0].size();
+
+        \ \ \ \ \ \ \ \ vector\<less\>int\<gtr\> ans;
+
+        \ \ \ \ \ \ \ \ map\<less\>string, int\<gtr\> target;\ 
+
+        \ \ \ \ \ \ \ \ for(auto s : words){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ target[s]++;
+
+        \ \ \ \ \ \ \ \ }
+
+        \;
+
+        \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ vector\<less\>string\<gtr\> split;\ 
+
+        \ \ \ \ \ \ \ \ for(int offset=0; offset \<less\> sz_str; offset++){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ split.clear();
+
+        \;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for(int i=offset; i+sz_str\<less\>=s.size();
+        i+=sz_str){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ split.push_back(s.substr(i, sz_str));
+
+        \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ int lptr = 0, rptr = n_elm-1;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ \ \ \ \ map\<less\>string, int\<gtr\> fact;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for(int i=lptr; i\<less\>=rptr; i++){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(i \<gtr\>= split.size()) break; //
+        \<#6CE8\>\<#610F\>\<#8FB9\>\<#754C\>\<#6761\>\<#4EF6\>
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fact[split[i]] += 1;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ \ \ \ \ while(rptr \<less\> split.size()){
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(fact == target)
+        ans.push_back(lptr*sz_str + offset);
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(rptr == split.size()-1) break; //
+        \<#6CE8\>\<#610F\>\<#8FB9\>\<#754C\>\<#6761\>\<#4EF6\>
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rptr++; fact[split[rptr]]+=1;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fact[split[lptr]]--;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(fact[split[lptr]] == 0)
+        fact.erase(split[lptr]);
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lptr++;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ return ans;
+
+        \ \ \ \ }
+
+        };
+      </code>
+    </folded>
   </example>
 
   <\example>
@@ -332,6 +513,64 @@
       \<#5E76\>\<#4E14\>\<#4E00\>\<#4E2A\>\<#77ED\>\<#7684\>\<#5982\>\<#679C\>\<#6709\>\<#4E00\>\<#5B9A\>\<#7684\>\<#5143\>\<#7D20\>,
       \<#957F\>\<#7684\>\<#4E00\>\<#5B9A\>\<#6709\>.\ 
     </enumerate>
+
+    <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>:>
+      C++
+
+      <\code>
+        class Solution {
+
+        public:
+
+        \ \ \ \ int countCompleteSubarrays(vector\<less\>int\<gtr\>& nums) {
+
+        \ \ \ \ \ \ \ \ int n = nums.size();
+
+        \ \ \ \ \ \ \ \ unordered_set\<less\>int\<gtr\> all(nums.begin(),
+        nums.end());
+
+        \ \ \ \ \ \ \ \ int k = all.size(); \ //
+        \<#603B\>\<#5171\>\<#4E0D\>\<#540C\>\<#5143\>\<#7D20\>\<#4E2A\>\<#6570\>
+
+        \;
+
+        \ \ \ \ \ \ \ \ unordered_map\<less\>int, int\<gtr\> cnt;
+
+        \ \ \ \ \ \ \ \ int ans = 0, left = 0;
+
+        \ \ \ \ \ \ \ \ for (int right = 0; right \<less\> n; ++right) {
+
+        \ \ \ \ \ \ \ \ \ \ \ \ cnt[nums[right]]++;
+
+        \;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ while (cnt.size() == k) {
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt[nums[left]]--;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if (cnt[nums[left]] == 0) {
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cnt.erase(nums[left]);
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ left++;
+
+        \ \ \ \ \ \ \ \ \ \ \ \ }
+
+        \ \ \ \ \ \ \ \ \ \ \ \ ans += left;
+
+        \ \ \ \ \ \ \ \ }
+
+        \;
+
+        \ \ \ \ \ \ \ \ return ans;
+
+        \ \ \ \ }
+
+        };
+      </code>
+    </folded>
   </example>
 
   \<#50CF\>\<#8FD9\>\<#6837\>\<#7684\>\<#95EE\>\<#9898\>,
@@ -363,6 +602,85 @@
   </example>
 
   <section|\<#7EF4\>\<#62A4\>\<#4E00\>\<#4E2A\>\<#6070\>\<#597D\>\<#6EE1\>\<#8DB3\>\<#6027\>\<#8D28\>\<#7684\>\<#533A\>\<#95F4\>>
+
+  \<#8FD9\>\<#7C7B\>\<#95EE\>\<#9898\>\<#7684\>\<#5E38\>\<#89C1\>\<#6A21\>\<#5F0F\>\<#662F\>:
+  \<#6BCF\>\<#4E00\>\<#6B21\>\<#8C03\>\<#6574\>\<#5230\>\<#8FBE\>\<#53E6\>\<#4E00\>\<#4E2A\>\<#533A\>\<#95F4\>\<#7684\>\<#65F6\>\<#5019\>,
+  \<#4EC5\>\<#4EC5\>\<#9700\>\<#8981\>\<#8FDB\>\<#884C\>\<#79FB\>\<#52A8\>\<#5DE6\>,
+  \<#53F3\>\<#6807\>\<#8BB0\>\<#70B9\>\<#5C31\>\<#53EF\>\<#4EE5\>\<#4E86\>.\ 
+
+  <\example>
+    <hlink|15. \<#4E09\>\<#6570\>\<#4E4B\>\<#548C\>|https://leetcode.cn/problems/3sum/>
+
+    <\answer*>
+      \<#53EF\>\<#4EE5\>\<#679A\>\<#4E3E\>\<#4E00\>\<#4E2A\>\<#503C\>,
+      \<#7136\>\<#540E\>\<#5229\>\<#7528\>\<#5355\>\<#8C03\>\<#6027\>\<#5B8C\>\<#6210\>\<#89E3\>\<#7B54\>.\ 
+
+      <\folded|\<#4EE3\>\<#7801\>\<#6F14\>\<#793A\>>
+        C++
+
+        <\code>
+          class Solution {
+
+          public:
+
+          \ \ \ \ vector\<less\>vector\<less\>int\<gtr\>\<gtr\>
+          threeSum(vector\<less\>int\<gtr\>& nums) {
+
+          \ \ \ \ \ \ \ \ vector\<less\>vector\<less\>int\<gtr\>\<gtr\> ans;
+
+          \ \ \ \ \ \ \ \ ranges::sort(nums);
+
+          \ \ \ \ \ \ \ \ int lptr = 0, rptr = nums.size()-1;
+
+          \ \ \ \ \ \ \ \ for(int _=0; _\<less\>nums.size(); _++){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ int elem = nums[_];
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if(_ \<gtr\> 0 && elem == nums[_-1])
+          {continue;}
+
+          \ \ \ \ \ \ \ \ \ \ \ \ lptr = _+1, rptr = nums.size()-1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ while(lptr \<less\> rptr){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int cval = nums[lptr] + nums[rptr]
+          +elem;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(cval == 0){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector\<less\>int\<gtr\>
+          anss = {elem, nums[lptr], nums[rptr]};
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans.push_back(anss);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(lptr++;
+          lptr\<less\>rptr && nums[lptr] == nums[lptr-1]; lptr++);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }else if(cval \<gtr\> 0){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rptr--;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }else{
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lptr++;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+
+          \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ return ans;
+
+          \ \ \ \ }
+
+          };
+        </code>
+      </folded>
+    </answer*>
+  </example>
 
   <\example>
     <hlink|2563. \<#7EDF\>\<#8BA1\>\<#516C\>\<#5E73\>\<#6570\>\<#5BF9\>\<#7684\>\<#6570\>\<#76EE\>|https://leetcode.cn/problems/count-the-number-of-fair-pairs/>
@@ -452,8 +770,6 @@
       </cpp>>
 
       \ 
-
-      \;
     </answer*>
   </example>
 
@@ -461,9 +777,189 @@
     <hlink|611. \<#6709\>\<#6548\>\<#4E09\>\<#89D2\>\<#5F62\>\<#7684\>\<#4E2A\>\<#6570\>|https://leetcode.cn/problems/valid-triangle-number/>
 
     <\answer*>
-      \<#53EF\>\<#4EE5\>\<#679A\>\<#4E3E\>\<#6700\>\<#77ED\>\<#8FB9\>;\ 
+      \<#53EF\>\<#4EE5\>\<#679A\>\<#4E3E\>\<#6700\>\<#77ED\>\<#8FB9\>;
+      \<#7531\>\<#4E8E\>\<#9012\>\<#589E\>\<#7684\>\<#7279\>\<#6027\>,
+      \<#53EA\>\<#8981\>\<#6700\>\<#5927\>\<#7684\>\<#4E24\>\<#4E2A\>\<#8FB9\>\<#5C0F\>\<#4E8E\>\<#7B2C\>\<#4E09\>\<#8FB9\>\<#5373\>\<#53EF\>.\ 
+
+      <\folded|\<#4EE3\>\<#7801\>\<#6F14\>\<#793A\>>
+        Python3:
+
+        <\python>
+          class Solution:
+
+          \ \ \ \ def triangleNumber(self, nums: List[int]) -\<gtr\> int:
+
+          \ \ \ \ \ \ \ \ nums.sort()
+
+          \ \ \ \ \ \ \ \ n, ans = len(nums), 0
+
+          \ \ \ \ \ \ \ \ for iptr in range(n):
+
+          \ \ \ \ \ \ \ \ \ \ \ \ ival = nums[iptr]
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if ival == 0: continue
+
+          \ \ \ \ \ \ \ \ \ \ \ \ # \<#679A\>\<#4E3E\>jptr, kptr
+
+          \ \ \ \ \ \ \ \ \ \ \ \ jptr, kptr = iptr+1, iptr+2
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if jptr \<gtr\>= n or kptr \<gtr\>= n:
+          continue
+
+          \ \ \ \ \ \ \ \ \ \ \ \ for kptr in range(iptr+2, n):
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ while nums[kptr] - nums[jptr]
+          \<gtr\>= nums[iptr]:
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ jptr+=1
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans += kptr-jptr
+
+          \ \ \ \ \ \ \ \ return ans
+        </python>
+      </folded>
     </answer*>
   </example>
+
+  <section|\<#4E8C\>\<#5206\>\<#65B9\>\<#6CD5\>>
+
+  \<#4E0E\>\<#4E0A\>\<#9762\>\<#7684\>\<#533A\>\<#95F4\>\<#7C7B\>\<#95EE\>\<#9898\>\<#6709\>\<#4E00\>\<#70B9\>\<#533A\>\<#522B\>:
+  \<#5728\>\<#6709\>\<#5E8F\>\<#5E8F\>\<#5217\>\<#4E2D\>,
+  \<#4E8C\>\<#5206\>\<#7B97\>\<#6CD5\>\<#662F\>\<#6BCF\>\<#6B21\>\<#53D6\>\<#4E2D\>\<#95F4\>\<#5143\>\<#7D20\>,
+  \<#4E0E\>\<#76EE\>\<#6807\>\<#6BD4\>\<#8F83\>\<#540E\>\<#7F29\>\<#5C0F\>\<#8303\>\<#56F4\>.
+  \<#8FD9\>\<#79CD\>\<#60C5\>\<#51B5\>\<#4E0B\>\<#6570\>\<#636E\>\<#5FC5\>\<#987B\><strong|\<#6709\>\<#5E8F\>>.\ 
+
+  <zs|\<#524D\>\<#7F6E\>\<#77E5\>\<#8BC6\>>\<#533A\>\<#95F4\>\<#53CA\>\<#5176\>\<#8868\>\<#793A\>.
+
+  <\example>
+    \<#7ED9\>\<#4E00\>\<#4E2A\>\<#6309\>\<#7167\>\<#975E\>\<#9012\>\<#51CF\>\<#987A\>\<#5E8F\>\<#6392\>\<#5217\>\<#7684\>\<#6574\>\<#6570\>\<#6570\>\<#7EC4\><math|n>\<#548C\>\<#4E00\>\<#4E2A\>\<#76EE\>\<#6807\>\<#503C\><math|t>.
+    \<#8BF7\>\<#4F60\>\<#627E\>\<#51FA\>\<#7ED9\>\<#5B9A\>\<#76EE\>\<#6807\>\<#503C\>\<#5728\>\<#6570\>\<#7EC4\>\<#4E2D\>\<#7684\>\<#5F00\>\<#59CB\>\<#4F4D\>\<#7F6E\>\<#548C\>\<#7ED3\>\<#675F\>\<#4F4D\>\<#7F6E\>.
+    (<hlink|34. \<#5728\>\<#6392\>\<#5E8F\>\<#6570\>\<#7EC4\>\<#4E2D\>\<#67E5\>\<#627E\>\<#5143\>\<#7D20\>\<#7684\>\<#7B2C\>\<#4E00\>\<#4E2A\>\<#548C\>\<#6700\>\<#540E\>\<#4E00\>\<#4E2A\>\<#4F4D\>\<#7F6E\>|https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/>)
+
+    <\solution*>
+      \ \<#8003\>\<#8651\>\<#4EC5\>\<#4EC5\>\<#5B9E\>\<#73B0\>\<#51FD\>\<#6570\><verbatim|lower_bound>,
+      \<#662F\>\<#6700\>\<#5C0F\>\<#6EE1\>\<#8DB3\><math|n<around*|[|i|]>\<geqslant\>t>\<#7684\>\<#4E0B\>\<#6807\><math|i>.
+      \<#8FD9\>\<#53EF\>\<#4EE5\>\<#505A\>\<#5230\>\<#5F00\>\<#5934\>\<#7684\>\<#4F4D\>\<#7F6E\>.
+      \<#90A3\>\<#4E48\>\<#6700\>\<#540E\>\<#4E00\>\<#4E2A\>\<#53EF\>\<#4EE5\>\<#8003\>\<#8651\>\<#6C42\><verbatim|lower_bound(t+1)>,
+      \<#7136\>\<#540E\>\<#4F4D\>\<#7F6E\><math|-1>\<#5C31\>\<#597D\>\<#4E86\>.
+      \<#5F53\>\<#7136\>\<#4E5F\>\<#53EF\>\<#4EE5\>\<#628A\>\<#4E24\>\<#4E2A\>\<#90FD\>\<#5B9E\>\<#73B0\>\<#4E86\>,
+      \<#5C31\>\<#50CF\>\<#4E0B\>\<#9762\>\<#7684\>\<#4EE3\>\<#7801\>\<#4E00\>\<#6837\>.\ 
+
+      <center|<block|<tformat|<twith|table-hmode|min>|<twith|table-width|1par>|<cwith|1|-1|1|-1|cell-hyphen|t>|<cwith|1|-1|1|-1|cell-halign|c>|<cwith|3|3|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|1|cell-lborder|1ln>|<cwith|1|-1|4|4|cell-rborder|1ln>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|2|2|1|-1|cell-tborder|1ln>|<cwith|1|1|1|1|cell-lborder|1ln>|<cwith|1|1|4|4|cell-rborder|1ln>|<table|<row|<\cell>
+        \<#51FD\>\<#6570\>
+      </cell>|<\cell>
+        <code*|l> \<#5DE6\>\<#4FA7\>\<#5143\>\<#7D20\>
+      </cell>|<\cell>
+        <code*|r> \<#53F3\>\<#4FA7\>\<#5143\>\<#7D20\>
+      </cell>|<\cell>
+        <code*|ans> \<#6761\>\<#4EF6\>
+      </cell>>|<row|<\cell>
+        <code*|findFirst>
+      </cell>|<\cell>
+        \<#5168\>\<#90FD\> <code*|\<less\> target>
+      </cell>|<\cell>
+        <with|font-series|bold|\<#5168\>\<#90FD\> <code*|\<geq\> target>>
+      </cell>|<\cell>
+        <code*|nums[ans] == target>
+      </cell>>|<row|<\cell>
+        <code*|findLast>
+      </cell>|<\cell>
+        <with|font-series|bold|\<#5168\>\<#90FD\> <code*|\<leq\> target>>
+      </cell>|<\cell>
+        \<#5168\>\<#90FD\> <code*|\<gtr\> target>
+      </cell>|<\cell>
+        <code*|nums[ans] == target>
+      </cell>>>>>>
+
+      <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
+        C++
+
+        <\code>
+          class Solution {
+
+          public:
+
+          \;
+
+          \ \ \ \ int findFirst(const vector\<less\>int\<gtr\>& nums, int
+          target) {
+
+          \ \ \ \ \ \ \ \ int left = 0, right = nums.size() - 1, ans = -1;
+
+          \ \ \ \ \ \ \ \ while (left \<less\>= right) {
+
+          \ \ \ \ \ \ \ \ \ \ \ \ int mid = left + (right - left) / 2;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ //nums[mid] \<gtr\>= target:
+          \<#76EE\>\<#6807\>\<#503C\>\<#53EF\>\<#80FD\>\<#8FD8\>\<#5728\>\<#5DE6\>\<#8FB9\>\<#FF08\>\<#5305\>\<#62EC\>\<#5F53\>\<#524D\>\<#7684\>
+          mid\<#FF09\>\<#FF0C\>\<#6240\>\<#4EE5\>\<#6211\>\<#4EEC\>\<#79FB\>\<#52A8\>\<#53F3\>\<#8FB9\>\<#754C\>
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if (nums[mid] \<gtr\>= target) right = mid
+          - 1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ //nums[mid] \<less\> target:
+          \<#76EE\>\<#6807\>\<#503C\>\<#53EA\>\<#80FD\>\<#5728\>\<#53F3\>\<#8FB9\>\<#FF0C\>\<#79FB\>\<#52A8\>\<#5DE6\>\<#8FB9\>\<#754C\>\<#FF1A\>l
+          = mid + 1
+
+          \ \ \ \ \ \ \ \ \ \ \ \ else left = mid + 1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ //nums[mid] == target:
+          \<#66F4\>\<#65B0\>\<#7ED3\>\<#679C\> ans = mid.
+          \<#4F46\>\<#4E0D\>\<#7ACB\>\<#5373\>\<#8FD4\>\<#56DE\>
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if (nums[mid] == target) ans = mid;
+
+          \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ return ans;
+
+          \ \ \ \ }
+
+          \;
+
+          \ \ \ \ int findLast(const vector\<less\>int\<gtr\>& nums, int
+          target) {
+
+          \ \ \ \ \ \ \ \ int left = 0, right = nums.size() - 1, ans = -1;
+
+          \ \ \ \ \ \ \ \ while (left \<less\>= right) {
+
+          \ \ \ \ \ \ \ \ \ \ \ \ int mid = left + (right - left) / 2;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if (nums[mid] \<less\>= target) left = mid
+          + 1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ else right = mid - 1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ if (nums[mid] == target) ans = mid;
+
+          \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ return ans;
+
+          \ \ \ \ }
+
+          \;
+
+          \ \ \ \ vector\<less\>int\<gtr\>
+          searchRange(vector\<less\>int\<gtr\>& nums, int target) {
+
+          \ \ \ \ \ \ \ \ return { findFirst(nums, target), findLast(nums,
+          target) };
+
+          \ \ \ \ }
+
+          };
+        </code>
+      </folded>
+    </solution*>
+  </example>
+
+  \;
+
+  \;
+
+  \;
 
   \;
 </body>
@@ -478,12 +974,13 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|I|1>>
-    <associate|auto-2|<tuple|1|?>>
-    <associate|auto-3|<tuple|2|?>>
-    <associate|auto-4|<tuple|3|?>>
-    <associate|auto-5|<tuple|II|?>>
-    <associate|auto-6|<tuple|4|?>>
-    <associate|auto-7|<tuple|5|?>>
+    <associate|auto-2|<tuple|1|3>>
+    <associate|auto-3|<tuple|2|3>>
+    <associate|auto-4|<tuple|3|3>>
+    <associate|auto-5|<tuple|II|5>>
+    <associate|auto-6|<tuple|4|7>>
+    <associate|auto-7|<tuple|5|8>>
+    <associate|auto-8|<tuple|6|9>>
   </collection>
 </references>
 
@@ -506,7 +1003,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>
 
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|II.<space|2spc>\<#6ED1\>\<#52A8\>\<#7A97\>\<#53E3\>>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|II.<space|2spc>\<#53CC\>\<#6307\>\<#9488\>\<#6846\>\<#5B9A\>\<#533A\>\<#95F4\>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5><vspace|1fn>
 
@@ -514,9 +1011,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>
 
-      <with|par-left|<quote|1tab>|4.1.<space|2spc>\<#4EE5\>\<#53D8\>\<#5316\>\<#7684\>\<#773C\>\<#5149\>\<#770B\>\<#95EE\>\<#9898\>
+      5.<space|2spc>\<#7EF4\>\<#62A4\>\<#4E00\>\<#4E2A\>\<#6070\>\<#597D\>\<#6EE1\>\<#8DB3\>\<#6027\>\<#8D28\>\<#7684\>\<#533A\>\<#95F4\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-7>
+
+      6.<space|2spc>\<#4E8C\>\<#5206\>\<#65B9\>\<#6CD5\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>
     </associate>
   </collection>
 </auxiliary>

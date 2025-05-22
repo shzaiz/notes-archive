@@ -316,7 +316,7 @@
     <\exercise>
       \<#5199\>\<#51FA\><hlink|494. \<#76EE\>\<#6807\>\<#548C\>|https://leetcode.cn/problems/target-sum/>\<#7684\>\<#9012\>\<#5F52\>\<#4EE3\>\<#7801\>,
       \<#63A2\>\<#8BA8\>\<#4E0A\>\<#8FF0\>\<#4F18\>\<#5316\>\<#7B97\>\<#6CD5\>\<#7684\>\<#53EF\>\<#884C\>\<#6027\>.
-      </exercise>
+    </exercise>
   <|folded>
     <\solution*>
       \<#9012\>\<#5F52\>\<#7684\>\<#4EE3\>\<#7801\>
@@ -350,13 +350,185 @@
     \;
   </folded>
 
+  <subsection|\<#7EBF\>\<#6027\>\<#7684\>\<#52A8\>\<#6001\>\<#89C4\>\<#5212\>\<#95EE\>\<#9898\>>
+
+  <subsubsection|LCS\<#95EE\>\<#9898\>\<#53CA\>\<#5176\>\<#53D8\>\<#5F0F\>>
+
+  <\example>
+    (\<#6700\>\<#957F\>\<#516C\>\<#5171\>\<#5B50\>\<#5E8F\>\<#5217\>)
+    \<#7ED9\>\<#5B9A\>\<#4E24\>\<#4E2A\>\<#5B57\>\<#7B26\>\<#4E32\><math|a,b>,
+    \<#6C42\>\<#4E24\>\<#4E2A\>\<#5B57\>\<#7B26\>\<#4E32\>\<#7684\>\<#6700\>\<#957F\><strong|\<#516C\>\<#5171\>\<#5B50\>\<#5E8F\>\<#5217\>>\<#7684\>\<#957F\>\<#5EA6\>.
+    (<hlink|1143. \<#6700\>\<#957F\>\<#516C\>\<#5171\>\<#5B50\>\<#5E8F\>\<#5217\>|https://leetcode.cn/problems/longest-common-subsequence/>)
+
+    <\solution*>
+      \<#5B9A\>\<#4E49\><math|f<around*|[|i|]><around*|[|j|]>\<assign\>a<around*|[|:i|]><around*|[|:j|]>>\<#7684\>\<#6700\>\<#957F\>\<#5B57\>\<#7B26\>\<#4E32\>\<#7684\>\<#4E2A\>\<#6570\>.
+      \<#6709\>\<#9012\>\<#63A8\>\<#5173\>\<#7CFB\>
+
+      <\python>
+        def dfs(i:int, j:int) -\<gtr\> int :
+
+        \ \ \ \ if i\<less\>0 or j\<less\>0:
+
+        \ \ \ \ \ \ \ \ return 0 # \<#8FB9\>\<#754C\>\<#60C5\>\<#51B5\>
+
+        \ \ \ \ if s[i] == t[j]:
+
+        \ \ \ \ \ \ \ \ return dfs(i-1, j-1)+1
+
+        \ \ \ \ return max(dfs(i-1, j), dfs(i, j-1)
+      </python>
+
+      <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
+        C++
+
+        <\code>
+          class Solution {
+
+          public:
+
+          \ \ \ \ int longestCommonSubsequence(string text1, string text2) {
+
+          \ \ \ \ \ \ \ \ // f[i][j] ::= t1\<#7684\>\<#524D\>i\<#4E2A\>\<#5B57\>\<#7B26\>\<#548C\>t2\<#7684\>\<#524D\>j\<#4E2A\>\<#5B57\>\<#7B26\>\<#7684\>LCS
+
+          \ \ \ \ \ \ \ \ // f[i][j] = max(f[i-1][j-1]+(a[i]==b[j]),
+          f[i-1][j], f[i][j-1])
+
+          \;
+
+          \ \ \ \ \ \ \ \ vector\<less\>vector\<less\>int\<gtr\>\<gtr\>
+          f(text1.size(), vector\<less\>int\<gtr\>(text2.size(), 0));
+
+          \ \ \ \ \ \ \ \ for(int i=0; i\<less\>text1.size(); i++){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ for(int j=0; j\<less\>text2.size(); j++){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int sameq =
+          (text1[i]==text2[j]?1:0);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(sameq) {
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(i==0 \|\| j==0)
+          f[i][j]=1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(i-1 \<gtr\>= 0 &&
+          j-1\<gtr\>=0) f[i][j] = f[i-1][j-1]+1;
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(i-1 \<gtr\>= 0) f[i][j] =
+          max(f[i][j], f[i-1][j]);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(j-1 \<gtr\>= 0) f[i][j] =
+          max(f[i][j], f[i][j-1]);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ return f[text1.size()-1][text2.size()-1];
+
+          \;
+
+          \ \ \ \ }
+
+          };
+        </code>
+      </folded>
+    </solution*>
+  </example>
+
+  <subsubsection|\<#6700\>\<#957F\>\<#9012\>\<#589E\>\<#5B50\>\<#5E8F\>\<#5217\>>
+
+  <\example>
+    (\<#6700\>\<#957F\>\<#9012\>\<#589E\>\<#5B50\>\<#5E8F\>\<#5217\>)
+    \<#7ED9\>\<#4F60\>\<#4E00\>\<#4E2A\>\<#6574\>\<#6570\>\<#6570\>\<#7EC4\><math|n>,
+    \<#627E\>\<#5230\>\<#5176\>\<#4E2D\>\<#6700\>\<#957F\>\<#4E25\>\<#683C\>\<#9012\>\<#589E\>\<#5B50\>\<#5E8F\>\<#5217\>\<#7684\>\<#957F\>\<#5EA6\>.
+    \<#5176\>\<#4E2D\>, \<#6570\>\<#7EC4\>\<#4E2D\>\<#7684\>\<#5143\>\<#7D20\>\<#800C\>\<#4E0D\>\<#6539\>\<#53D8\>\<#5176\>\<#4F59\>\<#5143\>\<#7D20\>\<#7684\>\<#987A\>\<#5E8F\>.
+    (<hlink|300. \<#6700\>\<#957F\>\<#9012\>\<#589E\>\<#5B50\>\<#5E8F\>\<#5217\>|https://leetcode.cn/problems/longest-increasing-subsequence/>)
+
+    <\solution*>
+      \<#5B9A\>\<#4E49\><math|f<around*|[|i|]>\<assign\>\<#4EE5\>i\<#4E3A\>\<#7ED3\>\<#5C3E\>\<#7684\>\<#6700\>\<#957F\>\<#4E0A\>\<#5347\>\<#5B50\>\<#5E8F\>\<#5217\>.>\ 
+
+      <\python>
+        def dfs(pos:int) -\<gtr\> int:\ 
+
+        \ \ \ \ \ \ \ \ \ \ \ \ if pos == 0: return 1
+
+        \ \ \ \ \ \ \ \ \ \ \ \ res = 1
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for i in range(pos):
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if nums[i] \<less\> nums[pos]:
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res = max(res, dfs(i)+1)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ return res
+      </python>
+
+      <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
+        C++
+
+        <\code>
+          class Solution {
+
+          public:
+
+          \ \ \ \ int lengthOfLIS(vector\<less\>int\<gtr\>& nums) {
+
+          \ \ \ \ \ \ \ \ int n = nums.size();
+
+          \ \ \ \ \ \ \ \ vector\<less\>int\<gtr\> f(n);
+
+          \ \ \ \ \ \ \ \ ranges::fill(f, 1);
+
+          \ \ \ \ \ \ \ \ f[0] = 1;
+
+          \ \ \ \ \ \ \ \ for(int pos=1; pos\<less\>n; pos++){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ for(int i=0; i\<less\>pos; i++){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(nums[i]\<less\>nums[pos]){
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f[pos] = max(f[pos], f[i] +
+          1);
+
+          \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ }
+
+          \ \ \ \ \ \ \ \ return *max_element(f.begin(), f.end());
+
+          \ \ \ \ }
+
+          };
+        </code>
+      </folded>
+    </solution*>
+  </example>
+
+  <subsubsection|\<#5212\>\<#5206\>\<#95EE\>\<#9898\>>
+
+  <\example>
+    (\<#5206\>\<#5272\>\<#56DE\>\<#6587\>\<#4E32\>)
+    \<#7ED9\>\<#5B9A\>\<#4E00\>\<#4E2A\>\<#5B57\>\<#7B26\>\<#4E32\><math|s>,
+    \<#8BF7\>\<#5206\>\<#4E3A\>\<#4E00\>\<#4E9B\>\<#5B50\>\<#4E32\>,
+    \<#4F7F\>\<#6BCF\>\<#4E2A\>\<#5B50\>\<#4E32\>\<#90FD\>\<#662F\>\<#56DE\>\<#6587\>\<#4E32\>,
+    \<#8FD4\>\<#56DE\>\<#7B26\>\<#5408\>\<#8981\>\<#6C42\>\<#7684\>\<#6700\>\<#5C0F\>\<#5206\>\<#5272\>\<#6B21\>\<#6570\>.
+    (<hlink|132. \<#5206\>\<#5272\>\<#56DE\>\<#6587\>\<#4E32\>
+    II|https://leetcode.cn/problems/palindrome-partitioning-ii/>)
+
+    \;
+  </example>
+
   \;
 </body>
 
 <\initial>
   <\collection>
     <associate|math-font|roman>
-    <associate|page-medium|paper>
+    <associate|page-medium|papyrus>
     <associate|page-top|1in>
   </collection>
 </initial>
@@ -367,6 +539,10 @@
     <associate|auto-2|<tuple|1|3>>
     <associate|auto-3|<tuple|1.1|3>>
     <associate|auto-4|<tuple|1.1.1|3>>
+    <associate|auto-5|<tuple|1.2|?>>
+    <associate|auto-6|<tuple|1.2.1|?>>
+    <associate|auto-7|<tuple|1.2.2|?>>
+    <associate|auto-8|<tuple|1.2.3|?>>
   </collection>
 </references>
 
@@ -389,6 +565,14 @@
       \<#5B58\>\<#5728\>\<#6027\>\<#3001\>\<#7EF4\>\<#62A4\>\<#5C5E\>\<#6027\>\<#3001\>\<#8BA1\>\<#6570\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|1.2.<space|2spc>\<#7EBF\>\<#6027\>\<#7684\>\<#52A8\>\<#6001\>\<#89C4\>\<#5212\>\<#95EE\>\<#9898\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|2tab>|1.2.1.<space|2spc>LCS\<#95EE\>\<#9898\>\<#53CA\>\<#5176\>\<#53D8\>\<#5F0F\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
     </associate>
   </collection>
 </auxiliary>
