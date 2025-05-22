@@ -1,6 +1,6 @@
 <TeXmacs|2.1.4>
 
-<style|<tuple|notes|std-latex|libertine-font|chinese|number-europe|hanging-theorems>>
+<style|<tuple|notes|libertine-font|chinese|number-europe|hanging-theorems|html-fold>>
 
 <\body>
   <\hide-preamble>
