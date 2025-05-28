@@ -1,6 +1,6 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
-<style|<tuple|notes|indent-paragraphs|ornaments|std-frame|no-page-numbers>>
+<style|<tuple|notes|indent-paragraphs|ornaments|std-frame|no-page-numbers|html-fold>>
 
 <\body>
   <\hide-preamble>
@@ -89,7 +89,7 @@
   y.x<rsup|2>|)><around*|(|5|)>, >\<#4F46\>\<#662F\>\<#53EF\>\<#4EE5\><math|>\<#6539\>\<#4E3A\><math|<around*|(|\<lambda\>
   y.y<rsup|2>|)><around*|(|5|)>.> \<#8FD9\>\<#91CC\>\<#4E0D\>\<#505A\>\<#5C55\>\<#5F00\>.
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#8BA1\>\<#7B97\><math|<around*|(|\<lambda\>
     x.<around*|(|x<rsup|3>+2x+1|)>|)><around*|(|1|)>>\<#548C\><math|><math|<around*|(|\<lambda\>
     y.<around*|(|y<rsup|3>+2y+1<with|font-series|bold|>|)>|)><around*|(|1|)>>.
@@ -151,7 +151,7 @@
     </solution*>
   </example>
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#6C42\><math|<around*|(|<around*|(|<with|color|red|<around*|(|\<lambda\>
     f.\<lambda\> x.f<around*|(|f<around*|(|f<around*|(|x|)>|)>|)>|)>><with|color|dark
     green|<around*|(|\<lambda\> g.\<lambda\>
@@ -337,7 +337,7 @@
   \<#5982\>\<#679C\>\<#5E0C\>\<#671B\>\<#8868\>\<#8FBE\>\<#4E24\>\<#8005\>\<#6BCF\>\<#4E00\>\<#4E2A\>\<#5B57\>\<#7B26\>\<#90FD\>\<#662F\>\<#76F8\>\<#7B49\>\<#7684\>,
   \<#53EF\>\<#4EE5\>\<#7528\><math|M\<equiv\> N.>
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#6709\>\<#628A\>\<#5927\>\<#5B66\>\<#6570\>\<#5B66\>\<#5FD8\>\<#8BB0\>\<#7684\>\<#8001\>\<#5E08\>\<#8FD9\>\<#6837\>\<#6559\>\<#5B66\>\<#751F\>:
     \P\<#51FD\>\<#6570\>\<#5C31\>\<#662F\><math|f<around*|(|x|)>>\<#6216\>\<#8005\><math|y<around*|(|x|)>>.
     \<#56E0\>\<#53D8\>\<#91CF\>\<#4E0D\>\<#7528\><math|x>,
@@ -384,7 +384,7 @@
       <block|<tformat|<table|<row|<cell|<with|color|blue|y> >>>>>
       z|)>><math|> .
 
-      <unfolded|<\question>
+      <folded|<\question>
         (1) \<#6F14\>\<#7B97\><math|add <overline|2>
         <overline|3>>\<#548C\><math|mult <overline|2> <overline|3>>. (2)
         \<#8BC1\>\<#660E\>: <math|add <overline|n>
@@ -757,7 +757,7 @@
     </itemize>
   </definition>
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#8BF7\>\<#5BF9\>\<#6BD4\><math|M<around*|{|y/x|}>>\<#548C\><math|M<around*|[|N/x|]>>,
     \<#8BF4\>\<#8BF4\>\<#54EA\>\<#91CC\>\<#6709\>\<#4E0D\>\<#540C\>,
     \<#5E76\>\<#4E14\>\<#6307\>\<#51FA\>\<#591A\>\<#52A0\>\<#7684\>\<#90E8\>\<#5206\>\<#662F\>\<#4E3A\>\<#4E86\>\<#89E3\>\<#51B3\>\<#4E0A\>\<#9762\>\<#8BA8\>\<#8BBA\>\<#7684\>\<#54EA\>\<#4E9B\>\<#95EE\>\<#9898\>.
@@ -827,7 +827,7 @@
   \<#4F8B\>\<#5982\><math|<around*|(|\<lambda\>x.x
   x|)><around*|(|\<lambda\>y. y y y|)>>\<#5728\>\<#6C42\>\<#503C\>\<#8FC7\>\<#7A0B\>\<#4E2D\>\<#4F1A\>\<#6301\>\<#7EED\>\<#81A8\>\<#80C0\>!\ 
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#6839\>\<#636E\>\<#89C4\>\<#5219\>,
     \<#5199\>\<#51FA\><math|<around*|(|\<lambda\>x.x
     x|)><around*|(|\<lambda\>y. y y y|)>>\<#7684\>\<#524D\>\<#51E0\>\<#6B65\>.
@@ -884,7 +884,7 @@
   \<#6211\>\<#4EEC\>\<#5B9A\>\<#4E49\><math|and>\<#7B97\>\<#5B50\>\<#4E3A\><math|and=\<lambda\>
   a b. a b \<bbb-F\>>. \<#53EF\>\<#4EE5\>\<#53D1\>\<#73B0\>\<#5728\><math|\<beta\>>-\<#5316\>\<#7B80\>\<#7684\>\<#610F\>\<#4E49\>\<#4E0B\>\<#7684\><math|and>\<#548C\>\<#903B\>\<#8F91\>\<#7B26\>\<#53F7\>\<#4E2D\>\<#7684\>and\<#53EA\>\<#662F\>\<#8BB0\>\<#53F7\>\<#4E0A\>\<#7684\>\<#4E0D\>\<#540C\>.\ 
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#901A\>\<#8FC7\><math|\<beta\>>-\<#5316\>\<#7B80\>\<#9A8C\>\<#8BC1\>:
     (1) <math|and \<bbb-T\> \<bbb-T\> <long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>\<bbb-T\>>;
     (2) <math|and \<bbb-T\>\<bbb-F\><long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>\<bbb-F\>>;
@@ -915,7 +915,7 @@
   \<#5B9A\>\<#4E49\><math|and=\<lambda\>a b.b a
   b>\<#4E5F\>\<#53EF\>\<#4EE5\>\<#5B8C\>\<#6210\>\<#4E00\>\<#6837\>\<#7684\>\<#6548\>\<#679C\>.\ 
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#6839\>\<#636E\>\<#4E0A\>\<#9762\>\<#7684\>\<#63A8\>\<#5BFC\>\<#8FC7\>\<#7A0B\>,
     \<#8BF7\>\<#4F60\>\<#6784\>\<#9020\>\<#51FA\><math|or>\<#7B97\>\<#5B50\>\<#548C\><math|not>\<#7B97\>\<#5B50\>.
   </question>|<\answer*>
@@ -943,7 +943,7 @@
   \<#6211\>\<#4EEC\>\<#7684\>\<#81EA\>\<#7136\>\<#6570\><math|n>\<#88AB\>\<#5B9A\>\<#4E49\>\<#505A\>:<math|<overline|
   n>=\<lambda\> f x.<around*|(|f<rsup|n>x|)>.>
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#8BF7\>\<#4F60\>\<#5199\>\<#51FA\><overline|0>
     ,<overline|1>,<overline|2>,<overline|3>\<#7684\><math|\<lambda\>>-\<#8868\>\<#8FBE\>\<#5F0F\>\<#7684\>\<#5B9A\>\<#4E49\>.
   </question>|<\answer*>
@@ -972,7 +972,7 @@
   x|)><long-arrow|\<rubber-twoheadrightarrow\>||\<beta\>>\<lambda\>f
   x.f<around*|(|f x|)>=<overline|2>.>
 
-  <unfolded|<\question>
+  <folded|<\question>
     \<#8BF7\>\<#4F7F\>\<#7528\>\<#6570\>\<#5B66\>\<#5F52\>\<#7EB3\>\<#6CD5\>\<#8BC1\>\<#660E\>:
     <math|succ <overline|n>=<overline|n+1>>.\ 
   </question>|<\answer*>
@@ -998,7 +998,7 @@
   f<around*|(|m f x|)>>>|<row|<cell|mult=>|<cell|\<lambda\>n m f. n
   <around*|(|m f|)>>>>>>>
 
-  <unfolded|<\question>
+  <folded|<\question>
     (1) \<#6F14\>\<#7B97\><math|add <overline|2>
     <overline|3>>\<#548C\><math|mult <overline|2> <overline|3>>. (2)
     \<#8BC1\>\<#660E\>: <math|add <overline|n>
@@ -1112,7 +1112,7 @@
     iszero=\<lambda\>n x y. n<around*|(|\<lambda\> z. y|)>x.
   </equation*>
 
-  <\unfolded|<\question>
+  <\folded|<\question>
     \<#901A\>\<#8FC7\>\<#5199\>\<#51FA\><math|iszero <overline|0>>,
     <math|iszero <overline|2>>\<#7684\>\<#6F14\>\<#7B97\>\<#8FC7\>\<#7A0B\>,
     \<#611F\>\<#53D7\>\<#6B64\>\<#5B9A\>\<#4E49\>\<#4E3A\>\<#4EC0\>\<#4E48\>\<#662F\>\<#6B63\>\<#786E\>\<#7684\>.
@@ -1156,7 +1156,7 @@
 
       \;
     </answer*>
-  </unfolded>
+  </folded>
 
   \<#5F53\>\<#7136\>, \<#4E0A\>\<#8FF0\>\<#7684\>\<#5185\>\<#5BB9\>\<#770B\>\<#4E0A\>\<#53BB\>\<#76F8\>\<#5F53\>\<#7684\>\<#968F\>\<#673A\>.
   \<#5018\>\<#82E5\>\<#81EA\>\<#5DF1\>\<#601D\>\<#8003\>\<#53EF\>\<#80FD\>\<#8981\>\<#82B1\>\<#8D39\>\<#76F8\>\<#5F53\>\<#591A\>\<#7684\>\<#65F6\>\<#95F4\>\<#6765\>\<#5C1D\>\<#8BD5\>.
