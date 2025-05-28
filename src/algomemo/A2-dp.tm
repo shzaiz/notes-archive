@@ -160,6 +160,11 @@
 
   <subsection|\<#80CC\>\<#5305\>\<#95EE\>\<#9898\>>
 
+  <\itemize>
+    <item>\<#9009\>\<#6216\>\<#4E0D\>\<#9009\>:
+    \<#53E6\>\<#5916\>\<#5F00\>\<#4E00\>\<#7EF4\>\<#5EA6\>\<#8BB0\>\<#5F55\>\<#524D\><math|m>\<#4E2A\>\<#7269\>\<#54C1\>.
+    </itemize>
+
   <subsubsection|0-1\<#80CC\>\<#5305\>: \<#5B58\>\<#5728\>\<#6027\>\<#3001\>\<#7EF4\>\<#62A4\>\<#5C5E\>\<#6027\>\<#3001\>\<#8BA1\>\<#6570\>>
 
   <zs|\<#7528\>\<#53D8\>\<#5316\>\<#7684\>\<#773C\>\<#5149\>\<#770B\>\<#95EE\>\<#9898\>>\<#4E0E\>\<#5176\>\<#66B4\>\<#529B\>\<#5730\>\<#679A\>\<#4E3E\>\<#76F8\>\<#5173\>\<#95EE\>\<#9898\>,
@@ -176,27 +181,29 @@
       \<#6BCF\>\<#4E00\>\<#6B21\>\<#8003\>\<#8651\>\<#9009\>\<#4E0D\>\<#9009\>;
       \<#7EF4\>\<#62A4\>\<#662F\>\<#5426\>\<#53EF\>\<#4EE5\>\<#5230\>\<#8FBE\>.\ 
 
-      <folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>|<\python>
-        def canPartition(self, nums: List[int]) -\<gtr\> bool:
+      <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
+        <\code>
+          def canPartition(self, nums: List[int]) -\<gtr\> bool:
 
-        \ \ \ \ \ \ \ \ def dfs(i:int, Vleft:int) -\<gtr\> bool:
+          \ \ \ \ \ \ \ \ def dfs(i:int, Vleft:int) -\<gtr\> bool:
 
-        \ \ \ \ \ \ \ \ \ \ \ \ if i\<gtr\>=len(nums) or Vleft\<less\>0:
-        return False
+          \ \ \ \ \ \ \ \ \ \ \ \ if i\<gtr\>=len(nums) or Vleft\<less\>0:
+          return False
 
-        \ \ \ \ \ \ \ \ \ \ \ \ if Vleft == 0: return True
+          \ \ \ \ \ \ \ \ \ \ \ \ if Vleft == 0: return True
 
-        \ \ \ \ \ \ \ \ \ \ \ \ return dfs(i+1, Vleft-nums[i]) or dfs(i+1,
-        Vleft)
+          \ \ \ \ \ \ \ \ \ \ \ \ return dfs(i+1, Vleft-nums[i]) or dfs(i+1,
+          Vleft)
 
-        \ \ \ \ 
+          \ \ \ \ 
 
-        \ \ \ \ \ \ \ \ tot = sum(nums)
+          \ \ \ \ \ \ \ \ tot = sum(nums)
 
-        \ \ \ \ \ \ \ \ if tot%2: return False
+          \ \ \ \ \ \ \ \ if tot%2: return False
 
-        \ \ \ \ \ \ \ \ else: return dfs(0, tot/2)
-      </python>>
+          \ \ \ \ \ \ \ \ else: return dfs(0, tot/2)
+        </code>
+      </folded>
 
       <\python>
         \;
@@ -211,17 +218,17 @@
   </folded>
 
   <\folded|\<#4F7F\>\<#7528\>\<#5FAA\>\<#73AF\>\<#5B9E\>\<#73B0\>>
-    <\python>
+    <\code>
       for i in 0..n:\ 
 
       \ \ \ \ for j in w[i]..V:
 
       \ \ \ \ \ \ \ \ dp[i][j]=dp[i][j] \| dp[i-1][j-w[i]]
-    </python>
+    </code>
 
     \<#4E0A\>\<#8FF0\>\<#4F8B\>\<#9898\>\<#7684\>\<#5B9E\>\<#73B0\>
 
-    <\python>
+    <\code>
       class Solution:
 
       \ \ \ \ def canPartition(self, nums: List[int]) -\<gtr\> bool:
@@ -244,7 +251,7 @@
       \ \ \ \ \ \ \ \ if m%2 == 1: return False
 
       \ \ \ \ \ \ \ \ else: return f[n-1][m//2]
-    </python>
+    </code>
   </folded>
 
   <zs|\<#538B\>\<#7F29\>\<#7EF4\>\<#5EA6\>><math|f<around*|[|i|]><around*|[|*\<star\><rsub|1>|]>>\<#4EC5\>\<#4EC5\>\<#4F9D\>\<#8D56\>\<#4E8E\><math|f<around*|[|i-1|]><around*|[|\<star\><rsub|2>|]>>,\ 
@@ -252,7 +259,7 @@
   <\folded|\<#53EF\>\<#4EE5\>\<#628A\>\<#7B2C\>\<#4E00\>\<#7EF4\>\<#5EA6\>\<#538B\>\<#7F29\>\<#4E3A\>2>
     \<#4EE3\>\<#7801\>:\ 
 
-    <\python>
+    <\code>
       class Solution:
 
       \ \ \ \ def canPartition(self, nums: List[int]) -\<gtr\> bool:
@@ -275,36 +282,37 @@
       \ \ \ \ \ \ \ \ if m%2 == 1: return False
 
       \ \ \ \ \ \ \ \ else: return f[(n-1)%2][m//2]
-    </python>
+    </code>
   </folded>
 
-  <folded|\<#5E76\>\<#4E14\>\<#4FDD\>\<#8BC1\><math|\<star\><rsub|1>\<less\>\<star\><rsub|2>>,
-  \<#53EF\>\<#4EE5\>\<#5012\>\<#5E8F\>\<#5FAA\>\<#73AF\>|<\python>
-    class Solution:
+  <\folded|\<#5E76\>\<#4E14\>\<#4FDD\>\<#8BC1\><math|\<star\><rsub|1>\<less\>\<star\><rsub|2>>,
+  \<#53EF\>\<#4EE5\>\<#5012\>\<#5E8F\>\<#5FAA\>\<#73AF\>>
+    <\code>
+      class Solution:
 
-    \ \ \ \ def canPartition(self, nums: List[int]) -\<gtr\> bool:
+      \ \ \ \ def canPartition(self, nums: List[int]) -\<gtr\> bool:
 
-    \ \ \ \ \ \ \ \ n, m = len(nums), sum(nums)
+      \ \ \ \ \ \ \ \ n, m = len(nums), sum(nums)
 
-    \ \ \ \ \ \ \ \ print(n, m)
+      \ \ \ \ \ \ \ \ print(n, m)
 
-    \ \ \ \ \ \ \ \ <with|font-series|bold|f = [False] * m>
+      \ \ \ \ \ \ \ \ f = [False] * m
 
-    \ \ \ \ \ \ \ \ <with|font-series|bold|f[0] = True>
+      \ \ \ \ \ \ \ \ f[0] = True
 
-    \ \ \ \ \ \ \ \ for i in range(1, n):
+      \ \ \ \ \ \ \ \ for i in range(1, n):
 
-    \ \ \ \ \ \ \ \ \ \ \ \ <with|font-series|bold|for j in
-    range(m//2,nums[i]-1, -1):>
+      \ \ \ \ \ \ \ \ \ \ \ \ for j in range(m//2,nums[i]-1, -1):
 
-    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f[j] = f[j] \| f[j-nums[i]]
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ f[j] = f[j] \| f[j-nums[i]]
 
-    \;
+      \;
 
-    \ \ \ \ \ \ \ \ if m%2 == 1: return False
+      \ \ \ \ \ \ \ \ if m%2 == 1: return False
 
-    \ \ \ \ \ \ \ \ else: return f[m//2]
-  </python>>
+      \ \ \ \ \ \ \ \ else: return f[m//2]
+    </code>
+  </folded>
 
   <\note>
     \<#80CC\>\<#5305\>\<#95EE\>\<#9898\>: NP-hard\<#95EE\>\<#9898\>,
@@ -321,7 +329,7 @@
     <\solution*>
       \<#9012\>\<#5F52\>\<#7684\>\<#4EE3\>\<#7801\>
 
-      <\python>
+      <\code>
         class Solution:
 
         \ \ \ \ def findTargetSumWays(self, nums: List[int], target: int)
@@ -341,7 +349,7 @@
         j+nums[i])
 
         \ \ \ \ \ \ \ \ return dfs(0, target)
-      </python>
+      </code>
     </solution*>
 
     \<#7ECF\>\<#8FC7\>\<#53D8\>\<#5316\>\<#7684\>\<#4EE3\>\<#7801\>:
@@ -364,7 +372,7 @@
       \<#5B9A\>\<#4E49\><math|f<around*|[|i|]><around*|[|j|]>\<assign\>a<around*|[|:i|]><around*|[|:j|]>>\<#7684\>\<#6700\>\<#957F\>\<#5B57\>\<#7B26\>\<#4E32\>\<#7684\>\<#4E2A\>\<#6570\>.
       \<#6709\>\<#9012\>\<#63A8\>\<#5173\>\<#7CFB\>
 
-      <\python>
+      <\code>
         def dfs(i:int, j:int) -\<gtr\> int :
 
         \ \ \ \ if i\<less\>0 or j\<less\>0:
@@ -376,7 +384,7 @@
         \ \ \ \ \ \ \ \ return dfs(i-1, j-1)+1
 
         \ \ \ \ return max(dfs(i-1, j), dfs(i, j-1)
-      </python>
+      </code>
 
       <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
         C++
@@ -449,7 +457,7 @@
     <\solution*>
       \<#5B9A\>\<#4E49\><math|f<around*|[|i|]>\<assign\>\<#4EE5\>i\<#4E3A\>\<#7ED3\>\<#5C3E\>\<#7684\>\<#6700\>\<#957F\>\<#4E0A\>\<#5347\>\<#5B50\>\<#5E8F\>\<#5217\>.>\ 
 
-      <\python>
+      <\code>
         def dfs(pos:int) -\<gtr\> int:\ 
 
         \ \ \ \ \ \ \ \ \ \ \ \ if pos == 0: return 1
@@ -463,7 +471,7 @@
         \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res = max(res, dfs(i)+1)
 
         \ \ \ \ \ \ \ \ \ \ \ \ return res
-      </python>
+      </code>
 
       <\folded|\<#4EE3\>\<#7801\>\<#5B9E\>\<#73B0\>>
         C++
@@ -508,7 +516,16 @@
     </solution*>
   </example>
 
+  \;
+
   <subsubsection|\<#5212\>\<#5206\>\<#95EE\>\<#9898\>>
+
+  <\itemize>
+    <item>\<#53EF\>\<#4EE5\>\<#662F\>\P\<#9009\>\<#6216\>\<#4E0D\>\<#9009\>\Q\<#95EE\>\<#9898\>\<#7684\>\<#53D8\>\<#5F0F\>,
+    \<#53EA\>\<#8981\>\<#8003\>\<#8651\>\<#65B0\>\<#6765\>\<#4E00\>\<#4E2A\>\<#5143\>\<#7D20\><choice|<tformat|<table|<row|<cell|\<#5F53\>\<#524D\>\<#7684\>\<#5143\>\<#7D20\>\<#8DDF\>\<#7740\>\<#524D\>\<#9762\>\<#7684\>\<#4E00\>\<#7EC4\>(\<#9009\>\<#62E9\>\<#4E00\>\<#7247\>)>>|<row|<cell|\<#5F53\>\<#524D\>\<#7684\>\<#5143\>\<#7D20\>\<#65B0\>\<#6210\>\<#7ACB\>\<#4E00\>\<#7EC4\><math|\<leftarrow\>>\<#679A\>\<#4E3E\>>>>>>
+
+    \;
+  </itemize>
 
   <\example>
     (\<#5206\>\<#5272\>\<#56DE\>\<#6587\>\<#4E32\>)
@@ -519,8 +536,177 @@
     (<hlink|132. \<#5206\>\<#5272\>\<#56DE\>\<#6587\>\<#4E32\>
     II|https://leetcode.cn/problems/palindrome-partitioning-ii/>)
 
+    <\solution*>
+      \<#53EF\>\<#4EE5\>\<#8003\>\<#8651\><math|f<around*|[|i|]>\<assign\>>\<#628A\><math|s<around*|[|0|]>..s<around*|[|r|]>>\<#5207\>\<#5206\>\<#4E3A\>\<#56DE\>\<#6587\>\<#4E32\>,
+      \<#6700\>\<#5C0F\>\<#5207\>\<#5206\>\<#7684\>\<#6B21\>\<#6570\>
+
+      <\code>
+        class Solution:
+
+        \ \ \ \ def minCut(self, s: str) -\<gtr\> int:
+
+        \ \ \ \ \ \ \ \ def ispar(s:str) -\<gtr\> bool:
+
+        \ \ \ \ \ \ \ \ \ \ \ \ return s[::-1]==s
+
+        \ \ \ \ \ \ \ \ def f(r:int) -\<gtr\> int:
+
+        \ \ \ \ \ \ \ \ \ \ \ \ # [l..r]\<#662F\>\<#56DE\>\<#6587\>\<#4E32\>
+
+        \ \ \ \ \ \ \ \ \ \ \ \ if ispar(s[0:r+1]):
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return 0
+
+        \ \ \ \ \ \ \ \ \ \ \ \ # [l..r]\<#4E0D\>\<#662F\>\<#56DE\>\<#6587\>\<#4E32\>,
+        \<#679A\>\<#4E3E\>\<#5207\>\<#5206\>\<#70B9\>,
+        \<#6BCF\>\<#6B21\>\<#589E\>\<#52A0\>\<#4E00\>\<#4E2A\>
+
+        \ \ \ \ \ \ \ \ \ \ \ \ res = inf\ 
+
+        \ \ \ \ \ \ \ \ \ \ \ \ for l in range(1, r+1):
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(ispar(s[l:r+1])):
+
+        \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res = min(res, f(l-1)+1)
+
+        \ \ \ \ \ \ \ \ \ \ \ \ return res
+
+        \ \ \ \ \ \ \ \ return f(len(s)-1)
+      </code>
+    </solution*>
+
     \;
   </example>
+
+  <folded|<\exercise>
+    <hlink|2707. \<#5B57\>\<#7B26\>\<#4E32\>\<#4E2D\>\<#7684\>\<#989D\>\<#5916\>\<#5B57\>\<#7B26\>|https://leetcode.cn/problems/extra-characters-in-a-string/>
+
+    \;
+  </exercise>|<\solution*>
+    \<#5B9A\>\<#4E49\><math|f<around*|(|r|)>>\<#4E3A\>\<#4EE5\><math|s<around*|[|0..r|]>>\<#9700\>\<#8981\>\<#4E22\>\<#5F03\>\<#591A\>\<#5C11\>\<#4E2A\>\<#5B57\>\<#7B26\>.
+
+    <\code>
+      class Solution:
+
+      \ \ \ \ def minExtraChar(self, s: str, dictionary: List[str]) -\<gtr\>
+      int:
+
+      \ \ \ \ \ \ \ \ @cache
+
+      \ \ \ \ \ \ \ \ def dfs(r:int) -\<gtr\> int:\ 
+
+      \ \ \ \ \ \ \ \ \ \ \ \ if r\<less\>0: return 0
+
+      \ \ \ \ \ \ \ \ \ \ \ \ res = dfs(r-1)+1 # \<#4E0D\>\<#9009\>,
+      \<#4E22\>\<#6389\>\<#7684\>\<#5B57\>\<#6BCD\>+1
+
+      \ \ \ \ \ \ \ \ \ \ \ \ for j in range(r+1):
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # \<#9009\>\<#62E9\>\<#7684\>\<#6761\>\<#4EF6\>:
+      \<#5728\>\<#5B57\>\<#5178\>\<#91CC\>\<#9762\>
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if s[j:r+1] in dictionary:
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res = min(res, dfs(j-1))
+
+      \ \ \ \ \ \ \ \ \ \ \ \ return res
+
+      \ \ \ \ \ \ \ \ return dfs(len(s)-1)
+    </code>
+  </solution*>>
+
+  <folded|<\exercise>
+    <hlink|3196. \<#6700\>\<#5927\>\<#5316\>\<#5B50\>\<#6570\>\<#7EC4\>\<#7684\>\<#603B\>\<#6210\>\<#672C\>|https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/>
+
+    \;
+  </exercise>|<\solution*>
+    \<#6700\>\<#521D\>\<#7248\>\<#672C\>,
+    \<#5982\>\<#679C\>\<#6309\>\<#7167\>\<#4E0A\>\<#8FF0\>\<#601D\>\<#8DEF\>\<#601D\>\<#8003\>\<#7684\>\<#8BDD\>,
+    \<#5C31\>\<#6709\>
+
+    <\code>
+      class Solution:
+
+      \ \ \ \ def maximumTotalCost(self, nums: List[int]) -\<gtr\> int:
+
+      \ \ \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ \ \ num = list(accumulate(map(lambda x:-x[1] if x[0]%2 else
+      x[1], enumerate(nums))))
+
+      \ \ \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ \ \ def get(l:int, r:int) -\<gtr\> int:
+
+      \ \ \ \ \ \ \ \ \ \ \ \ coeff = 1
+
+      \ \ \ \ \ \ \ \ \ \ \ \ if l % 2 : coeff *= -1
+
+      \ \ \ \ \ \ \ \ \ \ \ \ # if (r-l+1) % 2: coeff *= -1
+
+      \ \ \ \ \ \ \ \ \ \ \ \ if(l==0): return num[r] * coeff
+
+      \ \ \ \ \ \ \ \ \ \ \ \ else: return (num[r]-num[l-1]) * coeff
+
+      \;
+
+      \ \ \ \ \ \ \ \ @cache
+
+      \ \ \ \ \ \ \ \ def f(r:int) -\<gtr\> int:
+
+      \ \ \ \ \ \ \ \ \ \ \ \ if r\<less\>0: return 0
+
+      \ \ \ \ \ \ \ \ \ \ \ \ if r==0: return num[0]\ 
+
+      \ \ \ \ \ \ \ \ \ \ \ \ # for l=r
+
+      \ \ \ \ \ \ \ \ \ \ \ \ res = get(r, r) + f(r-1)
+
+      \ \ \ \ \ \ \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ \ \ \ \ \ \ # for l=1..r-1
+
+      \ \ \ \ \ \ \ \ \ \ \ \ for l in range(0, r):
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currans = get(l, r) + f(l-1)
+
+      \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res = max(res, currans)
+
+      \ \ \ \ \ \ \ \ \ \ \ \ return res
+
+      \ \ \ \ \ \ \ \ 
+
+      \ \ \ \ \ \ \ \ return f(len(nums)-1)
+    </code>
+
+    \<#4F46\>\<#662F\>\<#4F1A\>\<#8D85\>\<#65F6\>,
+    \<#56E0\>\<#4E3A\>\<#5947\>\<#6570\>\<#5076\>\<#6570\>\<#53EF\>\<#4EE5\>\<#66F4\>\<#5C0F\>\<#7684\>\<#5DE5\>\<#4F5C\>\<#62FC\>\<#6210\>,
+    \<#53EA\>\<#8981\>\<#628A\><verbatim|for l in range(0,
+    r)>\<#53D8\>\<#4E3A\><verbatim|<code|<code*|for l in range(max(0, r-3),
+    r)>>>\<#5373\>\<#53EF\>(\<#91CD\>\<#590D\>\<#6027\>\<#8D28\>).\ 
+  </solution*>>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 
   \;
 </body>
@@ -530,6 +716,7 @@
     <associate|math-font|roman>
     <associate|page-medium|papyrus>
     <associate|page-top|1in>
+    <associate|prog-scripts|python>
   </collection>
 </initial>
 
@@ -573,6 +760,14 @@
       <with|par-left|<quote|2tab>|1.2.1.<space|2spc>LCS\<#95EE\>\<#9898\>\<#53CA\>\<#5176\>\<#53D8\>\<#5F0F\>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|2tab>|1.2.2.<space|2spc>\<#6700\>\<#957F\>\<#9012\>\<#589E\>\<#5B50\>\<#5E8F\>\<#5217\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|2tab>|1.2.3.<space|2spc>\<#5212\>\<#5206\>\<#95EE\>\<#9898\>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
     </associate>
   </collection>
 </auxiliary>
