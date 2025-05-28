@@ -212,6 +212,15 @@
     style="margin-left: 1em"></span></h2>
     <h3 id="auto-3">1.1.<span style="margin-left: 1em"></span>&#x80CC;&#x5305;&#x95EE;&#x9898;<span
     style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          &#x9009;&#x6216;&#x4E0D;&#x9009;:
+          &#x53E6;&#x5916;&#x5F00;&#x4E00;&#x7EF4;&#x5EA6;&#x8BB0;&#x5F55;&#x524D;<span
+          class="no-breaks"><img src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0225674931129477em; margin-right: -0.0112837465564738em; margin-top: -0.0229421487603306em; vertical-align: 0em; height: 0.490842975206612em"></img>&#x4E2A;&#x7269;&#x54C1;.</span>
+        </p>
+      </li>
+    </ul>
     <h4 id="auto-4">1.1.1.<span style="margin-left: 1em"></span>0-1&#x80CC;&#x5305;:
     &#x5B58;&#x5728;&#x6027;&#x3001;&#x7EF4;&#x62A4;&#x5C5E;&#x6027;&#x3001;&#x8BA1;&#x6570;<span
     style="margin-left: 1em"></span></h4>
@@ -239,11 +248,11 @@
     </p>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
       </p>
       <pre class="verbatim detailed" xml:space="preserve">
-<class style="font-family: Times New Roman"><tt>def canPartition(self, nums: List[int]) -&gt; bool:
+def canPartition(self, nums: List[int]) -&gt; bool:
         def dfs(i:int, Vleft:int) -&gt; bool:
             if i&gt;=len(nums) or Vleft&lt;0: return False
             if Vleft == 0: return True
@@ -251,7 +260,7 @@
     
         tot = sum(nums)
         if tot%2: return False
-        else: return dfs(0, tot/2)</tt></class></pre>
+        else: return dfs(0, tot/2)</pre>
     </div>
     <p style="margin-bottom: 1em">
       <tt class="verbatim"><class style="font-family: Times New Roman"><tt></tt></class></tt>
@@ -261,8 +270,8 @@
     </p>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x7ED8;&#x5236;&#x72B6;&#x6001;&#x56FE;</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x7ED8;&#x5236;&#x72B6;&#x6001;&#x56FE;</font>
       </p>
       <p class="detailed">
         <div style="display: inline">
@@ -270,26 +279,26 @@
         </div>
         <table style="display: inline-table; vertical-align: middle">
           <tbody><tr>
-            <td><img src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img></td>
             <td><img src="A2-dp-4.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img></td>
+            <td><img src="A2-dp-5.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img></td>
           </tr></tbody>
         </table>
       </p>
     </div>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4F7F;&#x7528;&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4F7F;&#x7528;&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;</font>
       </p>
       <pre class="verbatim detailed" xml:space="preserve">
-<class style="font-family: Times New Roman"><tt>for i in 0..n: 
+for i in 0..n: 
     for j in w[i]..V:
-        dp[i][j]=dp[i][j] | dp[i-1][j-w[i]]</tt></class></pre>
+        dp[i][j]=dp[i][j] | dp[i-1][j-w[i]]</pre>
       <p class="detailed">
         &#x4E0A;&#x8FF0;&#x4F8B;&#x9898;&#x7684;&#x5B9E;&#x73B0;
       </p>
       <pre class="verbatim detailed" xml:space="preserve">
-<class style="font-family: Times New Roman"><tt>class Solution:
+class Solution:
     def canPartition(self, nums: List[int]) -&gt; bool:
         n, m = len(nums), sum(nums)
         f = [[False] * m for _ in range(n)]
@@ -299,22 +308,22 @@
                 f[i][j] = f[i-1][j] | f[i-1][j-nums[i]]
 
         if m%2 == 1: return False
-        else: return f[n-1][m//2]</tt></class></pre>
+        else: return f[n-1][m//2]</pre>
     </div>
     <p>
-      <b>&#x538B;&#x7F29;&#x7EF4;&#x5EA6;. </b><span class="no-breaks"><img src="A2-dp-5.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564737em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x4EC5;&#x4EC5;&#x4F9D;&#x8D56;&#x4E8E;</span><span
-      class="no-breaks"><img src="A2-dp-6.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564732em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>,</span> 
+      <b>&#x538B;&#x7F29;&#x7EF4;&#x5EA6;. </b><span class="no-breaks"><img src="A2-dp-6.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564737em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x4EC5;&#x4EC5;&#x4F9D;&#x8D56;&#x4E8E;</span><span
+      class="no-breaks"><img src="A2-dp-7.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564732em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>,</span> 
     </p>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x53EF;&#x4EE5;&#x628A;&#x7B2C;&#x4E00;&#x7EF4;&#x5EA6;&#x538B;&#x7F29;&#x4E3A;2</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x53EF;&#x4EE5;&#x628A;&#x7B2C;&#x4E00;&#x7EF4;&#x5EA6;&#x538B;&#x7F29;&#x4E3A;2</font>
       </p>
       <p class="detailed">
         &#x4EE3;&#x7801;: 
       </p>
       <pre class="verbatim detailed" xml:space="preserve">
-<class style="font-family: Times New Roman"><tt>class Solution:
+class Solution:
     def canPartition(self, nums: List[int]) -&gt; bool:
         n, m = len(nums), sum(nums)
         f = [[False] * m for _ in range(2)]
@@ -324,40 +333,40 @@
                 f[i%2][j] = f[(i-1)%2][j] | f[(i-1)%2][j-nums[i]]
 
         if m%2 == 1: return False
-        else: return f[(n-1)%2][m//2]</tt></class></pre>
+        else: return f[(n-1)%2][m//2]</pre>
     </div>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x5E76;&#x4E14;&#x4FDD;&#x8BC1;</font><img
-        class="always" src="A2-dp-7.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564737em; margin-top: -0.0122314049586777em; vertical-align: -0.147702479338843em; height: 0.728815426997245em"></img><font class="always">,
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x5E76;&#x4E14;&#x4FDD;&#x8BC1;</font><img
+        class="always" src="A2-dp-8.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564737em; margin-top: -0.0122314049586777em; vertical-align: -0.147702479338843em; height: 0.728815426997245em"></img><font class="always">,
         &#x53EF;&#x4EE5;&#x5012;&#x5E8F;&#x5FAA;&#x73AF;</font>
       </p>
       <pre class="verbatim detailed" xml:space="preserve">
-<class style="font-family: Times New Roman"><tt>class Solution:
+class Solution:
     def canPartition(self, nums: List[int]) -&gt; bool:
         n, m = len(nums), sum(nums)
         print(n, m)
-        <b>f = [False] * m</b>
-        <b>f[0] = True</b>
+        f = [False] * m
+        f[0] = True
         for i in range(1, n):
-            <b>for j in range(m//2,nums[i]-1, -1):</b>
+            for j in range(m//2,nums[i]-1, -1):
                 f[j] = f[j] | f[j-nums[i]]
 
         if m%2 == 1: return False
-        else: return f[m//2]</tt></class></pre>
+        else: return f[m//2]</pre>
     </div>
     <p style="margin-top: 1em; margin-bottom: 1em">
       <strong>&#x6CE8;&#x8BB0; <class style="font-style: normal">1.2</class>.
       </strong>&#x80CC;&#x5305;&#x95EE;&#x9898;: NP-hard&#x95EE;&#x9898;,
       &#x4F46;&#x662F;&#x4E0E;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x7684;&#x603B;&#x548C;&#x6709;&#x5173;;
-      <img src="A2-dp-8.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564739em; margin-top: -0.0138402203856749em; vertical-align: 0em; height: 0.468275482093664em"></img>
+      <img src="A2-dp-9.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564739em; margin-top: -0.0138402203856749em; vertical-align: 0em; height: 0.468275482093664em"></img>
       &#x7B2C;&#x4E8C;&#x7EF4;&#x5EA6;&#x8BBE;&#x7F6E;&#x4E3A;&#x603B;&#x5171;&#x53EF;&#x80FD;&#x7684;&#x4F53;&#x79EF;.
     </p>
     <div class="switchable" style="margin-left: 38.660688007188px">
       <p class="always" style="margin-top: 1em; margin-bottom: 1em">
-        <class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img
-        class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><strong>&#x7EC3;&#x4E60; <class
+        <class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img
+        class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><strong>&#x7EC3;&#x4E60; <class
         style="font-style: normal">1.1</class>. </strong>&#x5199;&#x51FA;<a href="https://leetcode.cn/problems/target-sum/">494.
         &#x76EE;&#x6807;&#x548C;</a>&#x7684;&#x9012;&#x5F52;&#x4EE3;&#x7801;,
         &#x63A2;&#x8BA8;&#x4E0A;&#x8FF0;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x7684;&#x53EF;&#x884C;&#x6027;.
@@ -366,42 +375,18 @@
         <strong>&#x89E3;&#x7B54;.
         </strong>&#x9012;&#x5F52;&#x7684;&#x4EE3;&#x7801;
       </p>
+      <pre class="verbatim detailed" xml:space="preserve" style="margin-bottom: 1em">
+class Solution:
+    def findTargetSumWays(self, nums: List[int], target: int) -&gt; int:
+        @cache
+        def dfs(i:int, j:int) -&gt; int:
+            if(i &gt;= len(nums)): 
+                if j == 0: return 1
+                else: return 0
+            return dfs(i+1, j- nums[i]) + dfs(i+1, j+nums[i])
+        return dfs(0, target)</pre>
       <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>class Solution:</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>    def findTargetSumWays(self, nums:
-        List[int], target: int) -&gt; int:</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>        @cache</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>        def dfs(i:int, j:int) -&gt;
-        int:</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            if(i &gt;= len(nums)):
-        </tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>                if j == 0: return
-        1</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>                else: return
-        0</tt></class></tt>
-      </p>
-      <p class="detailed">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            return dfs(i+1, j- nums[i]) +
-        dfs(i+1, j+nums[i])</tt></class></tt>
-      </p>
-      <p class="detailed" style="margin-bottom: 1em">
-        <tt class="verbatim"><class style="font-family: Times New Roman"><tt>        return dfs(0,
-        target)</tt></class></tt>
-      </p>
-      <p class="detailed">
-        &#x7ECF;&#x8FC7;&#x53D8;&#x5316;&#x7684;&#x4EE3;&#x7801;: <img src="A2-dp-9.png"
+        &#x7ECF;&#x8FC7;&#x53D8;&#x5316;&#x7684;&#x4EE3;&#x7801;: <img src="A2-dp-10.png"
         style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0174325068870523em; vertical-align: -0.201101928374656em; height: 0.925267217630854em"></img>
       </p>
       <p class="detailed">
@@ -416,42 +401,27 @@
       <strong>&#x4F8B; <class style="font-style: normal">1.3</class>.
       </strong>(&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x5E8F;&#x5217;)
       &#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;<span class="no-breaks"><img
-      src="A2-dp-10.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.00200550964187327em; margin-right: -0.0112837465564739em; margin-top: -0.00952066115702488em; vertical-align: -0.201101928374656em; height: 0.930909090909091em"></img>,</span>
+      src="A2-dp-11.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.00200550964187327em; margin-right: -0.0112837465564739em; margin-top: -0.00952066115702488em; vertical-align: -0.201101928374656em; height: 0.930909090909091em"></img>,</span>
       &#x6C42;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x957F;<strong>&#x516C;&#x5171;&#x5B50;&#x5E8F;&#x5217;</strong>&#x7684;&#x957F;&#x5EA6;.
       (<a href="https://leetcode.cn/problems/longest-common-subsequence/">1143.
       &#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x5E8F;&#x5217;</a>)
     </p>
     <p style="margin-top: 1em">
       <strong>&#x89E3;&#x7B54;. </strong>&#x5B9A;&#x4E49;<span class="no-breaks"><img
-      src="A2-dp-11.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564724em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E2A;&#x6570;.</span>
+      src="A2-dp-12.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564724em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E2A;&#x6570;.</span>
       &#x6709;&#x9012;&#x63A8;&#x5173;&#x7CFB;
     </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>def dfs(i:int, j:int) -&gt; int
-      :</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>    if i&lt;0 or j&lt;0:</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>        return 0 #
-      &#x8FB9;&#x754C;&#x60C5;&#x51B5;</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>    if s[i] == t[j]:</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>        return dfs(i-1,
-      j-1)+1</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>    return max(dfs(i-1, j), dfs(i,
-      j-1)</tt></class></tt>
-    </p>
+    <pre class="verbatim" xml:space="preserve">
+def dfs(i:int, j:int) -&gt; int :
+    if i&lt;0 or j&lt;0:
+        return 0 # &#x8FB9;&#x754C;&#x60C5;&#x51B5;
+    if s[i] == t[j]:
+        return dfs(i-1, j-1)+1
+    return max(dfs(i-1, j), dfs(i, j-1)</pre>
     <div class="switchable" style="margin-bottom: 1em; margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
       </p>
       <p class="detailed">
         C++
@@ -486,7 +456,7 @@ public:
       <strong>&#x4F8B; <class style="font-style: normal">1.4</class>.
       </strong>(&#x6700;&#x957F;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;)
       &#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;<span
-      class="no-breaks"><img src="A2-dp-12.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0225674931129477em; margin-right: -0.0112837465564739em; margin-top: -0.0229421487603306em; vertical-align: 0em; height: 0.490842975206612em"></img>,</span>
+      class="no-breaks"><img src="A2-dp-13.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0225674931129477em; margin-right: -0.0112837465564739em; margin-top: -0.0229421487603306em; vertical-align: 0em; height: 0.490842975206612em"></img>,</span>
       &#x627E;&#x5230;&#x5176;&#x4E2D;&#x6700;&#x957F;&#x4E25;&#x683C;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x957F;&#x5EA6;.
       &#x5176;&#x4E2D;,
       &#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x800C;&#x4E0D;&#x6539;&#x53D8;&#x5176;&#x4F59;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;.
@@ -494,39 +464,21 @@ public:
       &#x6700;&#x957F;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;</a>)
     </p>
     <p style="margin-top: 1em">
-      <strong>&#x89E3;&#x7B54;. </strong>&#x5B9A;&#x4E49;<img src="A2-dp-13.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0254545454545454em; vertical-align: -0.201101928374656em; height: 1.04374655647383em"></img>
+      <strong>&#x89E3;&#x7B54;. </strong>&#x5B9A;&#x4E49;<img src="A2-dp-14.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564741em; margin-top: -0.0254545454545454em; vertical-align: -0.201101928374656em; height: 1.04374655647383em"></img>
       
     </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>def dfs(pos:int) -&gt; int:
-      </tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            if pos == 0: return
-      1</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            res = 1</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            for i in
-      range(pos):</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>                if nums[i] &lt;
-      nums[pos]:</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>                    res = max(res,
-      dfs(i)+1)</tt></class></tt>
-    </p>
-    <p>
-      <tt class="verbatim"><class style="font-family: Times New Roman"><tt>            return res</tt></class></tt>
-    </p>
+    <pre class="verbatim" xml:space="preserve">
+def dfs(pos:int) -&gt; int: 
+            if pos == 0: return 1
+            res = 1
+            for i in range(pos):
+                if nums[i] &lt; nums[pos]:
+                    res = max(res, dfs(i)+1)
+            return res</pre>
     <div class="switchable" style="margin-bottom: 1em; margin-left: 38.660688007188px">
       <p>
-        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-1.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
-        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
+        <class class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class
+        class="always" style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><font class="always">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</font>
       </p>
       <p class="detailed">
         C++
@@ -550,19 +502,181 @@ public:
     }
 };</pre>
     </div>
+    <p>
+      
+    </p>
     <h4 id="auto-8">1.2.3.<span style="margin-left: 1em"></span>&#x5212;&#x5206;&#x95EE;&#x9898;<span
     style="margin-left: 1em"></span></h4>
+    <ul>
+      <li>
+        <p>
+          <div style="display: inline">
+            &#x53EF;&#x4EE5;&#x662F;&ldquo;&#x9009;&#x6216;&#x4E0D;&#x9009;&rdquo;&#x95EE;&#x9898;&#x7684;&#x53D8;&#x5F0F;,
+            &#x53EA;&#x8981;&#x8003;&#x8651;&#x65B0;&#x6765;&#x4E00;&#x4E2A;&#x5143;&#x7D20;{
+          </div>
+          <table style="display: inline-table; vertical-align: middle">
+            <tbody><tr>
+              <td>&#x5F53;&#x524D;&#x7684;&#x5143;&#x7D20;&#x8DDF;&#x7740;&#x524D;&#x9762;&#x7684;&#x4E00;&#x7EC4;(&#x9009;&#x62E9;&#x4E00;&#x7247;)</td>
+            </tr><tr>
+              <td>&#x5F53;&#x524D;&#x7684;&#x5143;&#x7D20;&#x65B0;&#x6210;&#x7ACB;&#x4E00;&#x7EC4;<span
+              class="no-breaks"><img src="A2-dp-15.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564739em; margin-top: -0.0138402203856749em; vertical-align: 0em; height: 0.468275482093664em"></img>&#x679A;&#x4E3E;</span></td>
+            </tr></tbody>
+          </table>
+          <div style="display: inline">
+            .
+          </div>
+        </p>
+        <p>
+          
+        </p>
+      </li>
+    </ul>
     <p style="margin-top: 1em">
       <strong>&#x4F8B; <class style="font-style: normal">1.5</class>.
       </strong>(&#x5206;&#x5272;&#x56DE;&#x6587;&#x4E32;)
       &#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;<span class="no-breaks"><img
-      src="A2-dp-14.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0225674931129477em; margin-right: -0.0112837465564739em; margin-top: -0.0229421487603306em; vertical-align: 0em; height: 0.490842975206612em"></img>,</span>
+      src="A2-dp-16.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0225674931129477em; margin-right: -0.0112837465564739em; margin-top: -0.0229421487603306em; vertical-align: 0em; height: 0.490842975206612em"></img>,</span>
       &#x8BF7;&#x5206;&#x4E3A;&#x4E00;&#x4E9B;&#x5B50;&#x4E32;,
       &#x4F7F;&#x6BCF;&#x4E2A;&#x5B50;&#x4E32;&#x90FD;&#x662F;&#x56DE;&#x6587;&#x4E32;,
       &#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x6700;&#x5C0F;&#x5206;&#x5272;&#x6B21;&#x6570;.
       (<a href="https://leetcode.cn/problems/palindrome-partitioning-ii/">132. &#x5206;&#x5272;&#x56DE;&#x6587;&#x4E32; II</a>)
     </p>
+    <p style="margin-top: 1em">
+      <strong>&#x89E3;&#x7B54;. </strong>&#x53EF;&#x4EE5;&#x8003;&#x8651;<span
+      class="no-breaks"><img src="A2-dp-17.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564737em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x628A;</span><span class="no-breaks"><img src="A2-dp-18.png"
+      style="margin-left: -0.0112837465564738em; margin-bottom: 0.02633608815427em; margin-right: -0.0112837465564732em; margin-top: -0.0273498622589532em; vertical-align: -0.0601873278236915em; height: 0.82371349862259em"></img>&#x5207;&#x5206;&#x4E3A;&#x56DE;&#x6587;&#x4E32;,</span>
+      &#x6700;&#x5C0F;&#x5207;&#x5206;&#x7684;&#x6B21;&#x6570;
+    </p>
+    <pre class="verbatim" xml:space="preserve" style="margin-bottom: 1em">
+class Solution:
+    def minCut(self, s: str) -&gt; int:
+        def ispar(s:str) -&gt; bool:
+            return s[::-1]==s
+        def f(r:int) -&gt; int:
+            # [l..r]&#x662F;&#x56DE;&#x6587;&#x4E32;
+            if ispar(s[0:r+1]):
+                return 0
+            # [l..r]&#x4E0D;&#x662F;&#x56DE;&#x6587;&#x4E32;, &#x679A;&#x4E3E;&#x5207;&#x5206;&#x70B9;, &#x6BCF;&#x6B21;&#x589E;&#x52A0;&#x4E00;&#x4E2A;
+            res = inf 
+            for l in range(1, r+1):
+                if(ispar(s[l:r+1])):
+                    res = min(res, f(l-1)+1)
+            return res
+        return f(len(s)-1)</pre>
     <p style="margin-bottom: 1em">
+      
+    </p>
+    <div class="switchable" style="margin-left: 38.660688007188px">
+      <p class="always" style="margin-top: 1em">
+        <class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img
+        class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><strong>&#x7EC3;&#x4E60; <class
+        style="font-style: normal">1.2</class>. </strong><a href="https://leetcode.cn/problems/extra-characters-in-a-string/">2707.
+        &#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x989D;&#x5916;&#x5B57;&#x7B26;</a>
+      </p>
+      <p class="always" style="margin-bottom: 1em">
+        
+      </p>
+      <p class="detailed" style="margin-top: 1em">
+        <strong>&#x89E3;&#x7B54;. </strong>&#x5B9A;&#x4E49;<span class="no-breaks"><img
+        src="A2-dp-19.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0245730027548209em; margin-right: -0.0112837465564737em; margin-top: -0.0273498622589532em; vertical-align: -0.201101928374656em; height: 1.01553719008264em"></img>&#x4E3A;&#x4EE5;</span><span class="no-breaks"><img src="A2-dp-20.png" style="margin-left: -0.0112837465564738em; margin-bottom: 0.02633608815427em; margin-right: -0.0112837465564737em; margin-top: -0.0273498622589532em; vertical-align: -0.0601873278236915em; height: 0.82371349862259em"></img>&#x9700;&#x8981;&#x4E22;&#x5F03;&#x591A;&#x5C11;&#x4E2A;&#x5B57;&#x7B26;.</span>
+      </p>
+      <pre class="verbatim detailed" xml:space="preserve" style="margin-bottom: 1em">
+class Solution:
+    def minExtraChar(self, s: str, dictionary: List[str]) -&gt; int:
+        @cache
+        def dfs(r:int) -&gt; int: 
+            if r&lt;0: return 0
+            res = dfs(r-1)+1 # &#x4E0D;&#x9009;, &#x4E22;&#x6389;&#x7684;&#x5B57;&#x6BCD;+1
+            for j in range(r+1):
+                # &#x9009;&#x62E9;&#x7684;&#x6761;&#x4EF6;: &#x5728;&#x5B57;&#x5178;&#x91CC;&#x9762;
+                if s[j:r+1] in dictionary:
+                    res = min(res, dfs(j-1))
+            return res
+        return dfs(len(s)-1)</pre>
+    </div>
+    <div class="switchable" style="margin-left: 38.660688007188px">
+      <p class="always" style="margin-top: 1em">
+        <class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img class="summary-button container" src="A2-dp-2.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><class style="float: left; text-align: right; min-width: 2.5em; margin-left: -3em; margin-right: 0.5em"><img
+        class="detailed-button container" src="A2-dp-3.png" style="margin-left: -0.0112837465564738em; margin-bottom: -0.0112837465564738em; margin-right: -0.0112837465564738em; margin-top: -0.0142148760330578em; vertical-align: 0em; height: 0.485201101928375em"></img></class><strong>&#x7EC3;&#x4E60; <class
+        style="font-style: normal">1.3</class>. </strong><a href="https://leetcode.cn/problems/maximize-total-cost-of-alternating-subarrays/">3196.
+        &#x6700;&#x5927;&#x5316;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x603B;&#x6210;&#x672C;</a>
+      </p>
+      <p class="always" style="margin-bottom: 1em">
+        
+      </p>
+      <p class="detailed" style="margin-top: 1em">
+        <strong>&#x89E3;&#x7B54;. </strong>&#x6700;&#x521D;&#x7248;&#x672C;,
+        &#x5982;&#x679C;&#x6309;&#x7167;&#x4E0A;&#x8FF0;&#x601D;&#x8DEF;&#x601D;&#x8003;&#x7684;&#x8BDD;,
+        &#x5C31;&#x6709;
+      </p>
+      <pre class="verbatim detailed" xml:space="preserve">
+class Solution:
+    def maximumTotalCost(self, nums: List[int]) -&gt; int:
+        
+        num = list(accumulate(map(lambda x:-x[1] if x[0]%2 else x[1], enumerate(nums))))
+        
+        def get(l:int, r:int) -&gt; int:
+            coeff = 1
+            if l % 2 : coeff *= -1
+            # if (r-l+1) % 2: coeff *= -1
+            if(l==0): return num[r] * coeff
+            else: return (num[r]-num[l-1]) * coeff
+
+        @cache
+        def f(r:int) -&gt; int:
+            if r&lt;0: return 0
+            if r==0: return num[0] 
+            # for l=r
+            res = get(r, r) + f(r-1)
+            
+            # for l=1..r-1
+            for l in range(0, r):
+                currans = get(l, r) + f(l-1)
+                res = max(res, currans)
+            return res
+        
+        return f(len(nums)-1)</pre>
+      <p class="detailed" style="margin-bottom: 1em">
+        &#x4F46;&#x662F;&#x4F1A;&#x8D85;&#x65F6;,
+        &#x56E0;&#x4E3A;&#x5947;&#x6570;&#x5076;&#x6570;&#x53EF;&#x4EE5;&#x66F4;&#x5C0F;&#x7684;&#x5DE5;&#x4F5C;&#x62FC;&#x6210;,
+        &#x53EA;&#x8981;&#x628A;<tt class="verbatim">for l in range(0,
+        r)</tt>&#x53D8;&#x4E3A;<tt class="verbatim"><tt class="verbatim"><code>for l in
+        range(max(0, r-3),
+        r)</code></tt></tt>&#x5373;&#x53EF;(&#x91CD;&#x590D;&#x6027;&#x8D28;).
+        
+      </p>
+    </div>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
       
     </p>
     <p>
