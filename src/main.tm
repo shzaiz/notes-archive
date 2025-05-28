@@ -24,9 +24,9 @@
 
   <tabular|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<table|<row|<cell|<hlink|1.
   \<#65E0\>\<#7C7B\>\<#578B\>\<#7684\><math|\<lambda\>
-  >-\<#6F14\>\<#7B97\>|./fp/fp.tm>>|<cell|2.
-  Coq\<#548C\>\<#7C7B\>\<#578B\>>>|<row|<cell|3.
-  Coq\<#4E2D\>\<#7684\>\<#7B56\>\<#7565\>>|<cell|>>>>>
+  >-\<#6F14\>\<#7B97\>|./fp/fp.tm>>|<cell|<hlink|2.
+  Coq\<#548C\>\<#7C7B\>\<#578B\>|./fp/coq1-basics.tm>>>|<row|<cell|<hlink|3.
+  Coq\<#4E2D\>\<#7684\>\<#7B56\>\<#7565\>|./fp/coq2-tactics.tm>>|<cell|>>>>>
 
   <with|font-series|bold|\<#673A\>\<#5668\>\<#5B66\>\<#4E60\>><math|\<quarternote\>\<ldots\>>
 
