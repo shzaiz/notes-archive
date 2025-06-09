@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
     
 
-    - name: Switch to intermediate branch and sync with main
+      - name: Switch to intermediate branch and sync with main
         run: |
           git config --global --add safe.directory $PWD
           git fetch origin
