@@ -16,7 +16,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+    
+
+    - name: Switch to intermediate branch and sync with main
+        run: |
+          git config --global --add safe.directory $PWD
+          git fetch origin
+
+          if git show-ref --quiet refs/remotes/origin/intermediate; then
+              echo "Intermediate branch exists. Checking out..."
+              git checkout intermediate
+              echo "Merging main into intermediate..."
+              git merge origin/main --no-edit
+          else
+              echo "Intermediate branch does not exist. Creating..."
+              git checkout -b intermediate
+          fi
+
+          echo "Pushing intermediate branch..."
+          git push origin intermediate
+
 
       - name: Install TeXmacs
         run: |
